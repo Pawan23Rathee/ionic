@@ -1,0 +1,19 @@
+ion-card{
+    ion-button{
+        width: 90%;
+    }   
+}
+
+.config-btn{
+    margin-left: 5%;
+    --background: #1D96E8
+    
+}
+
+.my-custom-class{
+ --background: red !important;
+ --background: #490c0c;
+}
+ion-item{
+    --background:transparent;
+}

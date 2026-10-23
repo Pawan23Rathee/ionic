@@ -1,0 +1,43 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/mainpage"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="glbl-clr-white glbl-text-cntr">
+      {{user.tuyaDeviceName}}
+    </ion-title>
+    <!-- <p  name='trash' slot="end" style="color: black; font-size: 30px;margin-right: 10px;">{{d_on}}</p>  -->
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div style="display: -webkit-box;padding: 0 19px;width:100%">
+    <p>Doorbell</p>
+    <ion-toggle slot="end" style="margin-left:200px;" checked="false" (ionChange)="initDevice()">
+    </ion-toggle>
+  </div>
+  <ion-card class="statusCard global-background">
+    <img style="width: 100%; height: 100%;" src="{{icon}}">
+  </ion-card>
+</ion-content>
+
+<ion-footer class="ion-no-border">
+  <ion-toolbar color="light">
+    <ion-tabs>
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button tab="shareTuya">
+          <ion-icon name="share-social-outline"></ion-icon>
+          <ion-label>Share</ion-label>
+        </ion-tab-button>
+        <ion-tab-button (click)="playback()">
+          <ion-icon name="play"></ion-icon>
+          <ion-label>Playback</ion-label>
+        </ion-tab-button>
+
+        <ion-tab-button (click)="actionsheet()">
+          <ion-icon name="settings"></ion-icon>
+          <ion-label>Setting</ion-label>
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+  </ion-toolbar>
+</ion-footer>

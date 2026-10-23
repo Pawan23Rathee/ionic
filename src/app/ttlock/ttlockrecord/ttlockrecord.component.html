@@ -1,0 +1,29 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar >
+    <ion-buttons slot="start" >
+      <ion-back-button defaultHref="/securitylock" ></ion-back-button>
+    </ion-buttons>
+    <ion-title style="text-align: center; ">
+     Lock Records
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list *ngFor="let r of  data">
+    <ion-item >
+      <ion-avatar>
+        <ion-icon name="lock-open-outline"></ion-icon>
+      </ion-avatar>
+      <ion-label>
+        <h2>{{r.recordType}}</h2>
+        <h6>{{r.lockDate}}</h6>
+        <h6>{{r.lockId}}</h6>
+      </ion-label>
+    </ion-item>
+   
+  
+  </ion-list>
+   <!-- <ion-button (click)="sdkresponse()">upload record</ion-button>
+  <ion-button (click)="tTLockRecord()">get record</ion-button> -->
+</ion-content>

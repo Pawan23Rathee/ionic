@@ -1,0 +1,37 @@
+.header-btn{
+    --background:transparent !important;
+    --box-shadow:none !important;
+}
+.cancel{
+float: right;
+border: 1px solid white;
+--background:#1D96E8;
+}
+.add{
+    float:left;
+    border: 1px solid white;
+    --background:#1D96E8
+}
+ion-item{
+    --background:transparent;
+}
+ion-input{
+    --color:white;
+    --placeholder-color: white;
+    --placeholder-opacity: .8;
+}
+.card-cls{
+    border: 2px solid white;
+}
+.popover-viewport{
+    background: transparent;
+}
+.my-class{
+    background: transparent;
+}
+.select-device{
+   color: white;
+}
+// .alert-head .alert-title{
+//     color:white ;
+// }

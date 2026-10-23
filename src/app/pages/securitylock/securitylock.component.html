@@ -1,0 +1,290 @@
+<!-- <ion-header class="ion-no-border">
+  <ion-toolbar style="--background: rgb(245, 248, 248); ">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/mcategory" style="color: black;"></ion-back-button>
+    </ion-buttons>
+    <ion-title style="text-align: center; color: black;">
+      Security System
+    </ion-title>   
+    
+    <ion-buttons slot="end" (click)="tTLocklist()" style="padding-right: 15px;">
+      <ion-icon name="refresh-outline"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header> -->
+
+<!-- <ion-content>
+  <div  class="container-fluid showDevice divCard">
+    <h4 style="margin: 0;padding-left: 22px;">Smart Lock Devices</h4>
+    <p>Smart Lock</p>
+    <ion-card class="devCard"*ngFor="let tt of ttLockdataAll" lines="full"  id='deviceid'>
+   
+      <ion-item lines="none" (click)="ttLockClick(tt.lockId,tt.lockData,tt.lockMac)">
+        <ion-avatar style="width: 60px;height: 60px;" slot="start">
+          <ion-icon name="lock-closed-outline" style="font-size: 34px;padding-top: 10px;"></ion-icon>
+        </ion-avatar>  
+     
+        <ion-label><p  class="dyfo_lock"
+          style="padding: 0;left: 15px;margin-top: 8px;white-space: nowrap; 
+          width: 100px; font-size: 16px;
+          overflow: hidden;
+          text-overflow: ellipsis; ">{{tt.lockAlias}}</p>
+          </ion-label>
+          <ion-label><p  class="dyfo_lock"
+            style="padding: 0;left: 15px;margin-top: 8px;white-space: nowrap; 
+            width: 100px; font-size: 16px;
+            overflow: hidden;
+            text-overflow: ellipsis; ">{{tt.lockAlias}}</p>
+            </ion-label>            
+      </ion-item>
+    </ion-card>
+  </div>
+
+  <div  class="container-fluid showDevice divCard">
+    <h4 style="margin: 0;padding-left: 22px;">Gateway Devices</h4>
+    <ion-card class="devCard" *ngFor="let d of user.tuyaDevices" id='deviceid'>
+      <ion-list>
+        <ion-item *ngFor="let tt of gatewaylist13" lines="full" (click)="ttGateWayLockClick(tt.lockId,tt.lockMac,tt.lockName,tt.lockAlias)">
+          <ion-avatar style="width: 60px;height: 60px;" slot="start">
+            <ion-icon name="lock-closed-outline" style="font-size: 34px;padding-top: 10px;"></ion-icon>
+          </ion-avatar>     
+          <ion-label>
+            <h2>{{tt.lockName}}</h2>
+            <p>{{tt.lockId}}</p>  
+            <p>{{tt.lockMac}}</p>      
+          </ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-card>
+  </div>
+
+  <div  class="container-fluid showDevice divCard">
+    <h4 style="margin: 0;padding-left: 22px;">Smart Lock Type- DLS-2</h4>
+
+    <ion-list *ngFor="let l of lock_response">
+      <ion-item>
+        <ion-avatar slot="start">
+          <img id={{l.id}}  src="{{l.img}}">
+        </ion-avatar>
+        <ion-label style="text-align: center;">
+          <p >&nbsp;{{l.name}}</p>
+          <p >&nbsp;{{l.device_type}}</p>
+        </ion-label>
+        <ion-toggle slot="end" [(ngModel)]="l.status" checked="{{l.status}}"  (ionChange)="changeDyfoLockStatus(l.id)"></ion-toggle>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content> -->
+
+
+
+
+
+
+<ion-header translucent class="ion-no-border">
+  <!-- <ion-toolbar style="--background: rgb(245, 248, 248); "> -->
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/mainpage"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="glbl-clr-white glbl-text-cntr">
+      Security Devices
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div>
+
+    <ion-grid *ngIf="user.r_select_type=='rectangle'">
+      <ion-row>
+        <ion-col *ngFor='let d of allDevices' (click)="allDevicesClick(d)" size='4' style="text-align: center;">
+          <ion-card class="roomcard global-backgroun">
+            <div style="display: flex; align-items: center;justify-content: center;height: 100%;">
+              <img *ngIf='d.type=="ttlock"' src='../../../assets/images/bluetoothLock.png' style="height: 65px;">
+              <img *ngIf='d.type=="gateway"' src='../../../assets/images/wifiBluetoothLock.png' style="height: 65px;">
+              <img *ngIf='d.type=="tuya"' src='{{d.item.icon}}' style="width: 95px;height: 90px;">
+              <img *ngIf='d.type=="lock"' src='../../../assets/images/atiWifiLock.png' style="height: 65px;">
+            </div>
+          </ion-card>
+          <ion-item *ngIf='d.type=="ttlock"' style="font-size: 13px;" class="glbl-clr-white global-border">{{d.item.lockName}}</ion-item>
+          <ion-item *ngIf='d.type=="tuya" || d.type=="gateway"' style="font-size: 13px;" class="glbl-clr-white global-border">{{d.item.name}}</ion-item>
+          <ion-item *ngIf='d.type=="lock"' style="font-size: 13px;" class="glbl-clr-white global-border">{{d.item.device_name}}</ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <ion-grid *ngIf="user.r_select_type=='circle'">
+      <ion-row>
+        <ion-col *ngFor='let d of allDevices' (click)="allDevicesClick(d)" size='4' style="text-align: center;">
+          <ion-card class="roomCircleCard global-background">
+            <div style="display: flex; align-items: center;justify-content: center;height: 100%;">
+              <img *ngIf='d.type=="ttlock"' src='../../../assets/images/bluetoothLock.png' style="height: 65px;">
+              <img *ngIf='d.type=="gateway"' src='../../../assets/images/wifiBluetoothLock.png' style="height: 65px;">
+              <img *ngIf='d.type=="tuya"' src='{{d.item.icon}}' style="width: 95px;height: 90px;">
+              <img *ngIf='d.type=="lock"' src='../../../assets/images/atiWifiLock.png' style="height: 65px;">
+            </div>
+          </ion-card>
+          <ion-item *ngIf='d.type=="ttlock"' style="font-size: 13px;" class="glbl-clr-white global-border">{{d.item.lockName}}</ion-item>
+          <ion-item *ngIf='d.type=="tuya" || d.type=="gateway"' style="font-size: 13px;" class="glbl-clr-white global-border">{{d.item.name}}</ion-item>
+          <ion-item *ngIf='d.type=="lock"' style="font-size: 13px;" class="glbl-clr-white global-border">{{d.item.device_name}}</ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>
+
+<!-- <ion-content>
+<div>
+  <ion-item style="margin-top: 15px;">
+    <ion-label>Bluetooth Lock</ion-label>
+  </ion-item>
+  <ion-grid *ngIf="user.r_select_type=='rectangle'">
+    <ion-row>
+      <ion-col *ngFor='let tt of ttLockdataAll' (click)="ttLockClick(tt.lockId,tt.lockData,tt.lockMac)" size='4'  style="text-align: center;">
+        <ion-card class="roomcard" >
+          {{tt.lockName}}
+        </ion-card>
+        <span style="font-size: 13px;">{{tt.lockName}}</span>
+        <span style="font-size: 13px;">{{tt.lockId}}</span>
+        <span style="font-size: 13px;">{{tt.lockMac}}</span>
+      </ion-col> 
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid *ngIf="user.r_select_type=='circle'">
+    <ion-row>
+      <ion-col *ngFor='let tt of ttLockdataAll' (click)="ttLockClick(tt.lockId,tt.lockData,tt.lockMac)" size='4'  style="text-align: center;">
+        <ion-card class="roomCircleCard" >       
+        </ion-card>
+        <span style="font-size: 13px;">{{tt.lockName}}</span>
+        <span style="font-size: 13px;">{{tt.lockId}}</span>
+        <span style="font-size: 13px;">{{tt.lockMac}}</span>
+      </ion-col> 
+    </ion-row>
+  </ion-grid>
+</div>
+ 
+
+<div>
+  <ion-item style="margin-top: 15px;">
+    <ion-label>Bluetooth Gateway Lock</ion-label>
+  </ion-item>
+  <ion-grid *ngIf="user.r_select_type=='rectangle'">
+    <ion-row>
+      <ion-col *ngFor="let l of gatewaylist13" size='4'  style="text-align: center;">
+        <ion-card class="roomcard" (click)="ttGateWayLockClick(l.lockId,tt.lockMac,l.lockName,l.lockAlias)">
+          {{l.name}}
+        </ion-card>
+        <span style="font-size: 13px;">{{l.name}}</span>
+        <span style="font-size: 13px;">{{l.device_type}}</span>
+      </ion-col> 
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid *ngIf="user.r_select_type=='circle'">
+    <ion-row>
+      <ion-col *ngFor="let d of gatewaylist13"  size='4'  style="text-align: center;">
+        <ion-card class="roomCircleCard" (click)="ttGateWayLockClick(l.lockId,tt.lockMac,l.lockName,l.lockAlias)">
+         
+        </ion-card>
+        <span style="font-size: 13px;">{{d.name}}</span>
+        <span style="font-size: 13px;">{{d.device_type}}</span>
+      </ion-col> 
+    </ion-row>
+  </ion-grid>
+</div>
+
+<div>
+  <ion-item style="margin-top: 15px;">
+    <ion-label>Camera Door Bell</ion-label>
+  </ion-item>
+  <ion-grid *ngIf="user.r_select_type=='rectangle'">
+    <ion-row>
+      <ion-col *ngFor="let l of tuya_security_lock" size='4'  style="text-align: center;">
+        <ion-card class="roomcard" (click)="goToTuyaSettings(d.name,d.icon,d.id)">
+          <ion-img [src]='l.icon' style="height: 65px;"></ion-img>
+        </ion-card>
+        <ion-item>
+        <span style="font-size: 13px;">{{l.name}}</span>
+        </ion-item>
+      </ion-col> 
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid *ngIf="user.r_select_type=='circle'">
+    <ion-row>
+      <ion-col *ngFor="let d of tuya_security_lock"  size='4'  style="text-align: center;">
+        <ion-card class="roomCircleCard" (click)="goToTuyaSettings(d.name,d.icon,d.id)">
+        <ion-img [src]='d.icon' style="width: 95px;height: 90px;"></ion-img>
+        </ion-card>
+        <ion-item>
+        <span style="font-size: 13px;">{{d.name}}</span>
+        </ion-item>
+      </ion-col> 
+    </ion-row>
+  </ion-grid>
+</div>
+
+<div>
+  <ion-item style="margin-top: 15px;"> -->
+<!-- <ion-label> DyfoLock</ion-label> -->
+<!-- <ion-label> AITLock</ion-label>
+  </ion-item>
+  <ion-grid *ngIf="user.r_select_type=='rectangle'">
+    <ion-row>
+      <ion-col *ngFor="let l of lock_response" size='4'  style="text-align: center;">
+        <ion-card class="roomcard" (click)="ttLockClick(tt.lockId,tt.lockData,tt.lockMac)">
+          {{r.device_name}}
+        </ion-card>
+        <span style="font-size: 13px;">{{r.device_name}}</span>
+      </ion-col> 
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid *ngIf="user.r_select_type=='circle'">
+    <ion-row>
+      <ion-col *ngFor='let tt of ttLockdataAll'  size='4'  style="text-align: center;">
+        <ion-card class="roomCircleCard" (click)="ttLockClick(tt.lockId,tt.lockData,tt.lockMac)">
+        {{r.device_name}}
+        </ion-card>
+        <span style="font-size: 13px;">{{r.device_name}}</span>
+      </ion-col> 
+    </ion-row>
+  </ion-grid>
+</div>
+
+  </ion-content> -->
+
+<ion-footer class="ion-no-border">
+  <ion-toolbar color="dark">
+    <ion-tabs>
+      <ion-tab-bar slot="bottom" style="padding-bottom: 9px;padding-top: 5px;">
+
+        <ion-tab-button class="home" (click)='mainpage()'>
+          <ion-icon name="home-outline"></ion-icon>
+          <ion-label>Home</ion-label>
+        </ion-tab-button>
+
+        <!--<ion-tab-button (click)="favpage()" class="favourite"> 
+            <ion-icon name="heart"></ion-icon>
+            <ion-label>Favourite</ion-label>
+          </ion-tab-button>-->
+        <ion-tab-button (click)="rgbpage()" class="favourite">
+          <ion-icon name="bulb-outline"></ion-icon>
+          <ion-label>RGB Device</ion-label>
+        </ion-tab-button>
+        <ion-tab-button class="security">
+          <ion-icon name="lock-closed-outline"></ion-icon>
+          <ion-label>Security</ion-label>
+        </ion-tab-button>
+
+        <ion-tab-button class="mode" (click)="modepage()">
+          <ion-icon name="aperture"></ion-icon>
+          <ion-label>Scene</ion-label>
+        </ion-tab-button>
+
+      </ion-tab-bar>
+    </ion-tabs>
+  </ion-toolbar>
+</ion-footer>

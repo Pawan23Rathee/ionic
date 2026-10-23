@@ -1,0 +1,53 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar class="ion-no-border">
+    <ion-buttons slot="start">
+      <ion-button  (click)="dismiss()">
+        <ion-icon name="close" class="glbl-clr-white"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title style="text-align: center;" class="glbl-clr-white">{{d_name}} </ion-title>
+    <ion-buttons slot="end" style="width: 40px;">
+      <ion-button (click)="deleteDevice()">
+        <ion-icon slot="icon-only" name='trash' class="glbl-clr-white"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content >
+  <ion-card style="border-radius: 20px; padding: 10px 8px;" class="global-background">
+    <!-- <ion-item style="border-radius: 20px; padding: 10px 8px;"> -->
+    <div class="selectdevice" style="margin-top: 10px;max-height: 100%;">
+      <ion-label>Select Devices Type:</ion-label>
+      <ion-select (ionChange)="checkChecked($event)" [(ngModel)]="d_type" ok-text="Okay" style="max-height: 100%;"
+        cancel-text="Cancel">
+        <ion-select-option value="Fan">Fan</ion-select-option>
+        <ion-select-option value="Bulb">Bulb</ion-select-option>
+        <ion-select-option value="Tube_Light">TubeLight</ion-select-option>
+        <ion-select-option value="Lamp">Lamp</ion-select-option>
+        <ion-select-option value="Ac">AC</ion-select-option>
+        <ion-select-option value="Geyser">Geyser</ion-select-option>
+        <ion-select-option value="Table_Lamp">Table Lamp</ion-select-option>
+        <ion-select-option value="Chandelier">Chandelier</ion-select-option>
+        <ion-select-option value="Table_Fan">Table Fan</ion-select-option>
+        <ion-select-option value="Curtain">Curtain</ion-select-option>
+        <ion-select-option value="Door_Lock">Door Lock</ion-select-option>
+        <ion-select-option value="Curtain2">Curtain2</ion-select-option>
+      </ion-select>
+    </div>
+    <!-- </ion-item> -->
+  </ion-card>
+  <ion-card style="border-radius: 20px; padding: 16px 8px;" class="global-background">
+    <ion-label>Your Device Name:</ion-label>
+    <ion-input id="deviceName" value="{{d_name}}" maxlength="10"></ion-input>
+  </ion-card>
+  <ion-card *ngIf="d_isdimmer=='true' " style="border-radius: 20px; padding: 20px 8px;">
+    <ion-label>Min Value:</ion-label>
+    <ion-input id="min" [(ngModel)]="d_min"></ion-input>
+    <ion-label>Max Value:</ion-label>
+    <ion-input id="max" [(ngModel)]="d_max"></ion-input>
+  </ion-card>
+  <ion-button expand="full"style="margin: auto 11px;"
+    (click)="submitdevice()" class="button">Submit</ion-button>
+
+
+</ion-content>

@@ -1,0 +1,70 @@
+<ion-header translucent class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/mainpage" (click)="backbutton()" ></ion-back-button>
+    </ion-buttons>
+    <ion-title class="title-pos">Favourites</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+  <div *ngIf="nofav" style="text-align: center;padding: 50px;margin-top: 50px;">
+    <p>Add your favourite devices here for easy control</p>
+    <!-- <ion-button expand="round" class="nofav_button fav-button-clr" (click)='add_fav_device()'>
+      <ion-icon slot="icon-only" name="add"></ion-icon>
+    </ion-button> -->
+  
+  </div>
+  <ion-fab horizontal="end" vertical="bottom" slot="fixed" *ngIf="nofav">
+    <ion-fab-button class="fav-button-clr" (click)='add_fav_device()' size="large">
+      <ion-icon name="alarm"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  <ion-card *ngFor="let d of getDevices">
+    <ion-item>
+      <ion-avatar slot="start" (click)="deviceclick(d[0].device,d[0].status,d[0].device_name,d[0].description,d[0].id)">
+        <img src="{{d[0].device_type}}">
+      </ion-avatar>
+      <ion-label (click)="deviceclick(d[0].device,d[0].status,d[0].device_name,d[0].description,d[0].id)">
+        <p>{{d[0].description}}</p>
+        <p>{{d[0].device_name}}</p>
+      </ion-label>
+      <!-- <ion-label> -->
+      <ion-button id='ion-btn' (click)="devicestatus($event, d[0].device, d[0].status,d[0].description);"
+        [ngClass]="d[0].status == 'True' ? 'on':'off'"
+        style="float: right; display: inline; font-size: 0px; margin: 5px; --border-radius: 74px; width: 35px; height: 35px; padding: 0;">
+        <ion-icon style="font-size: 23px;margin-right: 6px;" name='power' slot="end"></ion-icon>
+      </ion-button>
+      <!-- </ion-label> -->
+    </ion-item>
+  </ion-card>
+
+</ion-content>
+<!-- <ion-footer class="ion-no-border">
+  <ion-toolbar color="dark">
+    <ion-tabs>
+      <ion-tab-bar slot="bottom" style="padding-bottom: 9px;padding-top: 5px;">
+
+        <ion-tab-button (click)="mainpage()" class="home">
+          <ion-icon name="home-outline"></ion-icon>
+          <ion-label style="padding: 0;">Home</ion-label>
+        </ion-tab-button>
+        <ion-tab-button (click)="rgbpage()" class="favourite">
+          <ion-icon name="bulb-outline"></ion-icon>
+          <ion-label>RGB Devices</ion-label>
+        </ion-tab-button>
+
+        <ion-tab-button (click)="securitylockpage()" class="security">
+          <ion-icon name="lock-closed-outline"></ion-icon>
+          <ion-label style="padding: 0;">Security</ion-label>
+        </ion-tab-button>
+
+        <ion-tab-button (click)="modepage()" class="mode">
+          <ion-icon name="aperture-outline"></ion-icon>
+          <ion-label style="padding: 0;">Scene</ion-label>
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+  </ion-toolbar>
+</ion-footer> -->
+<app-footer></app-footer>

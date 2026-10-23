@@ -1,0 +1,230 @@
+.noremote{
+    height: 100%;
+    background-color: rgba(68, 68, 68, 0.3);
+    overflow: hidden;
+}
+.noremote > h2{
+    color: rgb(68, 68, 68);
+    text-align: center;
+    position: relative;
+    top:25%;
+}
+.rem_card{
+    ion-card-header {
+        font-size: 20px;
+        ion-button{
+        float: right;
+        --background: transparent;
+        font-size: 20px;
+        right: -4px;
+        top: -3px;
+        position: absolute;
+    }
+    ion-icon{
+        --color: #524e4e;
+        font-size: 24px;
+    }
+}
+}
+
+
+.forGauge{
+    border-radius: 50%;
+    --background: #2F3C5F;
+    border-bottom: 1px solid #f5f6f9;
+    border-top: 1px solid white;
+    border-right: 1px solid white;
+    border-left: 1px solid white;
+    --color: white;
+}
+
+.opCard{
+    text-align: center;
+    border: 2px solid white;
+   ion-button{
+    --border-radius: 50%;
+    // --border-color: white;
+    // --border-style: solid;
+    --border-width: 2px;
+    // --background: transparent;
+    // --margin: 0 auto;
+    --color: white;
+    width: 70px;
+    height: 70px;
+    ion-icon{
+        --color: white;
+        font-size: 24px;
+    }
+   }
+
+}
+@media screen and (max-width: 411px){
+    .divbutton{
+      margin-left: 108px;
+    }
+}
+.my-custom-modal-css .modal-wrapper {
+    height: 20%;
+    top: 80%;
+    position: absolute; 
+    display: block;  
+ }
+ @media all and (max-width: 319px) and (min-width: 220px) {
+    #div_center {
+        margin-left: 38px;
+    }
+  }
+  @media all and (max-width: 350px) and (min-width: 320px) {
+    #div_center {
+        margin-left: 68px;
+    }
+  }
+  @media all and (max-width: 390px) and (min-width: 351px) {
+    #div_center {
+        margin-left: 86px;
+    }
+  }
+  @media all and (max-width: 411px) and (min-width: 391px) {
+    #div_center {
+        margin-left: 112px;
+    }
+  }
+  @media all and (max-width: 460px) and (min-width: 412px) {
+    #div_center {
+        margin-left: 103px;
+    }
+  }
+  @media all and (max-width: 620px) and (min-width: 461px) {
+    #div_center {
+        margin-left: 34%;
+    }
+  }
+  @media all and (max-width: 1260px) and (min-width: 621px) {
+    #div_center {
+        margin-left: 40%;
+    }
+  }
+
+  .device_card1{
+    // background-color: #946DE2;
+    //background-color: black;
+    background-color: blueviolet;
+    color: white;
+    opacity: 9;
+    border-radius: 50%;
+    ion-row{
+        color: white;
+        ion-text{
+            color: white;
+        }
+    }
+}
+.title-class{
+    text-align:center;
+    margin-right: 20px;
+    text-transform: capitalize;
+}
+.voice-channel-div{
+    display: inline-grid;
+    border: 2px solid #dad2d2;
+    border-radius: 29px;
+    height: 161px;  
+    width: 68px;text-align: center;
+    align-items: center;
+        ion-icon{
+            margin-left: 16px;
+            font-size: 32px;
+            padding-top: 3px;
+            color: white;
+        }
+}
+.micro-icon{
+    ion-icon{
+        color: white;
+    }
+}
+.console-btn{
+    ion-icon{
+        color: white;
+    }
+}
+// .reading-block .reading-label{
+//     color: white !important;
+// }
+.ac-remote{
+    --background: transparent;
+}
+// RGB
+/* colorpicker styles */
+.colorpicker {
+    // background-color: #222222;
+    // border-radius: 5px 5px 5px 5px;
+    // box-shadow: 2px 2px 2px #444444;
+    color: #FFFFFF;
+    font-size: 12px;
+    position: relative;
+    max-width: 100%;
+    text-align: center;
+
+}
+#picker {
+    cursor: crosshair;
+    // float: left;
+    margin: -2px;
+    border: 0;
+}
+.controls {
+    // float: right;
+    margin: 10px;
+}
+.controls > div {
+    border: 1px solid #2F2F2F;
+    margin-bottom: 5px;
+    overflow: hidden;
+    padding: 5px;
+}
+.controls label {
+    float: left;
+}
+.controls > div input {
+    // background-color: #121212;
+    border: 1px solid #2F2F2F;
+    color: rgb(10, 10, 10);
+    float: right;
+    font-size: 16px;
+    height: 22px;
+    // margin-left: 6px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 75px;
+}
+// .preview {
+//     background: url("../../../assets/images/select.png") repeat scroll center center transparent;
+//     border-radius: 3px;
+//     box-shadow: 2px 2px 2px #444444;
+//     cursor: pointer;
+//     height: 30px;
+//     width:  30px;
+// }
+
+#ion-list-here{
+    letter-spacing: 1px;
+    position: relative;
+    color: black;
+    font-family: sans-serif;
+    font-size: 18px;
+    width: 100%;
+    background-color: #f5f5f5;
+    border-radius: 21px;
+    text-align: center;
+    padding: 4px 0;
+    border: 1px solid #9d5c5c;
+}
+.selectrow{
+    text-align: center;
+    color: black;
+}
+ion-button{
+    --border-radius: 50%;
+    min-width: 103px;
+}

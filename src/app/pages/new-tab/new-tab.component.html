@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar class="profile-tool" color="light" >
+    <ion-buttons slot="start" >
+      <ion-back-button defaultHref="/addnewmodule"></ion-back-button>
+    </ion-buttons>
+    <ion-title>HARDWARE SYNC SSID</ion-title>  
+    <ion-buttons slot="end" (click)="enableUrl()">
+      <ion-button><ion-icon slot="icon-only" name="wifi"></ion-icon></ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-button (click)="disable()" >Switch To Home Network</ion-button>
+    <ion-list  *ngFor="let data of results1">
+      <ion-item *ngIf="show" (click)="wificheck(data.SSID)" detail>
+         <ion-label>
+          <p style="margin-left: 10px;">{{data.SSID}}</p>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+    <ion-button (click)="room()" > After Switching Network Add Device in Room</ion-button>
+  </ion-content>

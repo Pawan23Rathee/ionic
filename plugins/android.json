@@ -1,0 +1,73 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-open-native-settings": {
+      "PACKAGE_NAME": "dyfolabs.automation.app"
+    },
+    "cordova-plugin-android-permissions": {
+      "PACKAGE_NAME": "dyfolabs.automation.app"
+    },
+    "cordova-plugin-androidx-adapter": {
+      "PACKAGE_NAME": "dyfolabs.automation.app"
+    },
+    "cordova-plugin-camera": {
+      "ANDROIDX_CORE_VERSION": "1.6.+",
+      "PACKAGE_NAME": "dyfolabs.automation.app"
+    },
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "dyfolabs.automation.app"
+    },
+    "cordova-plugin-geolocation": {
+      "GPS_REQUIRED": "true",
+      "PACKAGE_NAME": "dyfolabs.automation.app"
+    },
+    "cordova-plugin-inappbrowser": {
+      "PACKAGE_NAME": "dyfolabs.automation.app"
+    },
+    "cordova-plugin-ionic-keyboard": {
+      "PACKAGE_NAME": "dyfolabs.automation.app"
+    },
+    "cordova-plugin-ionic-webview": {
+      "PACKAGE_NAME": "dyfolabs.automation.app"
+    },
+    "cordova-plugin-network-information": {
+      "PACKAGE_NAME": "dyfolabs.automation.app"
+    },
+    "cordova-plugin-statusbar": {
+      "PACKAGE_NAME": "dyfolabs.automation.app"
+    },
+    "ionic-plugin-deeplinks": {
+      "URL_SCHEME": "your_scheme",
+      "DEEPLINK_SCHEME": "https",
+      "DEEPLINK_HOST": "your_host",
+      "ANDROID_PATH_PREFIX": "/",
+      "ANDROID_2_PATH_PREFIX": "/",
+      "ANDROID_3_PATH_PREFIX": "/",
+      "ANDROID_4_PATH_PREFIX": "/",
+      "ANDROID_5_PATH_PREFIX": "/",
+      "DEEPLINK_2_SCHEME": " ",
+      "DEEPLINK_2_HOST": " ",
+      "DEEPLINK_3_SCHEME": " ",
+      "DEEPLINK_3_HOST": " ",
+      "DEEPLINK_4_SCHEME": " ",
+      "DEEPLINK_4_HOST": " ",
+      "DEEPLINK_5_SCHEME": " ",
+      "DEEPLINK_5_HOST": " ",
+      "PACKAGE_NAME": "dyfolabs.automation.app"
+    },
+    "wifiwizard2": {
+      "PACKAGE_NAME": "dyfolabs.automation.app"
+    }
+  },
+  "dependent_plugins": {
+    "es6-promise-plugin": {
+      "PACKAGE_NAME": "dyfolabs.automation.app"
+    }
+  }
+}

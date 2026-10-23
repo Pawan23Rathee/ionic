@@ -1,0 +1,155 @@
+<ion-header translucent class="ion-no-border">
+  <ion-toolbar >
+      <ion-buttons slot="start" >
+        <ion-back-button defaultHref="/mainpage"></ion-back-button>
+      </ion-buttons>
+    <ion-title class="ion-text-center">Change Theme</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content padding>
+  <ion-item style="margin-top: 15px;">
+    <ion-label>Select Device Type</ion-label>
+    <ion-select placeholder="Select Room Type" cancelText="Cancel" okText="Okay!" [(ngModel)]="user.r_select_type" (ionChange)="user.deviceTypeSelect($event)">
+      <ion-select-option *ngFor='let type of user.deviceSelectArray' >{{type.type}}</ion-select-option>   
+    </ion-select>
+  </ion-item>
+
+
+  <div class="card logo_section">
+    <div class="item item-text-wrap main_logo" id="img">
+     
+     
+     <ion-grid>
+       <ion-row>
+         <ion-col size="6">
+          <ion-card>
+            <ion-row>
+              <ion-col size="6"><ion-avatar><ion-icon name="desktop-outline"></ion-icon></ion-avatar></ion-col>
+              <ion-col size="6"><ion-avatar><ion-icon name="power-outline"></ion-icon></ion-avatar></ion-col>
+            </ion-row>
+          <!-- <ion-label><h4>DyfoSmart</h4></ion-label> -->
+          <!-- <ion-label>
+            <h4>livsmart</h4>
+          </ion-label> -->
+          <!-- <ion-label>
+            <h4>AIT</h4>
+          </ion-label> -->
+          <!-- <ion-label>
+            <h4>Bonfire</h4>
+          </ion-label> -->
+          <!-- <ion-label>
+            <h4>Spira</h4>
+          </ion-label> -->
+          <ion-label>
+            <h4>THomes</h4>
+          </ion-label>
+          </ion-card>
+         </ion-col>
+         <ion-col size="6">
+          <ion-card>
+            <ion-row>
+              <ion-col size="6"><ion-avatar><ion-icon name="desktop-outline"></ion-icon></ion-avatar></ion-col>
+              <ion-col size="6"><ion-avatar><ion-icon name="power-outline"></ion-icon></ion-avatar></ion-col>
+            </ion-row>
+          <!-- <ion-label><h4>DyfoSmart</h4></ion-label> -->
+          <!-- <ion-label>
+            <h4>livsmart</h4>
+          </ion-label> -->
+          <!-- <ion-label>
+            <h4>AIT</h4>
+          </ion-label> -->
+          <!-- <ion-label>
+            <h4>Bonfire</h4>
+          </ion-label> -->
+          <!-- <ion-label>
+            <h4>Spira</h4>
+          </ion-label> -->
+          <ion-label>
+            <h4>THomes</h4>
+          </ion-label>
+          </ion-card>
+         </ion-col>
+
+         <ion-col size="6">
+          <ion-card>
+            <ion-row>
+              <ion-col size="6"><ion-avatar><ion-icon name="desktop-outline"></ion-icon></ion-avatar></ion-col>
+              <ion-col size="6"><ion-avatar><ion-icon name="power-outline"></ion-icon></ion-avatar></ion-col>
+            </ion-row>
+          <!-- <ion-label><h4>DyfoSmart</h4></ion-label> -->
+          <!-- <ion-label>
+            <h4>livsmart</h4>
+          </ion-label> -->
+          <!-- <ion-label>
+            <h4>AIT</h4>
+          </ion-label> -->
+          <!-- <ion-label>
+            <h4>Bonfire</h4>
+          </ion-label> -->
+          <!-- <ion-label>
+            <h4>Spira</h4>
+          </ion-label> -->
+          <ion-label>
+            <h4>THomes</h4>
+          </ion-label>
+          </ion-card>
+         </ion-col>
+         <ion-col size="6">
+          <ion-card>
+            <ion-row>
+              <ion-col size="6"><ion-avatar><ion-icon name="desktop-outline"></ion-icon></ion-avatar></ion-col>
+              <ion-col size="6"><ion-avatar><ion-icon name="power-outline"></ion-icon></ion-avatar></ion-col>
+            </ion-row>
+          <!-- <ion-label><h4>DyfoSmart</h4></ion-label> -->
+          <!-- <ion-label>
+            <h4>livsmart</h4>
+          </ion-label> -->
+          <!-- <ion-label>
+            <h4>AIT</h4>
+          </ion-label> -->
+          <!-- <ion-label>
+            <h4>Bonfire</h4>
+          </ion-label> -->
+          <!-- <ion-label>
+            <h4>Spira</h4>
+          </ion-label> -->
+          <ion-label>
+            <h4>THomes</h4>
+          </ion-label>
+          </ion-card>
+         </ion-col>
+       </ion-row>
+     </ion-grid>
+     
+    </div>
+  </div>
+<div class="container">
+  <div class="btnColor"> 
+    <ion-row>
+      <ion-col size="2"></ion-col>
+      <ion-col>
+        <ion-button class="colorButton" (click)="user.bright_red()" style="--background: #f8383a;"></ion-button>
+        <ion-button class="colorButton" (click)="user.black()" style="--background: #222428;"></ion-button>
+        <ion-button class="colorButton" (click)="user.light_glayish_blue()" style="--background: #add8e6;"></ion-button>
+        <ion-button class="colorButton" class="colorButton" (click)="user.green()" style="--background: #8fbc8f;"></ion-button>
+        <ion-button class="colorButton" (click)="user.lightSalmon()" style="--background: #FFA07A;"></ion-button>
+      </ion-col>
+      <ion-col size="2"></ion-col>
+    </ion-row>
+   <ion-row>
+    <ion-col size="3"></ion-col>
+    <ion-row>
+      <ion-button class="colorButton" (click)="user.vistra_blue()" style="--background: #0000FF;"></ion-button>
+      <ion-button class="colorButton" (click)="user.hoki()" style="--background: #687C82;"></ion-button>
+      <ion-button class="colorButton" (click)="user.indigo()" style="--background: #4b0082;"></ion-button>
+      <ion-button class="colorButton" (click)="user.medium_purple()" style="--background: #9370DB;"></ion-button>
+      <ion-button class="colorButton" (click)="user.medium_white()" style="--background: #ffffff;"></ion-button>
+    </ion-row>
+    <ion-col size="2"></ion-col>
+   </ion-row>
+   
+  </div>
+</div>
+
+
+</ion-content>

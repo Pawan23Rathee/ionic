@@ -1,0 +1,22 @@
+.roomcard{
+    width: 100%;
+    height: 65px;
+ }
+ .roomCircleCard{
+    width: 95px;
+    height: 90px;
+    border-radius: 50%;
+ }
+
+ ion-tab-button {
+   height: 70px;
+ //   padding-bottom: 10px;
+}  
+.security{
+   // color: #946DE2;
+   //color: black;
+   color: #1396b0;
+}
+ion-item{
+   --background:transparent;
+}

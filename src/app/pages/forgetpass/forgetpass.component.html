@@ -1,0 +1,88 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar >
+      <ion-buttons slot="start" >
+        <ion-back-button defaultHref="/home" (click)="backbutton()" style="color:white;"></ion-back-button>
+      </ion-buttons>
+    <!-- <ion-title style="color: rgba(0, 0, 0, 0.568);" class="ion-text-center">Support</ion-title> -->
+   
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+
+  <div  style="text-align: center;margin-top: 40px;" *ngIf='user.otp_div'>
+    <span>For security we require new users to <br> verify mobile number and email</span> <br>
+    <h3 style="border-radius: 50%; border: 2px solid; color: white; width: 30px; margin: 20px auto auto auto;">i</h3> <br>
+    <span>Please enter the code we just send to your email</span>
+    
+   <div style="padding-top: 15px;">
+     <ng-otp-input #ngOtpInput (onInputChange)="onOtpChange($event)" [config]="config"></ng-otp-input>
+   </div>
+   <p *ngIf='timeLeft > 0'>Resend after...{{timeLeft}} sec.</p>
+   <p *ngIf='timeLeft == 0'>Didn't receive a code? <span style="color: white;" (click)="resend_otp()">TAP HERE</span> </p>
+   <ion-button expand='round' (click)="otp_submit()" style="--background: #13A9DB;
+   color: white;
+   /* border-top: 1px solid #e6e6e6;
+   border-bottom: 1px solid #e6e6e6; */
+   width: 90%;
+   margin-top: 25px;
+   margin-left: 0px;"> submit <ion-icon name="create" slot="end" ></ion-icon></ion-button>
+  </div>
+
+  <div *ngIf="user.enter_newpass">
+    <form [formGroup]="loginForm" (ngSubmit)='submit()'>
+      <div style="margin-top: 65px;">
+    
+    
+    <ion-list>
+      <div class="form-group">
+    <ion-item>  
+      <ion-icon src="assets/iconi5/lock-closed-outline.svg"color="dark" slot="start"></ion-icon>
+      <ion-input type='password'  class="form-control" formControlName="newpassword"  autocorrect="on" autofocus="on" [type]="showpassword ? 'password': 'text'" clearOnEdit="true" color="dark" type="password" placeholder="Enter New Password" required="true"></ion-input>  
+      <ion-icon slot="end" [name]="passwordToggleIcon" (click)="togglepass()"></ion-icon>    
+      
+    </ion-item>
+    </div> 
+    <div class="error-messages">
+    <ng-container *ngFor="let error of error_messages.newpassword">
+      <!-- <span class="error-message" *ngIf="loginForm.get('newpassword').hasError(error.type) && (loginForm.get('newpassword').dirty || loginForm.get('newpassword').touched)"> -->
+      <span class="error-message" *ngIf="loginForm.get('newpassword')?.hasError(error.type)">
+        {{ error.message }}
+      </span>
+    </ng-container>
+    </div>
+    </ion-list>
+    
+    <ion-list>
+      <div class="form-group">
+    <ion-item>  
+      <ion-icon src="assets/iconi5/lock-closed-outline.svg" color="dark" slot="start"></ion-icon>
+      <ion-input type='password'  class="form-control" formControlName="cpassword"  autocorrect="on" autofocus="on" [type]="showpassword ? 'password': 'text'" clearOnEdit="true" color="dark" type="password" placeholder="Enter Confirm Password" required="true"></ion-input>  
+      <ion-icon slot="end" [name]="passwordToggleIcon" (click)="togglepass()"></ion-icon>    
+      
+    </ion-item>
+    </div> 
+    <div class="error-messages">
+    <ng-container *ngFor="let error of error_messages.cpassword">
+      <!-- <span class="error-message" *ngIf="loginForm.get('cpassword').hasError(error.type) && (loginForm.get('cpassword').dirty || loginForm.get('cpassword').touched)"> -->
+      <span class="error-message" *ngIf="loginForm.get('cpassword')?.hasError(error.type)">
+        {{ error.message }}
+      </span>
+    </ng-container>
+    <!-- <div class="error-message" *ngIf="!loginForm.get('cpassword').errors && loginForm.hasError('passwordNotMatch') && (loginForm.get('cpassword').dirty || loginForm.get('cmpassword').touched)"> -->
+    <div class="error-message" *ngIf="loginForm.get('cpassword')?.errors && loginForm.hasError('passwordNotMatch')">
+      Password and Confirm Password fields should match
+    </div>
+    </div>
+    </ion-list>
+     
+    
+      <ion-button  expand="block" style="--background: #13A9Db;
+            color: white;
+            border-top: 1px solid #e6e6e6;
+            border-bottom: 1px solid #e6e6e6;
+            width: 100%;
+            margin-left: 0px;" class="form-control" [disabled]="!loginForm.valid" type="submit" >Update</ion-button>
+            </div>
+          </form>
+  </div>
+</ion-content>

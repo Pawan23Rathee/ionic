@@ -1,0 +1,19 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar >
+    <ion-buttons slot="start" style="position:absolute">
+      <ion-back-button defaultHref="/mainpage" ></ion-back-button>
+    </ion-buttons>
+    <ion-title style="text-align: center;">
+    </ion-title>  
+    <!-- <p  name='trash' slot="end" style="color: black; font-size: 30px;margin-right: 10px;">{{d_on}}</p>  -->
+  </ion-toolbar>
+</ion-header>
+  <ion-content>
+    <ion-button (click)="getAccessToken()"> Get Access Token </ion-button>
+    <br/>
+    <!-- <ion-button (click)="getOurAuthCode()"> get our auth code </ion-button> -->
+    Ensure your account is same for both alexa and dyfo.
+    <br/>
+    <a href="{{ourauthUrl}}"> <ion-button> Get our auth code </ion-button></a>
+    <ion-button (click)="enableSkill()"> Enable Skill </ion-button>
+  </ion-content>

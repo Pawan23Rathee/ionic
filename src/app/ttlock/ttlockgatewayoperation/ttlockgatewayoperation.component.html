@@ -1,0 +1,56 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar >
+    <ion-buttons slot="start" >
+      <ion-back-button defaultHref="/securityLock" ></ion-back-button>
+    </ion-buttons>
+    <ion-title style="text-align: center; ">
+      Gateway Lock
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+ 
+  <ion-grid style="margin-top: 10%;">
+    <ion-row>
+      <p>Clicking on Unlock GIF only unlock operation will operate. For Lock operation please click Lock icon in toolbar</p>
+      <ion-col size="2"></ion-col>
+      <ion-col size="8">
+       <img style="width: 100%; height: 100%;" src="{{imgPath}}" (click)="unlock()">
+      </ion-col>
+      <ion-col size="2"></ion-col>
+     
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+<ion-footer class="ion-no-border">
+  <ion-toolbar color="dark">
+    <ion-tabs>
+      <ion-tab-bar slot="bottom" style="padding-bottom: 2px;">
+        <ion-tab-button (click)="lock()">
+          <ion-icon name="lock-closed-outline"></ion-icon>
+          <ion-label>lock</ion-label>
+        </ion-tab-button>
+        <ion-tab-button (click)="gatewaylock_Status()">
+          <ion-icon name="stats-chart-outline"></ion-icon>
+          <ion-label>Status</ion-label>
+        </ion-tab-button>
+
+        <ion-tab-button (click)="gatewayOpenState()">
+          <ion-icon name="stats-chart-outline"></ion-icon>
+          <ion-label>Open State</ion-label>
+        </ion-tab-button>
+
+        <ion-tab-button tab="ttlockrecord">
+          <ion-icon name="aperture"></ion-icon>
+          <ion-label>Records</ion-label>
+        </ion-tab-button>
+
+        <ion-tab-button (click)="deleteGateway()">
+          <ion-icon name="trash-outline"></ion-icon>
+          <ion-label>Delete</ion-label>
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+  </ion-toolbar>
+</ion-footer>

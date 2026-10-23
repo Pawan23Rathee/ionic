@@ -1,0 +1,349 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar class="profile-tool">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/mainpage" (click)="backbutton()"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="title-class glbl-clr-white">{{remote}}</ion-title>
+  </ion-toolbar>
+
+</ion-header>
+<ion-content class="global-background">
+  <ion-card style="height: auto" class="opCard global-background" *ngIf="remotetv">
+    <ion-grid>
+      <ion-row>
+        <ion-col style="width: 70px;">
+          <ion-button (click)="keyPress('Power_on_button',$event)" class="power">
+            <ion-icon name="power"></ion-icon>
+          </ion-button><br>
+          <ion-label class="tvpower">Power On</ion-label>
+        </ion-col>
+        <ion-col style="width: 70px;">
+          <ion-button (click)="keyPress('mute_button',$event)" class="power">
+            <ion-icon name="volume-mute-outline"></ion-icon>
+          </ion-button><br>
+          <ion-label class="power">Mute</ion-label>
+        </ion-col>
+        <ion-col style="width: 70px;">
+          <ion-button (click)="keyPress('Power_off_button',$event)" class="menu">
+            <ion-icon name="power"></ion-icon>
+          </ion-button><br>
+          <ion-label class="menu">Power Off</ion-label>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size='4'>
+          <div class="voice-channel-div">
+            <ion-icon name='add' (click)="keyPress('volume_up_button',$event)" class="voiceplus"></ion-icon>
+            <label class="glbl-clr-white">Voice</label>
+            <ion-icon name='remove' (click)="keyPress('volume_down_button',$event)" class="voiceminus"></ion-icon>
+          </div>
+        </ion-col>
+
+        <ion-col size='4'>
+          <div>
+            <ion-button (click)="keyPress('menu_button',$event)">
+              <ion-icon name="menu" (click)="keyPress('menu_button',$event)"></ion-icon>
+            </ion-button> <br>
+            <ion-button (click)="keyPress('record_button',$event)">
+              <ion-icon name="mic-outline" (click)="keyPress('record_button',$event)" class="micro-icon">
+              </ion-icon>
+            </ion-button>
+          </div>
+        </ion-col>
+        <ion-col size='4'>
+          <div class="voice-channel-div">
+            <ion-icon name='add' (click)="keyPress('channel_up_button',$event)" class="channelplus"></ion-icon>
+            <label class="glbl-clr-white">Channel</label>
+            <ion-icon name='remove' (click)="keyPress('channel_down_button',$event)" class="channelminus"></ion-icon>
+          </div>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <div id="div_center" style="
+      height: 161px;
+      border-radius: 50%; 
+      border: 2px solid #dad2d2;
+      
+      width: 161px;">
+            <div style="display: inline-grid;" class="console-btn">
+              <ion-col>
+                <ion-icon style="margin-top:5px;font-size: 20px;" (click)="keyPress('up_button',$event)" class="caretup"
+                  src="assets/iconi5/caret-up-outline.svg"></ion-icon>
+              </ion-col>
+              <ion-col style="margin-top: 28px;" (click)="keyPress('select_button',$event)">
+                <ion-label>OK</ion-label>
+              </ion-col>
+              <ion-col>
+                <ion-icon (click)="keyPress('down_button',$event)" class="caretdown"
+                  style="margin-top: 35px;font-size: 20px;" src="assets/iconi5/caret-down-outline.svg"></ion-icon>
+              </ion-col>
+
+            </div>
+            <div style="margin-top: -86px;" class="console-btn">
+              <ion-col>
+                <ion-icon style="margin-right: 86px;font-size: 20px;" (click)="keyPress('left_button',$event)"
+                  class="caretback" src="assets/iconi5/caret-back-outline.svg" name='caret-back-outline'></ion-icon>
+              </ion-col>
+
+              <ion-col>
+                <ion-icon style="font-size: 20px;" (click)="keyPress('right_button',$event)" class="caretforward"
+                  src="assets/iconi5/caret-forward-outline.svg"></ion-icon>
+              </ion-col>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col style="width: 70px;" (click)='irunmber()'>
+          <ion-button>
+            <ion-label>123</ion-label>
+          </ion-button><br>
+          <ion-label>Number</ion-label>
+        </ion-col>
+        <ion-col style="width: 70px;"> </ion-col>
+        <ion-col style="width: 70px;" (click)='irmore()'>
+          <ion-button>
+            <ion-icon name="more" src="assets/iconi5/ellipsis-vertical-sharp.svg"></ion-icon>
+          </ion-button><br>
+          <ion-label>More</ion-label>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+  </ion-card>
+  <ion-card style="height: 100%;" class="opCard global-background" *ngIf="remoteac">
+    <ion-grid>
+      <ion-row style="text-align: center;">
+        <ion-col>
+          <ion-button (click)="power($event)" class="power">
+            <ion-icon name="power"></ion-icon>
+          </ion-button><br>
+          <ion-label class="tvpower">Power On/Off</ion-label>
+        </ion-col>
+        <ion-col>
+          <ion-button (click)="keyPress('Power_on_button',$event)" class="power">
+            <ion-icon name="sync-outline"></ion-icon>
+          </ion-button><br>
+          <ion-label class="tvpower">Auto</ion-label>
+        </ion-col>
+        <ion-col>
+          <ion-button (click)="keyPress('Power_on_button',$event)" class="power">
+            <ion-icon name="snow-outline"></ion-icon>
+          </ion-button><br>
+          <ion-label class="tvpower">Cool</ion-label>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <div>
+      <ngx-gauge [value]="gaugeValue" [label]="gaugeLabel" [append]="gaugeAppendText" [size]="200" [min]="16" [max]="30"
+        type="arch" [animate]="true" [thick]="9" cap="round" foregroundColor="#ffffff"
+        [ngStyle]="{ 'color': 'white' }">
+
+      </ngx-gauge>
+      <ion-grid style="margin-top:-27px;">
+        <ion-row style="text-align: center;">
+          <ion-col>
+            <ion-icon name="remove-circle-outline" style="width:30px;height:30px;" class="glbl-clr-white"
+              (click)="minus($event)"></ion-icon>
+          </ion-col>
+          <ion-col>
+            <ion-icon name="add-circle-outline" style="width:30px;height:30px;" class="glbl-clr-white"
+              (click)="plus($event)"></ion-icon>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+
+    </div>
+    <ion-grid>
+      <ion-row style="text-align: center;">
+        <ion-col>
+          <ion-button (click)="keyPress('Power_on_button',$event)" class="power">
+            <ion-icon name="options-outline"></ion-icon>
+          </ion-button><br>
+          <ion-label class="tvpower">Dry</ion-label>
+        </ion-col>
+        <ion-col>
+          <ion-button (click)="keyPress('Power_on_button',$event)" class="power">
+            <ion-icon name="sunny-outline"></ion-icon>
+          </ion-button><br>
+          <ion-label class="tvpower">Heat</ion-label>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+
+          <ion-item class="ac-remote global-border">
+
+            <div style="width: 100%;">
+              <h5 class="glbl-clr-white">Wind Speed</h5>
+              <ion-range (click)="changeVal($event)" min="20" max="80" step="5">
+                <ion-icon size="small" slot="start" name="sunny" style="color: white;"></ion-icon>
+                <!-- <ion-icon slot="end" name="sunny"></ion-icon> -->
+              </ion-range>
+            </div>
+
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-grid>
+      <ion-row style="text-align: center;">
+        <ion-col>
+          <ion-button (click)="keyPress('Power_on_button',$event)" class="power">
+            <ion-icon name="trash-outline"></ion-icon>
+          </ion-button><br>
+          <ion-label class="tvpower">Device Delete</ion-label>
+        </ion-col>
+        <ion-col>
+          <ion-button (click)="keyPress('Power_on_button',$event)" class="power">
+            <ion-icon name="calendar-outline"></ion-icon>
+          </ion-button><br>
+          <ion-label class="tvpower">Schedule Device</ion-label>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+
+    <!-- <svg viewBox="0 0 270 480" xmlns="http://www.w3.org/2000/svg">
+      <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+      <script src='./script1.js'></script>
+
+      <rect width="270" height="100"
+        style="fill:rgba(231, 214, 247,0.36);stroke-width:2;stroke:rgba(31,30,30,0.37);border-radius:2%" />
+      <text id="text" x="120" y="35" style="font-size: 35px;">16</text>
+      <image href="assets/remote-image/temp.png" x="160" y="12" height="38" width="20" />
+      <rect width="3" height="10" x="120" y="83"
+        style="fill:rgba(32, 12, 46, 0.36);stroke-width:1;stroke:rgba(31,30,30,0.37)" />
+      <rect width="3" height="13" x="126" y="80"
+        style="fill:rgba(32, 12, 46, 0.36);stroke-width:1;stroke:rgba(31,30,30,0.37)" fill="grey" />
+      <rect class="bar1" width="3" height="16" x="132" y="77"
+        style="fill:rgba(231, 214, 247,0.36);stroke-width:1;stroke:rgba(31,30,30,0.37)" />
+      <rect class="bar1" width="3" height="19" x="138" y="74"
+        style="fill:rgba(231, 214, 247,0.36);stroke-width:1;stroke:rgba(31,30,30,0.37)" />
+      <rect class="bar2" width="3" height="22" x="144" y="71"
+        style="fill:rgba(231, 214, 247,0.36);stroke-width:1;stroke:rgba(31,30,30,0.37)" />
+      <rect class="bar2" width="3" height="25" x="150" y="68"
+        style="fill:rgba(231, 214, 247,0.36);stroke-width:1;stroke:rgba(31,30,30,0.37)" />
+      <image href="assets/remote-image/fan.png" x="35" y="75" height="14" width="14" />
+      <image href="assets/remote-image/auto.png" x="75" y="73" height="20" width="20" />
+      <image href="assets/remote-image/swing.png" x="170" y="73" height="20" width="20" />
+      <image href="assets/remote-image/timer.png" x="210" y="73" height="20" width="20" />
+      <image href="assets/remote-image/plus.png" x="191" y="155" height="26" width="24" />
+      <image href="assets/remote-image/minus.png" x="42" y="155" height="26" width="24" />
+      <image href="assets/remote-image/power.png" x="117" y="156" height="26" width="24" />
+      <image href="assets/remote-image/swing.png" x="50" y="287" height="20" width="20" />
+      <image href="assets/remote-image/timer.png" x="185" y="286" height="20" width="20" />
+      <image href="assets/remote-image/fan.png" x="120" y="287" height="20" width="20" />
+      <image href="assets/remote-image/upbutton.png" x="120" y="237" height="20" width="20" />
+      <image href="assets/remote-image/down.png" x="115" y="335" height="20" width="29" />
+      <defs>
+        <filter id="shadow">
+          <feDropShadow dx="1.3" dy="4.5" stdDeviation="0.2" flood-color="#75a3a3" />
+        </filter>
+      </defs>
+      <path (click)="minus($event)"
+        d="M628.4,387.2c-7,2.2-26.2,20.5-25.4,38.9s22.5,34.7,26.1,35.2,22.7.5,12.9-26.2a56.35,56.35,0,0,1,1.7-29.1C648.8,390.5,635.5,385,628.4,387.2Z"
+        transform="translate(-445.36 -171.68) scale(0.8, 0.8)" stroke="#527a7a" stroke-miterlimit="10"
+        stroke-width="0.89" style="filter:url(#shadow);" opacity="0.5" fill="#a3c2c2"></path>
+      <path (click)="plus($event)"
+        d="M743.7,387.7c5.8,4.5,25.7,19.9,24.9,37.9s-22.5,34.7-26.1,35.2-22.7.5-12.9-26.2a56.35,56.35,0,0,0-1.7-29.1C723,390,737.8,383.3,743.7,387.7Z"
+        transform="translate(-395.36 -171.68) scale(0.8, 0.8)" stroke-miterlimit="10" stroke="#527a7a"
+        stroke-width="0.89" opacity="0.5" style="filter:url(#shadow);" fill="#a3c2c2"></path>
+      <rect (click)="power($event)" value="93" x="93" y="150" rx="18" ry="18" width="73" height="40" stroke="#527a7a"
+        stroke-width="0.89" opacity="0.5" style="filter:url(#shadow);" fill="#a3c2c2"></rect>
+      <rect (click)='fan($event)' x="102" y="280" rx="13" ry="13" width="52" height="32" stroke="#527a7a"
+        stroke-width="0.89" opacity="0.5" style="filter:url(#shadow);" fill="#a3c2c2"></rect>
+      <path (click)="fanUp($event)"
+        d="M649.6,370.8c2.3-6.2,18.9-26.6,36.9-25.6,18,.8,34.2,22.5,34.7,26.1s.8,22.7-25.9,12.9a56.35,56.35,0,0,0-29.1,1.7C651,391,647.3,377,649.6,370.8Z"
+        transform="translate(-350.36 -10.68) scale(0.7, 0.7) " stroke="#527a7a" stroke-miterlimit="10"
+        stroke-width="0.69" opacity="0.5" style="filter:url(#shadow);" fill="#a3c2c2"></path>
+      <path (click)="fanDown($event)"
+        d="M649.3,480.5c2.2,7,20.5,26.2,38.9,25.4,17.9-1,34.6-22.5,35.1-26.1s.5-22.7-26.2-12.9a56.35,56.35,0,0,1-29.1-1.7C652.7,460.5,647.1,473.7,649.3,480.5Z"
+        transform="translate(-337.36 14.68) scale(0.68, 0.68)" stroke="#527a7a" stroke-miterlimit="10"
+        stroke-width="0.69" opacity="0.5" style="filter:url(#shadow);" fill="#a3c2c2"></path>
+      <rect (click)="swing($event)" x="40" y="283" rx="13" ry="13" width="45" height="28" stroke="#527a7a"
+        stroke-width="0.89" opacity="0.5" style="filter:url(#shadow);" fill="#a3c2c2"></rect>
+      <rect (click)="timer($event)" x="173" y="283" rx="13" ry="13" width="45" height="28" stroke="#527a7a"
+        stroke-width="0.89" opacity="0.5" style="filter:url(#shadow);" fill="#a3c2c2"></rect>
+    </svg> -->
+  </ion-card>
+  <!-- MOOD LIGHTING -->
+  <ion-card class="opCard global-background" *ngIf="!remotetv && !remoteac">
+    <div>
+      <div>
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <ion-button (click)="sendmoodType('Power_on_button')">on</ion-button>
+              <ion-button (click)="sendmoodType('Power_off_button')">Off</ion-button>
+            </ion-col>
+            <ion-col>
+              <ion-button (click)="sendmoodType('channel_up_button')">+</ion-button>
+              <ion-button (click)="sendmoodType('channel_down_button')">-</ion-button>
+            </ion-col>
+            <ion-col>
+              <ion-button (click)="sendmoodType('mute_button')">Flash</ion-button>
+              <ion-button (click)="sendmoodType('menu_button')">Strobe</ion-button>
+            </ion-col>
+            <ion-col>
+              <ion-button (click)="sendmoodType('volume_up_button')">Fade</ion-button>
+              <ion-button (click)="sendmoodType('volume_down_button')">Smooth</ion-button>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+      <div class="colorpicker">
+        <canvas id="picker" var="2" width="300" height="300"></canvas>
+      </div>
+
+      <div>
+        <div class="controls">
+          <div><label>RGB</label> <input type="text" disabled class="preview" /></div>
+          <div><label></label> <input type="text" id="hexVal" disabled /></div>
+
+        </div>
+        <div>
+          <ion-button  (click)="sendmoodcolor()">submit</ion-button>
+        </div>
+
+
+      </div>
+    </div>
+
+    <!-- ---------Select Mood Type  -->
+    <!-- <div *ngIf="SelectMood">
+      <ion-card>
+        <ion-row class="selectrow">
+          <ion-col size="12"
+            style="padding-left: 10%; font-size: 15px; font-family: 'Times New Roman', Times, serif; margin-top: 10px;font-weight: bold;">
+            SELECT MOOD TYPE
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="12"
+            style="padding-left: 10%; font-size: 15px; font-family: 'Times New Roman', Times, serif; margin-top: 10px;font-weight: bold;">
+            <ion-select placeholder="--Select--" (ionChange)="checkChecked($event)" ok-text="Okay" cancel-text="Cancel">
+              <ion-select-option value="Power_on_button">Disco_Mood</ion-select-option>
+              <ion-select-option value="mute_button">Musical_Mood</ion-select-option>
+              <ion-select-option value="channel_up_button">Party_Mood</ion-select-option>
+              <ion-select-option value="Power_off_button">Flash_Mood</ion-select-option>
+              <ion-select-option value="volume_up_button">Strome_Mood</ion-select-option>
+              <ion-select-option value="volume_down_button">Fade_Mood</ion-select-option>
+              <ion-select-option value="menu_button">Smooth_Mood</ion-select-option>
+            </ion-select>
+          </ion-col>
+
+        </ion-row>
+      </ion-card>
+      <ion-button expand="block" (click)="sendmoodType()">submit</ion-button>
+    </div> -->
+
+  </ion-card>
+</ion-content>
+<app-footer></app-footer>

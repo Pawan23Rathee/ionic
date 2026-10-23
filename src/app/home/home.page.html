@@ -1,0 +1,44 @@
+<!-- <ion-content [style.background-image]="'url('+ imageUrl +')'">
+  <div class="center">
+    <swiper-container #swiper [looop]="true" (slidechange)='ionSlideChange($event)' [pagination]="true" [zoom]="true">
+      <swiper-slide>
+        <div>
+          <h2>Connect</h2>
+          <p>Connect all your smart home devices easily.</p>
+        </div>
+      </swiper-slide>
+
+      <swiper-slide>
+        <div>
+          <h2>Control</h2>
+          <p>Control your devices from home or remove from anywhere in the world and just relax.</p>
+        </div>
+      </swiper-slide>
+
+      <swiper-slide>
+        <div>
+          <h2>Energy Management</h2>
+          <p>track energy consumption every day, get complete stats, save money</p>
+        </div>
+      </swiper-slide>
+    </swiper-container>
+    <ion-button style="text-transform: capitalize;" (click)="skipClick()" expand="round" fill="outline" color="light">
+      {{buttonName}}</ion-button>
+  </div>
+</ion-content> -->
+<ion-content>
+  <div class="background-container">
+    <div class="content">
+      <div class="center-container">
+        <ion-label class="title">SmartEasy</ion-label>
+        <div class="description-container">
+          <ion-label class="description">Control your home from anywhere across the globe and add a little more convenience in your life.</ion-label>
+        </div>
+      </div>
+    </div>
+    <div class="bottom-buttons">
+      <ion-button class="register-button" (click)="newUser()">Register</ion-button>
+      <ion-button class="login-button" (click)="skipClick()">Sign In</ion-button>
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,38 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/automationmodule"></ion-back-button>
+    </ion-buttons>
+    <ion-title style="text-align: center;">
+      RGB Light
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Install the light in a light holder first</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      Switch on and off the light for three times.
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-content>
+      The light will start blinking when it is ready to be paired.
+    </ion-card-content>
+    <ion-card-content>
+      <ion-item>
+        <ion-label class="ion-text-wrap">Check when light starts blinking</ion-label>
+        <ion-checkbox color="primary" checked="false" (ionChange)="getwifidetail()" slot="start"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-label class="ion-text-wrap">Please make sure the light and phone are as close to wifi router as possible
+        </ion-label>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

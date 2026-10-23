@@ -1,0 +1,53 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar >
+    <ion-buttons slot="start">
+      <ion-button color="white" (click)="backbutton()">
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title style="text-align: center; ">
+      Select Room
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+
+  <ion-list >
+    <ion-radio-group (click)="selectOne($event)">
+      <ion-button expand="full" >YOU MUST CHOOSE ONE OF THEM</ion-button>
+      <ion-item style="margin-top: 13px;">
+        <ion-label>Open Existing Room</ion-label>
+        <ion-radio (click)="selectOne($event)"  slot="start" color="success" value="existroom"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Create New Room</ion-label>
+        <ion-radio (click)="selectOne($event)"  slot="start" color="success" value="newroom"></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+  </ion-list>
+
+  <div *ngIf="existroom">
+    <ion-grid style="padding: 5px 0; height: 100%;">
+      <ion-row *ngFor='let r of myRooms' style="height: 25%;" class="container-fluid">
+        <ion-col style="padding: 5px 0; height: 21vh;">
+          <span style="position: absolute; top: 25px; left: 15px;font-size: 20px; font-weight: bold; z-index: 2; padding: 0px 6px; border-radius: 5px;">{{r.name}}</span>
+          <img (click)='selectexistroom(r.id)' [src]="showRoomType(r.room_type)" height="100%" width="100%">
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+  <div *ngIf="newroom">
+    <ion-grid style="padding: 5px 0; height: 100%;">
+      <ion-row *ngFor='let r of rooms' style="height: 25%;" class="container-fluid">
+        <ion-col style="padding: 5px 0; height: 21vh;">
+          <span style="position: absolute; top: 25px; left: 15px;font-size: 20px; font-weight: bold; z-index: 2;padding: 0px 6px; border-radius: 5px;">
+            {{r.name}}</span>
+          <img (click)='selectnewroom1(r.name)' src="{{r.imgPath}}" height="100%" width="100%"style="background-size: cover;">
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+  </div>
+</ion-content>

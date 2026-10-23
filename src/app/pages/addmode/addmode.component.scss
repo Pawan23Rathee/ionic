@@ -1,0 +1,23 @@
+ion-button{
+    --background: #1D96E8;
+    
+}
+.cancel{
+float: right;
+border: 1px solid white;
+}
+.add{
+    float:left;
+    border: 1px solid white;
+}
+ion-item{
+    --background:transparent;
+}
+ion-input{
+    --color:black;
+    --placeholder-color:black;
+    --placeholder-opacity: .8;
+}
+.card-cls{
+    border: 2px solid white;
+}

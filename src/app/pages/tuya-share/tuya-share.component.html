@@ -1,0 +1,69 @@
+<ion-header>
+  <ion-toolbar style="--background:aliceblue;">
+    <ion-buttons slot="start" >
+      <ion-back-button defaultHref="/mainpage" style="color:black"></ion-back-button>
+      <!-- <ion-back-button (click)="modalcontroler.dismiss()" style="color:#fff;"></ion-back-button> -->
+    </ion-buttons>
+    <ion-title class="ion-text-center" style="color:black">SHARE SECURITY DEVICES</ion-title>
+    <!-- <ion-icon (click)="menu()" name='md-more' slot="end" style="color: black; font-size: 30px;margin-right: 10px;"></ion-icon> -->
+  </ion-toolbar>
+</ion-header>
+  <ion-content style="--background:rgb(244 218 237) ;">
+
+  <ion-card >
+    <ion-item >
+      <ion-label  >Share Devices</ion-label>
+      <ion-select  interface="popover" (ionChange)="shareDevice($event)">
+        <ion-select-option  value="byMember" >Share With Member</ion-select-option>
+        <ion-select-option value="byAcc" >Share With Account</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-card>
+
+<ion-card>
+  <ion-item>
+    <ion-label>Get Share Relationship</ion-label>
+    <ion-select interface="popover" (ionChange)="getDevice($event)">
+      <ion-select-option value="allUser">List of All Share User</ion-select-option>
+      <ion-select-option value="userRec">List of All Shared User Received</ion-select-option>
+      <ion-select-option value="singleUser">Single Shared user Data</ion-select-option>
+      <ion-select-option value="singleShare">Shared Data from a Single Recipient</ion-select-option>
+      <ion-select-option value="singleDevice">Single Device Shared User List</ion-select-option>
+    </ion-select>
+  </ion-item>
+</ion-card>
+
+<ion-card >
+  <ion-item>
+    <ion-label>Delete Share </ion-label>
+    <ion-select interface="popover" (ionChange)="shareDelete($event)">
+      <ion-select-option value="delShare">Delete Share</ion-select-option>
+      <ion-select-option value="delReceive">Delete Receiving Share</ion-select-option>
+      <ion-select-option value="delSingle">Remove Single Device Sharing</ion-select-option>
+      <ion-select-option value="delShareDev">Remove Share Device Received</ion-select-option>
+    </ion-select>
+  </ion-item>
+</ion-card>
+
+<ion-card>
+  <ion-item>
+    <ion-label>Modify Note Name</ion-label>
+    <ion-select interface="popover" (ionChange)="modifyShare($event)">
+      <ion-select-option value="actShare">Nick Name of Active Share</ion-select-option>
+      <ion-select-option value="reShare">Nick Name of Recipient Share</ion-select-option>
+    </ion-select>
+  </ion-item>
+</ion-card>
+
+<ion-card *ngIf="modify">
+  <ion-item style="--background: rgb(250, 249, 249);">
+  <ion-input id="input" required type="text" value="{{nickName}}"  style="border: 1px solid rgb(160, 160, 243); width:80%" >
+  </ion-input>
+</ion-item>
+  <ion-button (click)="submit()" style="width:100%" >Submit</ion-button>
+
+</ion-card>
+<ion-card *ngIf="memShare">
+
+</ion-card>
+</ion-content>

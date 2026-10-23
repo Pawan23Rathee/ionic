@@ -1,0 +1,60 @@
+.main-row{
+    width: 95%;
+}
+.inr-device-col{
+    background-color: white;
+    height: 190px;
+    // border: 2px solid black;
+    margin-left: 5px;
+    margin-right: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 22px;
+}
+.device-card{
+    background-color: #009688;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+}
+
+.device-img{
+    width: 50%;
+}
+.on{
+    border:5px solid greenyellow;
+}
+.col-class{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.circle3{
+    border: 10px solid black;
+    border-radius: 50%;
+}
+.active{
+    border: 10px solid yellow;
+    border-radius: 50%;
+}
+.circle2 {
+    width: 100px;
+    height: 100px;
+    border: 15px solid #009688; /* Adjust border color and width as needed */
+    border-radius: 50%;
+  }
+  .circle1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: black;
+    border-radius: 50%;
+}
+
+.custo-font{
+    font-size: 1.4em;
+}

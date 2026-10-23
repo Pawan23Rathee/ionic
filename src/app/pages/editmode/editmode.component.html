@@ -1,0 +1,64 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-button id="btnDrawer" slot="start" (click)="navBack()" class="header-btn">
+      <ion-icon name="arrow-back" class="menu-icon" item-start></ion-icon>
+    </ion-button>
+    <ion-title class="glbl-clr-white title-pos"> Add Mode </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content fullscreen class="back">
+  <div class="fullscreen-container">
+    <ion-card class="global-background" >
+        <form style="height: 100%;" #form="ngForm" (ngSubmit)="saveeditMode(form)" (keyup.enter)="saveeditMode(form)">      
+        <ion-card-content style="height: 80%;">     
+          <ion-item>                   
+              <ion-label class="glbl-clr-white">Please select room first</ion-label>      
+              <ion-select (ionChange)="checkValue($event)"  interface="popover" placeholder="" >
+                <ion-select-option *ngFor='let r of myRooms' [value]="r"> {{r.name}}</ion-select-option>
+              </ion-select>
+          </ion-item>   
+            <!-- ......To select device............ -->
+            <div *ngIf="showDevices">
+            <!-- <ion-item *ngIf='dev_ToSelect.length == 0'><span>Sorry!</span></ion-item> -->
+             <ion-item>
+                <ion-label class="glbl-clr-white">Select Devices</ion-label>
+                 <!-- <ion-select [(ngModel)]="selectedDevs" name="deviceSelect" interface="popover" multiple="true" cancelText="Cancel" okText="OK" (ionChange)='dev_det_box=true'> -->
+                 <ion-select [(ngModel)]="selectedDevs" name="deviceSelect" multiple="true" (ionChange)='dev_det_box=true'>
+                  <ion-select-option  *ngFor='let dev of deviceAll' value="Device1" [value]="dev">{{dev.device_name}}</ion-select-option> 
+                </ion-select>            
+              </ion-item>
+              
+            </div>
+            <p *ngIf="noshowDevices" class="pText">No Devices found in this room. please select another room.</p>
+              <!-- ................................ -->
+  
+          <!-- ........Open Box To set device detail...................... -->
+            <div class="dev_status">              
+              <ion-item *ngFor='let d of selectedDevs'>
+                <div class="toogleBox">
+                  <span class="glbl-clr-white">{{d.device_name}}</span>
+                  <ion-toggle style="position: absolute; right: 20px;" name='power' slot="end" [(ngModel)]="d.status" [ngModelOptions]="{standalone: true}"
+                    checked="{{d.status}}" (ionChange)="power(d.status)"></ion-toggle>
+                  <div class="dimBox" *ngIf="d.is_dimmer=='True'">
+                    <ion-range min="{{d.minimum}}" max="{{d.maximum}}"  [(ngModel)]='d.dimmer' [ngModelOptions]="{standalone: true}" pin color="secondary" id="dimmervalue" (ionChange)="dimmer(d.dimmer)">
+                    </ion-range>
+                  </div>
+                </div>
+                
+              </ion-item>
+            </div>
+            <!-- .................................................... -->
+        </ion-card-content>
+  
+        <ion-row class="cardfooter">
+          <ion-col>
+              <ion-button (click)="navBack()" class="cancel">Cancel</ion-button>
+          </ion-col>
+          <ion-col>
+            <ion-button type="submit" class="add">Save</ion-button>
+        </ion-col>
+        </ion-row>
+      </form>
+      </ion-card> 
+    </div>
+</ion-content>

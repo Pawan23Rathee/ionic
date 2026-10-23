@@ -1,0 +1,18 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar >
+    <ion-buttons slot="start" >
+      <ion-back-button defaultHref="/ttlockoperation" ></ion-back-button>
+    </ion-buttons>
+    <ion-title style="text-align: center; ">
+      auto time
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-item>
+    <ion-label>auto time</ion-label>
+    <ion-datetime displayFormat="ss" picker-format="ss" value="05" [(ngModel)] = "time"></ion-datetime>
+    
+  </ion-item>
+  <ion-button expand="full" (click)="setAutoTime()">save</ion-button>
+</ion-content>

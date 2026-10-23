@@ -1,0 +1,22 @@
+ion-row{
+    width: 100%;
+}
+.colIcon{
+    padding-top: 10px;
+}
+#editEnter{
+    position:absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(90,90,90,0.8);
+    z-index: 9999;
+    display:none;
+}
+#dlBtn{
+    font-size: 30px;;
+}
+#round{
+    border-radius: 2%;
+}

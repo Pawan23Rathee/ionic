@@ -1,0 +1,137 @@
+ion-card {
+    // box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+    overflow: visible;
+    margin: 16px 0 24px;
+    position: relative;
+    margin-top: 76px;
+    padding-top: 60px;
+    padding-bottom: 20px;
+  
+    .img-wrapper {
+      position: absolute;
+      left: 50%;
+      top: -40px;
+      transform: translateX(-50%);
+      img {
+        // border-radius: 10px;
+        // width: 80px;
+        // height: 80px;
+        border-radius: 50%;
+    width: 91px;
+    height: 86px;
+      }
+  
+    //   ion-button {
+    //     --border-width: 1px;
+    //     --border-color: var(--ion-color-light-shade);
+    //     --border-style: solid;
+    //     --padding-start: 0;
+    //     --padding-end: 0;
+    //     --padding-bottom: 0;
+    //     --padding-top: 0;
+  
+    //     --border-radius: 50%;
+    //     height: 26px;
+    //     width: 26px;
+  
+    //     position: absolute;
+    //     right: -10px;
+    //     bottom: -10px;
+  
+    //     ion-icon {
+    //       width: 14px;
+    //       height: 14px;
+    //     }
+    //   }
+    }
+  }
+  .otp{
+    overflow: visible;
+    margin: 16px 0 24px;
+    position: relative;
+    margin-top: 76px;
+    padding-top: 1px;
+    padding-bottom: 5px;
+  
+    .img-wrapper {
+      position: absolute;
+      left: 50%;
+      top: -40px;
+      transform: translateX(-50%);
+      img {
+        border-radius: 50%;
+        width: 91px;
+        height: 86px;
+      }
+    }
+  }
+  ion-item.otp-input{
+
+    --border-color: black;
+    --border-style: solid;
+    --border-width: 2px;
+    --border-radius: 35px;
+  }
+  ion-input.otp-input{
+    --background: transparent;
+  --color: black;
+  --placeholder-color: black;
+  --placeholder-opacity: .8;
+  }
+  ion-item{
+    // --ion-background-color:#2F3c5F;
+    // padding: 5px;
+    border-radius: 25px;
+    --border-color: #f4f5f8;
+    
+ }
+ ion-label {
+   h2{
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+ a{
+     text-decoration: none;
+ }
+   } 
+    
+     
+
+ }
+
+
+.otpEnter{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 5%;
+    right: 0;
+    z-index: 9999;
+    width: 90%;
+}
+form{
+  ion-list{
+    ion-item{
+      margin: 7px 0;
+    }
+  }
+}
+ion-list{
+  margin-left: 2.5%;
+}
+ion-item {
+  --background: transparent;
+
+  --border-color: #fff;
+  --border-style: solid;
+  --border-width: 2px;
+  --border-radius: 35px;
+  width: 95%;
+  margin-left: 2.5%;
+}
+
+ion-input{
+  --background: transparent;
+  --color: #fff;
+  --placeholder-color: #fff;
+  --placeholder-opacity: .8;
+}

@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar style="--background:aliceblue;">
+    <ion-buttons slot="start" >
+      <ion-back-button defaultHref="/mainpage" (click)="backbutton()" style="color:black"></ion-back-button>
+      <!-- <ion-back-button (click)="modalcontroler.dismiss()" style="color:#fff;"></ion-back-button> -->
+    </ion-buttons>
+    <ion-title class="ion-text-center" style="color:black">Messages</ion-title>
+    <ion-icon (click)="menu()" name='md-more' slot="end" style="color: black; font-size: 30px;margin-right: 10px;"></ion-icon>
+    
+  </ion-toolbar>
+</ion-header>
+<ion-content style="--background:rgb(244 218 237) ;">
+<ion-card *ngFor="let m of messages" style="--background:white;padding:3% ;border-radius:5%" >
+   {{m.time}}<br/>
+   {{m.msg}}
+</ion-card>
+</ion-content>

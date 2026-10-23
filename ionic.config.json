@@ -1,0 +1,7 @@
+{
+  "name": "smartapp",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

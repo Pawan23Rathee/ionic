@@ -1,0 +1,23 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar >
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/ttoperation" ></ion-back-button>
+    </ion-buttons>
+    <ion-title style="text-align: center;">
+      Add IC Card
+    </ion-title>
+    <ion-buttons slot="end" >
+      <ion-button (click)="icAdd()">
+        <ion-icon slot="icon-only" ios="ellipsis-vertical" md="ellipsis-vertical"></ion-icon>      
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form #form="ngForm" (ngSubmit)="addIC(form)">
+    <ion-input name="name" type="text" ngModel required placeholder="Please enter card name"></ion-input>
+    <ion-button expand="full" type="submit" [disabled]="form.invalid">Save</ion-button>
+  </form>
+<ion-button (click)="addIcCardTTLock()">start adding IC Card</ion-button>
+</ion-content>

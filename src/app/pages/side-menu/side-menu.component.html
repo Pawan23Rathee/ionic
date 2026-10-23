@@ -1,0 +1,39 @@
+<!-- <div style="height: 50px; width: 50px; position: fixed; top: 0; left: 0;opacity:1;" (click)='openFirst()'><span></span>
+</div> -->
+<ion-menu side="start" contentId="menu" type="overlay" class="my-custom-menu" side="start" menuId="first">
+  <ion-header
+    style="height: 70px; padding-top: 3px;text-align: center;opacity: 1; text-align: center;background:whitesmoke;">
+    <ion-row>
+      <ion-col size="4">
+        <ion-avatar routerLink="/profile">
+          <img src="assets/HomePage/userblank.png" style="width: 55px; height: 55px; border-radius: 50px;">
+        </ion-avatar>
+      </ion-col>
+      <ion-col size="8" style="text-align: left;line-height:3">
+        <span style="font-size: 20px; color:black">{{user.username}}</span>
+      </ion-col>
+    </ion-row>
+  </ion-header>
+
+  <ion-content class='has-header has-subheader'>
+    <ion-list id="menu" *ngFor="let p of menuItem" lines="none">
+      <ion-item (click)="openPage(p)" [routerLink]="[p.url]" (click)="menuclick(p.title)" >
+        <ion-avatar>
+          <ion-icon [name]="p.icon" style="margin-top: 10px;width: 22px;height: 22px;"></ion-icon>
+        </ion-avatar>
+        {{p.title}}
+        <ion-icon name="chevron-forward-outline" slot="end"></ion-icon>
+      </ion-item>
+
+    </ion-list>
+    <ion-item (click)="logout()">
+      <ion-avatar>
+        <ion-icon name="log-out" style="margin-top: 10px;width: 22px;height: 22px;"></ion-icon>
+      </ion-avatar>
+      <ion-label>
+        <p style="font-size: 16px;margin-left: 10px;" class="color-black">Sign Out</p>
+      </ion-label>
+    </ion-item>
+
+  </ion-content>
+</ion-menu>

@@ -1,0 +1,48 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar >
+    <ion-buttons slot="start" style="position:absolute">
+      <ion-back-button defaultHref="/securitymodule" ></ion-back-button>
+    </ion-buttons>
+    <ion-title style="text-align: center;">
+      Security Door Lock 
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Connect your Moblie Phone to Wi-Fi</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      Enter 2.4 GHz Wi-Fi Network and  Password
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-label>Wi-Fi Name</ion-label>
+    <ion-input id="ssid" type="text" ></ion-input>
+    <ion-label>Password</ion-label>
+    <ion-input id="password" type="password" ></ion-input>
+    <ion-button expand="block" fill="outline"  (click)="next()">Next</ion-button>
+  </ion-card>
+
+  <ion-card *ngIf="show">
+    <ion-card-header>
+      <ion-card-title>Reset the Device First</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Power on the device and confirm that the smart door lock works normally
+      <ion-item>
+      <ion-label>Check when indicator is blinking rapidly</ion-label>
+    <ion-checkbox color="primary" checked="false" (ionChange)="navigateNext($event)" slot="start"></ion-checkbox>
+  </ion-item>
+  <ion-item>
+    <ion-button (click)="devicePage()">When Device gets added switch to device page</ion-button>
+  </ion-item>
+  
+  
+</ion-card-content>
+  </ion-card>
+</ion-content>

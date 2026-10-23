@@ -1,0 +1,33 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar >
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/securitymodule" ></ion-back-button>
+    </ion-buttons>
+    <ion-title style="text-align: center;" class="glbl-clr-white">
+      Add Lock
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon name="wifi-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div style="text-align: center;margin-top: 30px;" *ngIf="scanbtn">
+    <p class="glbl-clr-white">The phone need to be within 2 meters of the Smart Lock during the Pairing process.</p>
+    <img src="../../../assets/HomePage/bluetoothLock.gif">
+    <h2 class="glbl-clr-white">Touch any key to Activate the KeyPad</h2>
+    <ion-button  class="btn"  expand="round" (click)="scanLock()">scan</ion-button>
+    <p class="glbl-clr-white">Please touch any key to activate the Lock and put it in PAIRING Mode. Please Click above Scan Button...</p>
+  </div>
+<div style="text-align: center;margin-top: 30px;" *ngIf="addbtn"> 
+  <ion-button class="btn" expand="round" (click)="addLock()">Add Lock </ion-button>
+  <!-- <ion-button expand="full" (click)="lockInitialize()">Initialize lock</ion-button> -->
+</div>
+
+<ion-card *ngIf="user.lockData">
+  <p>{{user.lockData}}</p>
+</ion-card>
+</ion-content>

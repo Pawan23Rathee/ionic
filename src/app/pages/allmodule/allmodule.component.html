@@ -1,0 +1,103 @@
+<ion-header translucent class="ion-no-border" >
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/mainpage"></ion-back-button>
+    </ion-buttons>
+
+    <ion-title class="ion-text-center glbl-clr-white">Added modules</ion-title>
+    <ion-buttons slot="end" (click)='add_devices()'>
+      <ion-button>
+        <ion-icon slot="icon-only" name='add' class="glbl-clr-white"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <div>
+    <ion-card *ngFor="let dmodule of devicemodule; let d_index = index" (click)="clickDeviceModule(d_index)" class="global-background global-border">
+      <ion-item detail >
+        <ion-avatar slot="start">
+          <img src="../../../assets/product_image/triomodule.jpeg">
+        </ion-avatar>
+        <ion-label>
+          <p class="glbl-clr-white">{{dmodule.name}}</p>
+          <p class="glbl-clr-white">{{dmodule.pi_id}}</p>
+        </ion-label>
+      </ion-item>
+    </ion-card>
+  </div>
+<!-- IR module blaster API response disabling for now 9April2023 By TWS-->
+  <!-- <ion-card *ngFor="let imodule of irmodule"
+    (click)="clickIRModule(imodule.id,imodule.counter,imodule.pi_id,imodule.name)" class="global-background global-border">
+    <ion-item detail>
+      <ion-avatar slot="start">
+        <img src="../../../assets/product_image/IRBlaster.png">
+      </ion-avatar>
+      <ion-label>
+        <p class="glbl-clr-white">{{imodule.name}}</p>
+        <p class="glbl-clr-white">{{imodule.pi_id_name}}</p>
+      </ion-label>
+    </ion-item>
+  </ion-card> -->
+
+  <ion-card *ngFor="let mmodule of user.moodModule" (click)="clickMoodModule(mmodule.id, mmodule.pi_id)" class="global-background global-border">
+    <ion-item detail>
+      <ion-avatar slot="start">
+        <img src="../../../assets/product_image/mood.png">
+      </ion-avatar>
+      <ion-label>
+        <p class="glbl-clr-white">{{mmodule.name}}</p>
+        <p class="glbl-clr-white">{{mmodule.pi_id}}</p>
+      </ion-label>
+    </ion-item>
+  </ion-card>
+
+  <ion-card *ngFor="let lmodule of lockres" (click)="clickLockModule(lmodule.id,lmodule.serial_number)" class="global-background global-border">
+    <ion-item detail>
+      <ion-avatar slot="start">
+        <img src="../../../assets/product_image/doorlock.png">
+      </ion-avatar>
+      <ion-label>
+        <p class="glbl-clr-white">Door Lock</p>
+        <p class="glbl-clr-white">{{lmodule.serial_number}}</p>
+      </ion-label>
+    </ion-item>
+  </ion-card>
+
+
+  <ion-fab horizontal="end" vertical="bottom" slot="fixed">
+    <ion-fab-button >
+      <ion-icon name="wifi"></ion-icon>
+    </ion-fab-button>
+
+    <ion-fab-list side="top">
+      <ion-item (click)="gotowifipage()"
+        style="position: absolute; margin: auto; border: 1px solid; right: 20px; border-radius: 30px; height: 38px;">
+        <ion-icon style=" margin-top: 0px;" slot="start" name="wifi"></ion-icon>
+        <ion-label style=" margin-top: 0px;">Wifi Reconfiguration</ion-label>
+      </ion-item>
+      <!-- </ion-fab-list> -->
+      <ion-fab-list side="top">
+        <ion-item (click)="gotoirproductpage()"
+          style="position: absolute; margin: auto; border: 1px solid; right: 20px; border-radius: 30px; height: 38px;">
+          <ion-icon style=" margin-top: 0px;" slot="start" name="aperture"></ion-icon>
+          <ion-label style=" margin-top: 0px;">Tam Learning</ion-label>
+        </ion-item>
+      </ion-fab-list>
+
+      <!-- <ion-fab-list side="bottom">
+        <ion-item (click)="gotodyfolistlist()"
+          style="position: absolute; margin: auto; border: 1px solid; right: 55px; border-radius: 30px; height: 38px;">
+          <ion-icon style=" margin-top: 0px;padding-right: 20px;padding-bottom: 10px;"
+            src="assets/iconi5/lock-closed.svg"></ion-icon>
+          <ion-label style=" margin-top: 0px;">Dyfo lock</ion-label>
+        </ion-item>
+      </ion-fab-list> -->
+    </ion-fab-list>
+  </ion-fab>
+
+
+
+</ion-content>

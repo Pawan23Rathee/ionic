@@ -1,0 +1,14 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar >
+    <ion-buttons slot="start"  (click)="dismiss()">
+      <ion-back-button defaultHref="/ttlockdetails" ></ion-back-button>
+    </ion-buttons>
+    <ion-title style="text-align: center; ">
+      {{lockname}}
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-input [(ngModel)]="lockname"></ion-input>
+  <ion-button expand="full" (click)="submit()">Save</ion-button>
+</ion-content>

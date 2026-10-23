@@ -1,0 +1,227 @@
+<ion-header translucent class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start" defaultHref="/mainpage">
+      <ion-icon style="font-size: 26px;" name="chevron-back-outline" (click)="backbutton()"></ion-icon>
+    </ion-buttons>
+    <ion-title class="ion-text-center">Energy Managemanet</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-row class="set-border">
+    <ion-col>
+      <ion-select (ionChange)="checkValue($event)" interface="popover" placeholder="Select One">
+        <ion-select-option value="total">Total Energy Uses</ion-select-option>
+        <ion-select-option *ngFor="let c of allDevices" [value]="c">
+          {{c.device_name}} {{c.device}}</ion-select-option>
+      </ion-select>
+    </ion-col>
+  </ion-row>
+  <div *ngIf="totalSelectData">
+    <ion-card class="welcome-card">
+      <ion-card-header style="text-align: center;">
+        <ion-card-subtitle class="color-black">Total Units Consumed: Last 7 Days</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        <canvas #barChartTotalweekly></canvas>
+      </ion-card-content>
+
+      <ion-row class="rowData">
+        <ion-col size='6' class="colData">
+          <div style="display: inline-flex;">
+            <h2 class="h2Data">{{tt_w_total_watts}}</h2>
+            <p class="pData">KWH</p>
+          </div>
+          <h4 class="belowtext">Usage Today</h4>
+        </ion-col>
+
+        <ion-col size='6' class="colData">
+          <div style="display: inline-flex;">
+            <h2 class="h2Data">{{tt_w_avg_watts}}</h2>
+            <p class="pData">KWH</p>
+          </div>
+          <h4 class="belowtext">Daily Average</h4>
+        </ion-col>
+      </ion-row>
+
+      <ion-row class="rowData">
+        <ion-col size='6' class="colData">
+          <div style="display: inline-flex;">
+            <h2 class="h2Data">{{tt_w_total_hours}}</h2>
+            <p class="pData">Hrs</p>
+          </div>
+          <h4 class="belowtext">Usage Today</h4>
+        </ion-col>
+
+        <ion-col size='6' class="colData">
+          <div style="display: inline-flex;">
+            <h2 class="h2Data">{{tt_w_avg_hours}}</h2>
+            <p class="pData">Hrs</p>
+          </div>
+          <h4 class="belowtext">Daily Average</h4>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+
+
+
+
+    <ion-card class="welcome-card">
+      <ion-card-header style="text-align: center;">
+        <ion-card-subtitle class="color-black">Total Units Consumed: Last 5 Months</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        <canvas #barChartTotalmonthly></canvas>
+      </ion-card-content>
+
+      <ion-row class="rowData">
+        <ion-col size='6' class="colData">
+          <div style="display: inline-flex;">
+            <h2 class="h2Data">{{tt_m_total_watts}}</h2>
+            <p class="pData">KWH</p>
+          </div>
+          <h4 class="belowtext">Usage current month</h4>
+        </ion-col>
+
+        <ion-col size='6' class="colData">
+          <div style="display: inline-flex;">
+            <h2 class="h2Data">{{tt_m_avg_watts}}</h2>
+            <p class="pData">KWH</p>
+          </div>
+          <h4 class="belowtext">Monthly Average</h4>
+        </ion-col>
+      </ion-row>
+
+      <ion-row class="rowData">
+        <ion-col size='6' class="colData">
+          <div style="display: inline-flex;">
+            <h2 class="h2Data">{{tt_m_total_hours}}</h2>
+            <p class="pData">Hrs</p>
+          </div>
+          <h4 class="belowtext">Usage Current Month</h4>
+        </ion-col>
+        <ion-col size='6' class="colData">
+          <div style="display: inline-flex;">
+            <h2 class="h2Data">{{tt_m_avg_hours}}</h2>
+            <p class="pData">Hrs</p>
+          </div>
+          <h4 class="belowtext">Monthly Average</h4>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+
+  </div>
+
+  <div *ngIf="deviceSelectData">
+    <ion-card class="welcome-card">
+      <ion-card-header style="text-align: center;">
+        <ion-card-subtitle>Units Consumed: Last 7 Days</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        <canvas #barChartweekly></canvas>
+      </ion-card-content>
+
+      <ion-row class="rowData">
+        <ion-col size='6' class="colData">
+          <div style="display: inline-flex;">
+            <h2 class="h2Data">{{w_total_watts}}</h2>
+            <p class="pData">KWH</p>
+          </div>
+          <h4 class="belowtext">Usage Today</h4>
+        </ion-col>
+
+        <ion-col size='6' class="colData">
+          <div style="display: inline-flex;">
+            <h2 class="h2Data">{{w_avg_watts}}</h2>
+            <p class="pData">KWH</p>
+          </div>
+          <h4 class="belowtext">Daily Average</h4>
+        </ion-col>
+      </ion-row>
+
+      <ion-row class="rowData">
+        <ion-col size='6' class="colData">
+          <div style="display: inline-flex;">
+            <h2 class="h2Data">{{w_total_hours}}</h2>
+            <p class="pData">Hrs</p>
+          </div>
+          <h4 class="belowtext">Usage Today</h4>
+        </ion-col>
+
+        <ion-col size='6' class="colData">
+          <div style="display: inline-flex;">
+            <h2 class="h2Data">{{w_avg_hours}}</h2>
+            <p class="pData">Hrs</p>
+          </div>
+          <h4 class="belowtext">Daily Average</h4>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+
+
+    <!-- <ion-card class="welcome-card">
+     <ion-card-header>
+      <ion-card-subtitle>Daily Uses</ion-card-subtitle>
+    </ion-card-header>
+    <div><canvas #barChart></canvas></div>
+  </ion-card> -->
+
+    <!-- <ion-card class="welcome-card">
+    <ion-card-header>
+      <ion-card-subtitle>Weekly Energy Uses</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <canvas #barChart2></canvas>
+    </ion-card-content>
+  </ion-card> -->
+
+    <ion-card class="welcome-card">
+      <ion-card-header style="text-align: center;">
+        <ion-card-subtitle>Units Consumed: Last 5 Months</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        <canvas #barChartmonthly></canvas>
+      </ion-card-content>
+
+      <ion-row class="rowData">
+        <ion-col size='6' class="colData">
+          <div style="display: inline-flex;">
+            <h2 class="h2Data">{{m_total_watts}}</h2>
+            <p class="pData">KWH</p>
+          </div>
+          <h4 class="belowtext">Usage current month</h4>
+        </ion-col>
+        <!-- <ion-col size='2'></ion-col> -->
+        <ion-col size='6' class="colData">
+          <div style="display: inline-flex;">
+            <h2 class="h2Data">{{m_avg_watts}}</h2>
+            <p class="pData">KWH</p>
+          </div>
+          <h4 class="belowtext">Monthly Average</h4>
+        </ion-col>
+      </ion-row>
+
+      <ion-row class="rowData">
+        <ion-col size='6' class="colData">
+          <div style="display: inline-flex;">
+            <h2 class="h2Data">{{m_total_hours}}</h2>
+            <p class="pData">Hrs</p>
+          </div>
+          <h4 class="belowtext">Usage Current Month</h4>
+        </ion-col>
+        <!-- <ion-col size='2'></ion-col> -->
+        <ion-col size='6' class="colData">
+          <div style="display: inline-flex;">
+            <h2 class="h2Data">{{m_avg_hours}}</h2>
+            <p class="pData">Hrs</p>
+          </div>
+          <h4 class="belowtext">Monthly Average</h4>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+
+
+  </div>
+
+
+</ion-content>

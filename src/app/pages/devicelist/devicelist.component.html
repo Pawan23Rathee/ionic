@@ -1,0 +1,71 @@
+<ion-header class="ion-no-border" [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/settings"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="glbl-clr-white title-pos">Devices</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content overflow-scroll="true">
+  <ion-scroll scrollX="true" scrollY="true">
+    <ion-row class="main-row">
+      
+      <ion-col size=12 class="glbl-text-cntr">
+        <ion-label class="custo-font">{{room_name}}</ion-label>
+      </ion-col>
+      <ion-col size=12>
+        <div *ngIf="device_inRoom_is_dimmer_false.length == 0" style="text-align: center;padding: 50px;margin-top: 50px;">
+          <p>Add your  devices here for easy control</p>
+        </div>
+      </ion-col>
+      <ion-col size=6 *ngFor="let device of device_inRoom_is_dimmer_false" class="device-col"
+        (click)="changeLightStatus($event, device.device, device.status,device.id);">
+        <!-- 3880ff,,  009688 -->
+        <ion-row class="inr-device-row"
+          (press)="clickdeviceforstatus(device.device,device.status,device.device_name,device.device_id)">
+          <ion-col size=12 class="inr-device-col">
+            <!-- <div>
+              <ion-card class="device-card" [ngClass]="device.status == 'True' ? 'on':''">
+                <img src="{{this.showIcon(device.device_type)}}" class="device-img">
+              </ion-card>
+            </div> -->
+            <ion-row>
+              <ion-col size="12" class="col-class">
+                <div class="circle3" [ngClass]="device.status == 'True' ? 'active':''">
+                  <div class="circle2">
+                    <div class="circle1">
+                      <img src="{{this.showIcon(device.device_type)}}" class="device-img">
+                    </div>
+                  </div>
+                </div>
+              </ion-col>
+              <ion-col size="12" class="glbl-text-cntr">
+                <span class="device-name glbl-clr-white" style="margin-top:5px;margin-bottom: 10px;"
+              text-wrap>{{device.device_name}}</span>
+              </ion-col>
+            </ion-row>
+            <!-- <div class="circle3" [ngClass]="device.status == 'True' ? 'active':''">
+              <div class="circle2">
+                <div class="circle1">
+                  <img src="{{this.showIcon(device.device_type)}}" class="device-img">
+                </div>
+              </div>
+            </div> -->
+            <!-- <ion-div>
+              <span class="device-name glbl-clr-white" style="margin-top:5px;margin-bottom: 10px;"
+              text-wrap>{{device.device_name}}</span>
+            </ion-div> -->
+            <!-- <span class="device-name glbl-clr-white" style="margin-top:5px;margin-bottom: 10px;"
+            text-wrap>{{device.device_name}}</span> -->
+          </ion-col>
+          <!-- <ion-col size=12 class="glbl-text-cntr">
+            <span class="device-name glbl-clr-white" style="margin-top:5px;margin-bottom: 10px;"
+              text-wrap>{{device.device_name}}</span>
+          </ion-col> -->
+        </ion-row>
+      </ion-col>
+    </ion-row>
+  </ion-scroll>
+</ion-content>
+
+<app-footer></app-footer>

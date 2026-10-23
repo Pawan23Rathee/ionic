@@ -1,0 +1,28 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar >
+    <ion-buttons slot="start" >
+      <ion-back-button defaultHref="/ttoperation" ></ion-back-button>
+    </ion-buttons>
+    <ion-title style="text-align: center;">
+      Added Fingerprint
+    </ion-title>
+    <ion-buttons slot="end" >
+      <ion-button (click)="fingerAdd()">
+        <ion-icon slot="icon-only" ios="ellipsis-vertical" md="ellipsis-vertical"></ion-icon>      
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-list>
+    <ion-item lines="full" *ngFor="let tt of fingerdata" (click)="fingerpersonDetails(tt.fingerprintNumber,tt.fingerprintName,tt.fingerprintId)">
+      <ion-avatar slot="start" id="avatar">
+        <ion-icon name="finger-print-outline">
+        </ion-icon>
+      </ion-avatar>
+      <ion-label id="label">{{tt.fingerprintName}}</ion-label>
+    </ion-item>
+  </ion-list>
+  <ion-button (click)="fingList()">fing list</ion-button>
+  <!-- <ion-button (click)="fingerAddButton()" >Add lock</ion-button> -->
+</ion-content>

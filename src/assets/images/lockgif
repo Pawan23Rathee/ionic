@@ -1,0 +1,3458 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+  
+
+  
+
+  
+
+
+<!-- Mobile metas, for responsive design -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Base page info -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="google-site-verification" content="kwaga5XnnPgXviy_075V8_D58lnCIRxiTFRydC7ynBQ">
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<link rel="publisher" href="https://plus.google.com/112296088154859033980">
+<!-- Base fonts -->
+
+<link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,300italic,400,400italic,500,600,600italic,700,700italic,800|Raleway:100,200,300,400,500,600,700,800|Open+Sans:100,200,300,400,500,600,700,800|Shadows+Into+Light|Source+Sans+Pro:100,200,300,300italic,400,400italic,500,500italic,600,700,800," rel="stylesheet">
+<link href="/css/font-awesome.min.css" rel="stylesheet">
+<link href="/css/font-files.css?v=21.1.17.1202ae" rel="stylesheet">
+<!-- Base CSS -->
+<link href="/css/bootstrap3.css?v=21.1.17.1202ae" rel="stylesheet">
+<link href="/css/jasny-bootstrap.css?v=21.1.17.1202ae" rel="stylesheet">
+<link href="/css/site.css?v=21.1.17.1202ae" rel="stylesheet" media="screen,projection">
+<!--[if IE]><link href="/css/ie.css?v=21.1.17.1202ae" rel="stylesheet" media="screen,projection"><![endif]-->
+<!--[if IE 7]><link href="/css/font-awesome-ie7.min.css" rel="stylesheet"><![endif]-->
+<!-- Base JS -->
+<script src="/js/jquery/jquery-1.11.0.min.js"></script>
+<script src="/js/bootstrap3.min.js"></script>
+<script src="/js/jasny-bootstrap.min.js"></script>
+<script src="/js/jquery.cookie.js?v=21.1.17.1202ae"></script>
+<script src="/js/modernizr.js?v=21.1.17.1202ae"></script>
+<script src="/js/global-js.js?v=21.1.17.1202ae"></script>
+<!--[if IE 8]><script src="/js/respond.js?v=21.1.17.1202ae" async></script><![endif]-->
+
+<script>
+jsContextFromServer = {};
+
+$(function() {
+  $( '.headerBurger button' ).on( 'click', function() {
+    //$('html,body').scrollTop(0);
+    scrollTo( 0, 0 );
+    if( document.body.parentNode.style.overflow == 'hidden' )
+    {
+      $( 'html' ).css( 'overflow', '' );
+    }
+    else
+    {
+      $( 'html' ).css( 'overflow', 'hidden' );
+    }
+  });
+});
+</script>
+
+<!-- if url = renewSuccess then create gtm will happen locally-->
+
+<!-- header_adsense -->
+
+<!-- Google Tag Manager -->
+<script>
+if (window.location.href.indexOf("renewSuccess") < 0) {
+
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MCKVWJR');
+
+}
+</script>
+<!-- End Google Tag Manager -->
+
+<style>
+/* The Modal (background) */
+.modal-sale {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1000;
+    /* Sit on top */
+    padding-top: 180px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.6);
+    /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content-sale {
+    background-color: #fff;
+    margin: auto;
+    width: 550px;
+    height: 550px;
+    background-image: url("https://images.sharefaith.com/images/img/3/central/images/sales-promo/cyber-monday-2020/sharefaith%20cyber%20monday%20v2.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    cursor: pointer;
+    opacity: 1;
+    /* Firefox */
+    -moz-transition: opacity 1s ease;
+    /* WebKit */
+    -webkit-transition: opacity 1s ease;
+    /* Opera */
+    -o-transition: opacity 1s ease;
+    /* Standard */
+    transition: opacity 1s ease;
+}
+
+/* The Close Button */
+.close-sale {
+    color: #fff;
+    font-size: 28px;
+    font-weight: 900;
+    position: relative;
+    top: -16px;
+    left: 532px;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    background-color: black;
+    height: 30px;
+    width: 30px;
+    display: block;
+    text-align: center;
+    border: solid #fff 2px;
+    /* Firefox */
+    -moz-transition: all 1s ease;
+    /* WebKit */
+    -webkit-transition: all 1s ease;
+    /* Opera */
+    -o-transition: all 1s ease;
+    /* Standard */
+    transition: all 1s ease;
+    -webkit-box-sizing: content-box !important;
+    -o-box-sizing: content-box !important;
+    -moz-box-sizing: content-box !important;
+    box-sizing: content-box !important;
+    line-height: 29px;
+    cursor: pointer;
+}
+
+.close-sale:hover,
+.close-sale:focus {
+    color: lightgray;
+    text-decoration: none;
+    cursor: pointer;
+    /* Firefox */
+    -moz-transform: rotate(180deg);
+    /* WebKit */
+    -webkit-transform: rotate(180deg);
+    /* Opera */
+    -o-transform: rotate(180deg);
+    /* Standard */
+    transform: rotate(180deg);
+}
+
+.hidden-sale {
+    opacity: 0;
+}
+
+@media ( max-width: 940px) {
+    .modal-content-sale {
+        background-color: #fefefe;
+        margin: auto;
+        width: 85vw;
+        height: 85vw;
+        padding: 0;
+        background-image: url("https://images.sharefaith.com/images/img/3/central/images/sales-promo/cyber-monday-2020/sharefaith%20cyber%20monday%20v2.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center, center;
+        cursor: pointer;
+        opacity: 1;
+        /* Firefox */
+        -moz-transition: all 1s ease;
+        /* WebKit */
+        -webkit-transition: all 1s ease;
+        /* Opera */
+        -o-transition: all 1s ease;
+        /* Standard */
+        transition: all 1s ease;
+        -webkit-box-sizing: content-box !important;
+        -o-box-sizing: content-box !important;
+        -moz-box-sizing: content-box !important;
+        box-sizing: content-box !important;
+        line-height: 29px;
+    }
+    .close-sale {
+        color: #fff;
+        font-size: 28px;
+        font-weight: 900;
+        position: static;
+        top: 0;
+        right: 0;
+        float: right;
+        margin: -17px;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+        background-color: black;
+        height: 30px;
+        width: 30px;
+        display: block;
+        text-align: center;
+        border: solid #fff 2px;
+        /* Firefox */
+        -moz-transition: all 1s ease;
+        /* WebKit */
+        -webkit-transition: all 1s ease;
+        /* Opera */
+        -o-transition: all 1s ease;
+        /* Standard */
+        transition: all 1s ease;
+        -webkit-box-sizing: content-box !important;
+        -o-box-sizing: content-box !important;
+        -moz-box-sizing: content-box !important;
+        box-sizing: content-box !important;
+    }
+}
+</style>
+
+<!-- The Modal -->
+<!--<div id="sales-modal" class="modal-sale hidden-sale">-->
+  <!-- Modal content -->
+  <!--<div class="modal-content-sale">
+    <span class="close-sale">&times;</span>
+  </div>
+</div>-->
+
+<script>
+if ( location.href.indexOf('sales-and-promos')==-1 && location.href.indexOf('joinNow.do')==-1) { // Use `false` to disable popup
+    document.onreadystatechange = function() {
+        if (document.readyState === 'complete') {
+            if (sessionStorage["PopupShown"] != 'yes') {
+                if ($.cookie('popup') != 'seen') {
+                    // Get the modal
+                    var modal = document.getElementById('sales-modal');
+                    if (modal) {
+                        modal.style.display = "block";
+
+                        var elems = document.querySelectorAll(".hidden-sale");
+                        [].forEach.call(elems, function(el) {
+                            el.className = el.className.replace(/\bhidden-sale\b/, "");
+                        });
+
+                        $.cookie('popup', 'seen', {
+                            expires: 1,
+                            path: '/'
+                        });
+                        sessionStorage["PopupShown"] = 'yes';
+
+                        // Get the <span> element that closes the modal
+                        var span = document.getElementsByClassName("close-sale")[0];
+
+                        // When the user clicks on <span> (x), close the modal
+                        span.onclick = function() {
+                            modal.style.display = "none";
+                        }
+
+                        var modalContent = document.getElementsByClassName("modal-content-sale");
+
+                        // When the user clicks anywhere outside of the modal, close it
+                        window.onclick = function(event) {
+                            if (event.target == modal) {
+                                modal.style.display = "none";
+                            }
+
+                            if (event.target == modalContent[0]) {
+                                window.location.href = "/cyber-monday-offer/";
+                            }
+                        }   
+                    }
+                }
+            }
+        }
+    };
+}
+</script>
+
+<!--- end header.jsp -->
+
+
+<title>Free Trial Registration</title>
+<!-- begin regOnePageFT.jsp -->
+
+<link href="https://de411bmyfix7d.cloudfront.net/css/planSelectionBody.css" type="text/css" rel="stylesheet" />
+<style type="text/css">
+    #plan-selection div.featured-boxes div.featured-box{margin-top:25px;}
+</style>
+
+<script src='https://www.google.com/recaptcha/api.js'></script>
+
+
+
+
+
+
+<!-- begin html site-head.jsp -->
+<link rel="stylesheet" href="/js/mediaelement/mediaelementplayer.min.css" />
+<link href="/css/siteHeader.css" type="text/css" rel="stylesheet" />
+
+<script src="/js/mediaelement/mediaelement-and-player.min.js" type="text/javascript"></script>
+<script src="/js/mouseover.js" type="text/javascript"></script>
+
+<script>
+$(function(){
+    $('[data-toggle="tooltip"]').tooltip();
+    //Hover not just click, product menu:
+    $(".nav >.dropdown").on('mouseover', function(){
+       	$(this).addClass('open');
+   	})
+   	.on('mouseout', function(){
+       	$(this).removeClass('open');
+   	});
+});
+</script>
+
+
+<!-- Gets re-rendered : end main header -->
+</head>
+<body class="sticky-menu-active" data-twttr-rendered="true">
+<div id="topBodyContainer" style="display: none; position: absolute; width: 100vw; height: 100vh; left: 0; top: 0"></div>
+
+<!-- HTML Body/Head Wrapper -->
+<div class="body">
+    <header class="flattened clean-top top-border header_logged_out">
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header centered-header">
+                    <span class="col-xs-4"></span>
+                    <a class="col-xs-4" href="/" style="text-align: center; padding:0"><img align="middle" src="/images/n_sharefaith_logo3.png" alt="ShareFaith.com" align="left" id="middleSharefaithLogo"/></a>
+                    <span class="col-xs-4"></span>
+                </div>
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header large-header">
+                    <div class="col-xs-3 headerLogo"><a href="/"><img src="/images/n_sharefaith_logo3.png"
+                        alt="ShareFaith.com" align="left" id="sharefaith_logo"/></a></div>
+                    <div class="col-xs-9 headerLinks">
+                          <span id="header_large" class="">
+                                <a id="homeShowBtn" href="/faith/home.do" class="btn btn-link" >Home</a>
+                                <ul class="nav navbar-nav">
+                                    <li style="display:none"><a href="#"><span class="sr-only">(current)</span></a></li>
+    <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Products&nbsp;<i class="icon icon-angle-down"></i></a>
+        <ul class="dropdown-menu" role="menu"><!-- as in wp: -->
+	<li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-47 current_page_item menu-item-790"><a href="https://www.sharefaith.com/online-giving-for-churches-easily-take-donations-via-mobile-or-text/" aria-current="page" class="elementor-sub-item elementor-item-active">Giving &amp; Donations</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-791"><a href="/category/church-graphics.html" class="elementor-sub-item">Church Graphics</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-792"><a href="/graphics-editor/" class="elementor-sub-item">Graphics Editor</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-793"><a href="/church-websites/" class="elementor-sub-item">Church Websites</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-794"><a href="https://hello.sharefaith.com/live-streaming-free-trial" class="elementor-sub-item">Live Streaming</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-795"><a href="/category/sunday-school-activities-kids-bible-stories-and-videos.html" class="elementor-sub-item">Sunday School Lessons</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-796"><a href="/kids-vacation-bible-school/" class="elementor-sub-item">Kids Vacation Bible School</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-797"><a href="/sunday-school-lesson-scheduler/" class="elementor-sub-item">Kids Scheduler</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-798"><a href="/sharefaith-ministry-background-checks/" class="elementor-sub-item">Background Checks</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-799"><a href="/church-website-migration/" class="elementor-sub-item">Website Migration</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-800"><a href="/church-app/" class="elementor-sub-item">Church Mobile Apps</a></li>
+        </ul>
+    </li>
+		
+                                </ul>
+                                <a id="aboutUsShowBtn" href="/faith/about/view.do" class="btn btn-link" >About Us</a>
+                                <a id="reviewsShowBtn" href="/category/sharefaith-reviews.html" class="btn btn-link" >Reviews</a>
+                                <a id="blogShowBtn" href="/blog/" class="btn btn-link" >Magazine</a>
+                                <a id="supportShowBtn" href="//support.sharefaith.com" class="btn btn-link" rel="nofollow">Support</a>
+                                <a id="loginShowBtn" href="/faith/member.do" class="btn btn-link">Login</a>
+                                <a id="priceShowBtn" href="/faith/joinNow.do" class="btn btn-link">Memberships</a>
+                                <a id="freetrialShowBtn" href="/feature/sharefaith-free-trial.html" class="btn btn-link">Free Trial</a>
+                            </span>
+                        
+                    </div>
+                </div>
+                <div class="navbar-header mobile-header">
+                    <div class="col-xs-2 col-sm-4 headerBurger">
+                        <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-recalc="false"
+                            data-target="#bs-example-navbar-collapse-1" data-canvas=".canvas">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="text-bar">MENU</span>
+                        </button>
+                    </div>
+                    <div class="col-xs-8 col-sm-4 col-lg-11 headerLogo"><a href="/"><img src="/images/n_sharefaith_logo3.png"
+                        alt="ShareFaith.com" align="left" id="sharefaith_logo"/></a></div>
+                    <div class="col-xs-2 col-sm-4 rightmenu">
+                    <a id="priceShowBtnmini" href="/faith/joinNow.do" class="btn btn-link">Memberships</a>
+                    <a id="freetrialShowBtnmini" href="/feature/sharefaith-free-trial.html" class="btn btn-link">Free Trial</a>
+                    </div>
+                </div>
+            </div><!-- /.container-fluid -->
+        </nav>
+    </header><!--/header-->
+
+    <div class="navmenu navmenu-default navmenu-fixed-left smMenu" id="bs-example-navbar-collapse-1">
+        
+        <ul class="nav navbar-nav slideMainMenu">
+	    	<li style="display:none"><a href="#"><span class="sr-only">(current)</span></a></li>
+	    	<li><a id="homeShowBtn" href="/faith/home.do"  class="btn btn-link" >Home</a></li>
+        	    <li style="display:none"><a href="#"><span class="sr-only">(current)</span></a></li>
+    <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Products&nbsp;<i class="icon icon-angle-down"></i></a>
+        <ul class="dropdown-menu" role="menu"><!-- as in wp: -->
+	<li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-47 current_page_item menu-item-790"><a href="https://www.sharefaith.com/online-giving-for-churches-easily-take-donations-via-mobile-or-text/" aria-current="page" class="elementor-sub-item elementor-item-active">Giving &amp; Donations</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-791"><a href="/category/church-graphics.html" class="elementor-sub-item">Church Graphics</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-792"><a href="/graphics-editor/" class="elementor-sub-item">Graphics Editor</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-793"><a href="/church-websites/" class="elementor-sub-item">Church Websites</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-794"><a href="https://hello.sharefaith.com/live-streaming-free-trial" class="elementor-sub-item">Live Streaming</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-795"><a href="/category/sunday-school-activities-kids-bible-stories-and-videos.html" class="elementor-sub-item">Sunday School Lessons</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-796"><a href="/kids-vacation-bible-school/" class="elementor-sub-item">Kids Vacation Bible School</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-797"><a href="/sunday-school-lesson-scheduler/" class="elementor-sub-item">Kids Scheduler</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-798"><a href="/sharefaith-ministry-background-checks/" class="elementor-sub-item">Background Checks</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-799"><a href="/church-website-migration/" class="elementor-sub-item">Website Migration</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-800"><a href="/church-app/" class="elementor-sub-item">Church Mobile Apps</a></li>
+        </ul>
+    </li>
+		
+       		<li><a id="aboutUsShowBtn" href="/faith/about/view.do"  class="btn btn-link" >About Us</a></li>
+       		<li><a id="reviewsShowBtn" href="/category/sharefaith-reviews.html" class="btn btn-link" >Reviews</a></li>
+       		<li><a id="blogShowBtn" href="/blog/" class="btn btn-link" >Magazine</a></li>
+       		<li><a id="supportShowBtn" href="//support.sharefaith.com" class="btn btn-link" rel="nofollow">Support</a></li>
+        	<li><a id="loginShowBtn" href="/faith/member.do" class="btn btn-link">Login</a></li>
+        	<!-- <li><a id="priceShowBtn" href="/faith/planSelection.do" class="btn btn-link">Join Now</a></li>
+        	<li><a id="freetrialShowBtn" href="/feature/sharefaith-free-trial.html" class="btn btn-link">Try Free</a></li> -->
+		</ul>
+		
+        <br/><br/>
+    </div><!-- /.navbar-collapse -->
+
+    
+    
+    <!-- HEADER_topbanner -->
+<noscript>
+    <div>Your browser does not support JavaScript!</div>
+</noscript>
+<style>
+noscript div {
+    background-color: #ED4039;
+    width: 100%;
+    height: 40px;
+    display: block;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 17px;
+    font-weight: 100;
+    color: #fff;
+    padding-top: 10px;
+}
+
+/* MAIN FULL WIDTH BANNER ACROSS SITE */
+.top-header-bar-banner {
+    text-transform: uppercase;
+    display: block;
+    width: 100%;
+    height: 65px;
+    z-index: 999;
+    background-color: #be2c13;
+    color: #fff;
+    border: none;
+    text-align: left;
+    font-size: 15px;
+    text-decoration: none;
+    margin-top: 0px;
+}
+.top-header-bar-banner > .col-xs-12 {
+    padding-top: 5px;
+    background-color:#be2c13;
+}
+
+/* TEXT COLORS AND FONTS */
+.top-header-bar-banner span.sale-text1 {
+    font-family: "proxima nova",Arial,sans-serif;
+    line-height: 60px;
+    vertical-align: top;
+}
+.top-header-bar-banner .countdownTimer {
+    margin: auto;
+    max-width: 1024px;
+}
+.full-banner-background-color {
+    margin-top: -8px;
+}
+#trial_bar {
+    margin-bottom: 0px !important;
+}
+.mediaBody .hero-section.kidsLP {
+    height: 590px;
+}
+.mediaBody .kidsLP .slider.hero {
+    height: 590px;
+}
+
+@media (max-width: 924px) {
+    .top-header-bar-banner {
+        font-size: 12px !important;
+    }
+    .top-header-bar-banner .countdownTimer > div.col-xs-12 {
+        text-align: center;
+    }
+}
+
+body .modal-content-sale {
+ height:289px; /* for non square blackfriday*/
+}
+
+/*
+@media (max-width: 479px) {
+.mediaBody .kidsLP .hero-headline {margin-top:200px}
+.mediaBody .kidsLP .characterbox {background-position: 50% 130%;}
+}
+*/
+</style>
+
+<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel='stylesheet' type='text/css' />
+<link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css' />
+
+<!--  BANNER HTML -->
+
+<link rel="stylesheet" href="https://images.sharefaith.com/images/img/3/central/css/flipclock.css" type="text/css"/>
+<script type="text/javascript" src="https://images.sharefaith.com/images/img/3/central/js/flipclock.min.js"></script>
+
+<a href="/cyber-monday-offer/" id="top-banner-countdown-link" style="display: none"
+    title="Cyber Monday Sale! Save 20%"
+><div class="top-header-bar-banner canvas">
+    <div class="col-xs-12"><div class="countdownTimer">
+        <div class="col-xs-12 col-md-6"><div class="clock"></div></div>
+        <div class="col-xs-12 col-md-6"><span style="vertical-align: top;line-height:60px !important;">
+            Cyber Monday Sale! 20% Off new membership/upgrades <i class="icon icon-angle-right" style="line-height: 60px;"></i>
+        </span></div>
+    </div></div>
+</div></a>
+
+
+<script>
+// Set the time in the future to count down to from now; set to 0 to disable the timer
+COUNTDOWN_TO_TIME = new Date("November 30, 2020 23:59:59");
+
+$(function($) {
+    var countdownTo;
+    if ((!! COUNTDOWN_TO_TIME) && COUNTDOWN_TO_TIME > 0) {
+        var tzOffsetMillis = (-8 + (COUNTDOWN_TO_TIME.getTimezoneOffset() / 60)) * 1000 * 60 * 60; // PST
+        countdownTo = new Date(COUNTDOWN_TO_TIME.getTime() - tzOffsetMillis);
+    } else {
+        countdownTo = 0;
+    }
+    var secondsLeft = Math.ceil((countdownTo - (new Date())) / 1000);
+    if (secondsLeft > 0) {
+        $('.clock').FlipClock(secondsLeft, {
+            clockFace: 'DailyCounter',
+            countdown: true
+        });
+        $('.top-header-bar-banner').show();
+        $('#top-banner-countdown-link').show();
+    }
+
+    // None of the below is needed since we use FlipClock...
+    //
+    //// Number of seconds in every time division
+    //var days    = 24*60*60,
+    //    hours   = 60*60,
+    //    minutes = 60;
+    //
+    //// Creating the plugin
+    //$.fn.countingdown = function(prop) {
+    //    var options = $.extend({
+    //        callback:  function() {},
+    //        timestamp: 0
+    //    }, prop);
+    //
+    //    if (options.timestamp <= 0) {
+    //        return;
+    //    }
+    //
+    //    // Initialize the plugin
+    //    init(this, options);
+    //
+    //    var positions = this.find('.position');
+    //
+    //    (function tick() {
+    //        // Time left
+    //        var left = Math.floor((options.timestamp - (new Date())) / 1000);
+    //        if (left < 0) {
+    //            left = 0;
+    //        }
+    //
+    //        // Number of days left
+    //        var d = Math.floor(left / days);
+    //        updateDuo(0, 1, d);
+    //        left -= d * days;
+    //
+    //        // Number of hours left
+    //        var h = Math.floor(left / hours);
+    //        updateDuo(2, 3, h);
+    //        left -= h * hours;
+    //
+    //        // Number of minutes left
+    //        var m = Math.floor(left / minutes);
+    //        updateDuo(4, 5, m);
+    //        left -= m * minutes;
+    //
+    //        // Number of seconds left
+    //        var s = left;
+    //        updateDuo(6, 7, s);
+    //
+    //        // Calling an optional user supplied callback
+    //        options.callback(d, h, m, s);
+    //
+    //        // Scheduling another call of this function in 1s
+    //        setTimeout(tick, 1000);
+    //    })();
+    //
+    //    return this;
+    //};
+    //
+    //function init(elem, options) {
+    //    elem.addClass('countdownHolder');
+    //
+    //    // Creating the markup inside the container
+    //    //$.each(['Days','Hours','Minutes','Seconds'],function(i){
+    //    $('<span class="countDays">').html(
+    //          '<span class="position" style="display:none;">'
+    //        + '<span class="digit static">0</span>'
+    //        + '</span>'
+    //        + '<span class="position"><span class="digit static">0</span></span>'
+    //    ).appendTo(elem);
+    //    elem.append('<span class="countDiv countDiv0"><div style="top:7px;position:absolute;top: 1px;left: 3px;">D</div></span>');
+    //
+    //    $('<span class="countHours">').html(
+    //          '<span class="position">'
+    //        + '<span class="digit static">0</span>'
+    //        + '</span>'
+    //        + '<span class="position"><span class="digit static">0</span></span>'
+    //    ).appendTo(elem);
+    //    elem.append('<span class="countDiv countDiv1"><div style="top:7px;position:absolute;top: 1px;left: 3px;">H</div></span>');
+    //
+    //    $('<span class="countMinutes">').html(
+    //          '<span class="position">'
+    //        + '<span class="digit static">0</span>'
+    //        + '</span>'
+    //        + '<span class="position"><span class="digit static">0</span></span>'
+    //    ).appendTo(elem);
+    //    elem.append('<span class="countDiv countDiv2"><div style="top:7px;position:absolute;top: 1px;left: 3px;">M</div></span>');
+    //
+    //    $('<span class="countSeconds">').html(
+    //          '<span class="position">'
+    //        + '<span class="digit static">0</span>'
+    //        + '</span>'
+    //        + '<span class="position"><span class="digit static">0</span></span>'
+    //    ).appendTo(elem);
+    //    elem.append('<span class="countDiv countDiv3"><div style="top:7px;position:absolute;top: 1px;left: 3px;">S</div></span>');
+    //}
+    //
+    //// This function updates two digit positions at once
+    //function updateDuo(minor, major, value) {
+    //    switchDigit(positions.eq(minor), Math.floor(value / 10) % 10);
+    //    switchDigit(positions.eq(major), value % 10);
+    //}
+    //
+    //// Creates an animated transition between the two numbers
+    //function switchDigit(position, number) {
+    //    var digit = position.find('.digit')
+    //
+    //    if (digit.is(':animated')) {
+    //        return false;
+    //    }
+    //
+    //    if (position.data('digit') == number) {
+    //        // We are already showing this number
+    //        return false;
+    //    }
+    //
+    //    position.data('digit', number);
+    //
+    //    var replacement = $('<span>', {
+    //        'class': 'digit',
+    //        css: {
+    //            top: '-2.1em',
+    //            opacity: 0
+    //        },
+    //        html: number
+    //    });
+    //
+    //    // The .static class is added when the animation
+    //    // completes. This makes it run smoother.
+    //    digit
+    //        .before(replacement)
+    //        .removeClass('static')
+    //        .animate({ top: '2.5em', opacity: 0 }, 'fast', function() {
+    //            digit.remove();
+    //        });
+    //
+    //    replacement
+    //        .delay(100)
+    //        .animate({ top: 0, opacity: 1 }, 'fast', function() {
+    //            replacement.addClass('static');
+    //        });
+    //}
+});
+
+// This is now disabled since we use FlipClock
+///* COUNTDOWN TIMER SETTINGS */
+//$(function() {
+//    if (! COUNTDOWN_TO_TIME || (new Date()) > COUNTDOWN_TO_TIME) {
+//        // HIDE THE WHOLE BANNER IF WE REACHED OUR DATE
+//        $('.top-header-bar-banner').hide();
+//    } else {
+//        var note = $('#note');
+//        $('.custom-clock').countingdown({
+//            timestamp: COUNTDOWN_TO_TIME,
+//            callback: function(days, hours, minutes, seconds) {
+//                days = ("0" + days).slice(-2);
+//                hours = ("0" + hours).slice(-2);
+//                minutes = ("0" + minutes).slice(-2);
+//                seconds = ("0" + seconds).slice(-2);
+//
+//                var message = "";
+//
+//                //message += days + " day" + ( days==1 ? '':'s' ) + ", ";
+//                //message += hours + " hour" + ( hours==1 ? '':'s' ) + ", ";
+//                //message += minutes + " minute" + ( minutes==1 ? '':'s' ) + " and ";
+//                //message += seconds + " second" + ( seconds==1 ? '':'s' ) + " ";
+//
+//                message += days + "d ";
+//                message += hours + ":" ;
+//                message += minutes + ":";
+//                message += seconds +"";
+//
+//                message += "";
+//
+//                note.html(message);
+//            }
+//        });
+//    }
+//});
+</script>
+
+<!-- None of this is needed since we use FlipClock...
+<style>
+#note {
+    font-weight: bold;
+}
+.countdownHolder {
+    width:450px;
+    margin:0 auto;
+    font:40px/1.5 'proxima nova',sans-serif;
+    text-align:center;
+    letter-spacing:-3px;
+    /*
+    display: none;
+    float: none;
+    */
+}
+.position {
+    display:inline-block;
+    height:1.6em;
+    overflow:hidden;
+    position:relative;
+    width:1.05em;
+}
+.digit {
+    position:absolute;
+    display:block;
+    width:1em;
+    background-color:#444;
+    border-radius:0.2em;
+    text-align:center;
+    color:#fff;
+    letter-spacing:-1px;
+}
+.digit.static {
+    box-shadow:1px 1px 1px rgba(4,4,4,0.35);
+    background-image:linear-gradient(bottom,#3A3A3A 50%,#444444 50%);
+    background-image:-o-linear-gradient(bottom,#3A3A3A 50%,#444444 50%);
+    background-image:-moz-linear-gradient(bottom,#3A3A3A 50%,#444444 50%);
+    background-image:-webkit-linear-gradient(bottom,#3A3A3A 50%,#444444 50%);
+    background-image:-ms-linear-gradient(bottom,#3A3A3A 50%,#444444 50%);
+    background-image:-webkit-gradient(linear,left bottom,left top,color-stop(0.5,#3A3A3A),color-stop(0.5,#444444));
+}
+.countDays {/*display:none !important;*/}
+.countDiv0 {/*display:none !important;*/}
+.countHours {}
+.countDiv1 {}
+.countMinutes {}
+.countDiv2 {}
+.countSeconds {}
+.countDiv {
+    display:inline-block;
+    width:35px;
+    height:1.6em;
+    position:relative;
+}
+.countDiv:before, .countDiv:after {
+    position:absolute;
+    background-color:#444;
+    border-radius:50%;
+    left:50%;
+    margin-left:-3px;
+    top:0.5em;
+    box-shadow:1px 1px 1px rgba(4,4,4,0.5);
+}
+.countDiv:after {
+    top:0.9em;
+}
+</style>
+-->
+
+
+    <div role="main" class="main canvas">
+        <div id="content" class="content full">
+
+            <!-- start header promo -->
+            
+            <div class="header-promo"><!--<div id="header-promo-content">
+<p>
+Used by over 19,000 churches. Was <del>$149</del>. Save 15%. Now only $126.65/y.
+</p>
+
+<div style="margin:0 -6px 0 0;">
+<a href="https://www.sharefaith.com/faith/learnmore.do" class="promobtn3"></a>
+
+<a href="https://www.sharefaith.com/feature/sharefaith-10-day-free-trial.html" class="promobtn2"></a>
+
+<a href="https://www.sharefaith.com/faith/joinNow.do?id=63&coupon=2012JoinNowHP" class="promobtn1"></a>
+
+
+
+</div>
+
+<hr />
+</div>
+
+-->
+
+<style>
+    @font-face{
+        font-family: 'din';
+        src: url('https://d2d735512y8kbj.cloudfront.net/fonts/DIN%20Condensed%20Bold.ttf');
+    }
+</style>
+
+ <div style="font: 1px/1px din, 'Open Sans Condensed', sans-serif !important; position:fixed; width:0; height:0; top: -100; left -100;"><strong style=" font-weight: normal;
+
+                                                                                                                         ">x</strong></div></div>
+            
+            
+            <!-- end header promo-->
+
+
+            
+
+
+            
+             
+
+            
+
+
+             
+
+<!-- end site-head.jsp -->
+
+
+<div class="container container-non-responsive twoPageRegistrationWrapper">
+<div class="header-design"><style>
+    .freetrial_header{
+        background: repeat 50% 50% / cover;
+        background-image: url(https://images.sharefaith.com/images/img/3/central/images/kids/Free%20Trial%20Resrource%20Page%20Header.jpg);
+        height: 26rem;
+        text-align: center;
+        display:none;
+    }
+
+    .david_logo{
+        max-height: 10rem;
+        max-width: 10rem;
+        display: inline-block;
+    }
+
+    .freetrial_header h1{
+        color:#fff;
+        font-family:"Open Sans";
+        font-size:36px;
+        font-weight:700;
+        height:auto;
+        line-height:58px;
+        overflow-wrap:break-word;
+        text-align:center;
+        width:auto;
+        -webkit-font-smoothing:antialiased;
+        display: inline-block;
+        margin-bottom: 0;
+    }
+
+    .freetrial_header h2{
+        color:#8ae100;
+        font-family:"Open Sans";
+        font-size:18px;
+        font-weight:700;
+        height:auto;
+        overflow-wrap:break-word;
+        text-align:center;
+        width:auto;
+        -webkit-font-smoothing:antialiased;
+        display: inline-block;
+    }
+
+#mediaHeader {
+ color:#FFF;
+ background: #0d2633 url(https://images.sharefaith.com/images/img/3/central/images/media/churchmediabackground.jpg) no-repeat 50% 50% /cover;
+ margin: 0 0 20px 0;
+ padding:8rem;
+ text-align:center;
+}
+#mediaHeader img {
+	max-width:900px;
+}
+@media only screen and (max-width:999px) {
+ #mediaHeader {
+	padding-left: 4rem;
+	padding-right: 4rem;
+ }
+ #mediaHeader img {
+	max-width:100%;
+ }
+ #mediaHeader h2 {
+	font-size:20px
+ }
+ #mediaSideBar li{
+	text-align:left;
+ }
+}
+#mediaHeader h1,
+#mediaHeader h2 {
+ color:#FFF;
+ font-weight: bold;
+}
+#mediaHeader h2 {
+ font-size:23px;
+}
+
+    /*Mobile Styling*/
+    @media (max-width: 1090px){
+        .freetrial_header{
+            height: 29rem;
+        }
+    }
+</style>
+
+<div class="freetrial_header" id="kidsHeader">
+     <br>
+     <br>
+     <img class="david_logo" title="Sharefaith kids free trial" alt="Sharefaith kids free trial David Logo" src="https://images.sharefaith.com/images/img/3/central/images/kids/Sunday%20School%20Lessons.png"/>
+     <br>
+     <h1>Get 7 FREE Days Of Sharefaith Kids!</h1>
+     <br>
+     <h2>No Commitments: Cancel Anytime.</h2>
+</div>
+
+<div style="display: none;" id="mediaHeader">
+<h1 style="font-size:70px; line-height:76px;"><img src="https://images.sharefaith.com/images/img/3/central/images/media/churchmedia.png" alt="CHURCH MEDIA" /></h1>
+<h2 style="font-size:35px;">Engage And Grow Your Church</h2>
+<h2>Start Your Free 7-Day Trial Today!</h2>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function(){ 
+    var planName = getUrlVars()["planName"];
+    var kidsHeader = document.getElementById("kidsHeader");
+
+    if(planName != null)
+    {
+      if(planName === "kids" ){
+        kidsHeader.style.display = "block";
+      }
+      else{
+        kidsHeader.style.display = "none";
+      }
+    }else{
+      kidsHeader.style.display = "none";
+    }
+}, false);
+
+function getUrlVars() {
+    var vars = {};
+    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+        vars[key] = value;
+    });
+    return vars;
+}
+</script></div>
+<div class="col-xs-12 planSelectionBody">
+<div id="member-registration">
+
+    <!-- TOP TEXTBLOCKS-->
+    <script>
+  document.addEventListener('DOMContentLoaded', function(){ 
+    var planName = getUrlVars()["planName"];
+    var mediaHeader = document.getElementById("mediaHeader");
+
+    if(planName != null)
+    {
+      if(planName === "media" ){
+        mediaHeader.style.display = "block";
+      }
+      else{
+        mediaHeader.style.display = "none";
+        if( planName === "kids") {
+         jQuery('.info+p').text(  jQuery('.info+p').text().replace('media','kids'));
+        }
+      }
+    }else{
+      mediaHeader.style.display = "block";
+    }
+}, false);
+
+function getUrlVars() {
+    var vars = {};
+    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+        vars[key] = value;
+    });
+    return vars;
+}
+</script>
+
+    <!-- Begin Form -->
+    <div class="regform">
+    <form name="GenericForm" method="post" action="/faith/freeTrial.do;jsessionid=91AE0EC23F80C70787C7B557C20F7384"><div><input type="hidden" name="org.apache.struts.taglib.html.TOKEN" value="976ee175a4a306115b90339f1c034120"></div>
+
+    <!-- Used on postbacks -->
+    
+    <input type="hidden" name="value(plan)" value="1061">
+	
+    <input type="hidden" name="value(memberTrialPlan)" value="1061">
+
+    
+
+    <div class="side-info"><style>
+    .freetrial_side_info_image{
+        margin-bottom: 20px;
+    }
+
+    .freetrial_side_info{
+        display:none;
+        max-width: 26rem;
+        border-right: 1px solid #A3BAC6;
+        padding-right: 30px;
+        margin-right: 30px;
+        height: 57rem;
+    }
+
+    .freetrial_side_info p{
+        color: #37465A;
+        font-size: 14px;
+        line-height: 21px;
+        font-family: "Open Sans";
+    }
+
+    .list
+    {
+        list-style-type:disc;
+        margin-left: 25px;
+    }
+
+    /*Mobile Styling*/
+    @media (max-width: 1090px){
+    	.freetrial_side_info{
+    		    max-width: 100%; 
+		    border-right: none; 
+		    padding-right: 0; 
+		    margin-right: 0; 
+		    height: auto; 
+		    text-align: center;
+                    margin-bottom: 25px;
+    	}
+    	
+    	.freetrial_side_info p{
+		    text-align: left;
+		    margin-right: 12px;
+   	            margin-left: 12px;
+    	}
+
+    .list
+    {
+        list-style-type:disc;
+        margin-left: 31px;
+        text-align: left;
+    }
+
+    }
+
+#mediaSideBar ul {
+	padding-top:2em;
+}
+#mediaSideBar li {
+	list-style: disc;
+	margin-left:20px;
+}
+
+</style>
+
+
+
+<div class="freetrial_side_info" id="kidsSideBar">
+    <img class="freetrial_side_info_image" title="Sharefaith kids free trial lesson" alt="kids free trial lesson image" src="https://images.sharefaith.com/images/img/3/central/images/kids/kids_free_trial.png"/>
+    <p><strong>Start your 7-day Free Trial</strong> to get a free, fully downloadable pack of resources that include:</p>  
+<br>
+    <ul class="list">
+  <li><span>"Love Your Enemies" Kids Bible Lesson</span><br></li>
+  <li><span>"God of Wonders" VBS - Day 1</span><br></li>
+  <li><span>Interactive Bible Quiz Video</span><br></li>
+  <li><span>Bonus Pack: Church Graphics!</span><br></li>
+</ul>
+ </div>
+<div class="freetrial_side_info" id="mediaSideBar">
+<img class="freetrial_side_info_image" alt="Sharefaith Media" src="https://images.sharefaith.com/images/img/3/central/images/media/side.jpg"/><br>
+<strong>Start your 7-day Free Trial</strong> to get a free, fully downloadable pack of resources that includes:
+<ul>
+ <li>Sermon Graphics</li>
+ <li>Social Media</li>
+ <li>Worship Media</li>
+ <li>Print-Ready</li>
+ <li>And more!</li>
+</ul>
+<br/>
+<p style="font-size: 20px; line-height: 30px;">Church Media Membership is <strong>$30/mo</strong> after trial is over.</p>
+
+</div>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function(){ 
+    var planName = getUrlVars()["planName"];
+    var kidsSideBar = document.getElementById("kidsSideBar");
+    var mediaSideBar = document.getElementById("mediaSideBar");
+
+    if(planName != null)
+    {
+      if(planName === "kids" ){
+        kidsSideBar.style.display = "block";
+        mediaSideBar.style.display = "none";
+      }
+      else{
+        kidsSideBar.style.display = "none";
+        mediaSideBar.style.display = "block";
+      }
+    }else{
+       kidsSideBar.style.display = "none";
+       mediaSideBar.style.display = "block";
+    }
+}, false);
+
+function getUrlVars() {
+    var vars = {};
+    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+        vars[key] = value;
+    });
+    return vars;
+}
+</script></div>
+
+	<div class="reg-container">
+	    <!-- ************************ Email & Password =================================== -->
+	    <div class="member-register-box reg-address plan-line-break">
+	        
+<div id="formFieldRowLoginPassword" class="row">
+    <div class="col-xs-12">
+        
+<!-- EMAIL -->
+<div class="reg-form-box"><span class="errorEmail_Anchor"></span>
+    
+
+    
+
+    
+
+    
+
+    <input type="text" name="value(login)" value="" onblur="showPromptFromTitle(this)" onfocus="clearPromptFromTitle(this)" class="form-control reg-text-control reg-grey prompt_text" title="Your Valid Email Address">
+</div>
+<script>
+$(function() {
+    if (typeof jsContextFromServer !== "object")
+        return;
+
+    var field = $("input[name='value(login)'][type='text']");
+
+    if (!! jsContextFromServer.login)
+        field.val(jsContextFromServer.login);
+
+    if (!! jsContextFromServer.lockLogin)
+        field.attr("readonly", true);
+});
+</script>
+
+        
+<!-- PASSWORD -->
+<div class="reg-form-box"><span class="errorPass_Anchor"></span>
+    
+
+    
+
+    
+    <input type="text" name="value(password)" maxlength="40" size="16" value="" onblur="showPromptFromTitle(this); typeToPassword()" onfocus="clearPromptFromTitle(this); typeToText()" class="form-control reg-text-control reg-grey prompt_text passwordInput" title="Create a Password">
+</div>
+
+<script>
+function typeToPassword() {
+    var field = $('.passwordInput');
+    var type = (field.val() == "Create a Password") ? "text" : "password";
+    field.attr("type", type);
+}
+
+function typeToText() {
+    $('.passwordInput').attr("type", "text");
+}
+</script>
+
+    </div>
+</div>
+<script>
+$(function() {
+    if (typeof jsContextFromServer !== "object")
+        return;
+
+    if (!! jsContextFromServer.login)
+        $("#formFieldRowLoginPassword").hide();
+});
+</script>
+
+	    </div>
+
+	    <!-- ************************ Credit Card & Billing Address =================================== -->
+	    <div class="member-register-box reg-cc">
+
+	        <!-- Billing Alert -->
+	        <style type="text/css">
+    #member-registration .ft-billing-alert{margin: 10px 0;}
+    #member-registration .ft-billing-alert h3{font-weight:600;font-size:14px;}
+    #member-registration .ft-billing-alert p{font-size:12px;}
+</style>
+<div class="row">
+    <div class="col-xs-12 ft-billing-alert">
+        <h3 class="reg-grey" id="regcctitle">Credit Card Information.</h3>
+        <!--<p class="reg-grey">To prevent multiple free trial account abuse, we request your CC info.</p>-->
+   </div>
+</div>
+
+	        <!-- CC Form -->
+	        
+
+
+<!-- Sentry error tracking -->
+<script src="https://cdn.ravenjs.com/3.23.1/raven.min.js" crossorigin="anonymous"></script>
+
+<script>
+	Raven.config('https://11bdf36b33454950a15a914d64299150@sentry.io/299398').install()
+</script>
+
+<!-- CARD NAME -->
+<div class="row">
+	<div class="col-xs-12">
+		<div class="reg-form-box">
+			
+			<div id="firstName" class="form-errors">First Name Required</div>
+			<input type="text" name="value(firstName)" value="" onblur="showPromptFromTitle(this);" onfocus="clearPromptFromTitle(this);" class="form-control reg-text-control reg-grey prompt_text" title="Card Holder First Name">
+		</div>
+		<div class="reg-form-box">
+			
+			<div id="lastName" class="form-errors">Last Name Required</div>
+			<input type="text" name="value(lastName)" value="" onblur="showPromptFromTitle(this);" onfocus="clearPromptFromTitle(this);" class="form-control reg-text-control reg-grey prompt_text" title="Card Holder Last Name">
+		</div>
+	</div>
+</div>
+
+<input type="hidden" name="value(payment_method_nonce)" id="payment_method_nonce" value="" />
+<input type="hidden" name="value(payment-response)" id="payment-response" value="" />
+
+<!-- request.getParameter("bill") == null && !request.getParameter("bill").equals("test") -->
+<!-- This is here so we can switch back easily if there is a billing issue. -->
+
+<div class="row">
+	<div class="col-xs-12">
+
+		<!-- CC Number -->
+		<div class="reg-form-box">
+			<span class="errorAddress"></span>
+			<div id="number" class="form-errors" style="float:left;">The credit card number is invalid.</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div id="ccnum" class="form-control reg-text-control reg-grey prompt_text" style="padding: 0; float: left;"></div>
+			<div id="card-image"></div>
+		</div>
+
+
+		<div class="pull-left">
+			<span class="errorAddress"></span>
+			<div id="expirationDate" class="form-errors">Please select a valid expiration date.</div>
+			<div id="cvv" class="form-errors">Please enter a correct CVV code.</div>
+			<div class="reg-form-box reg-form-box-small">
+				<div class="form-control reg-text-control reg-grey prompt_text" id="month" style="padding: 0;"></div>
+			</div>
+			<div class="reg-form-box reg-form-box-small">
+				<div class="form-control reg-text-control reg-grey prompt_text" id="year" style="padding: 0;"></div>
+			</div>
+			<div class="reg-form-box reg-form-box-small">
+				<div id="ccCVV" class="form-control reg-text-control reg-grey prompt_text cvv_help" style="padding: 0;"></div>
+				<div style="position: relative; z-index: 1000;">
+					<div id="cvv_help_hover" style="display: none;">
+						<h3>The CVV is the last three digits of the number that appears on the back of your card in the signature bar.</h3>
+						<div>
+							<center>
+								<img alt="" src="/images/creditcard_cvv/general-card.png">
+							</center>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+<input type="submit" style="display: none !important;" id="submitPayment" name="value(submit)" />
+
+
+
+
+<!--Setting Up Credit Card Icons -->
+<style>
+#card-image {
+	position: relative;
+	top: 9px;
+	right: -17.7em;
+	width: 44px;
+	height: 28px;
+	background-image:
+		url(https://images.sharefaith.com/images/img/3/central/images/card_sprite.png);
+	background-size: 86px 458px;
+	background-position: -100px 0;
+	background-repeat: no-repeat;
+	margin-bottom: -21em;
+}
+
+#card-image.visa {
+	background-position: 0 -398px;
+}
+
+#card-image.master-card {
+	background-position: 0 -281px;
+}
+
+#card-image.american-express {
+	background-position: 0 -370px;
+}
+
+#card-image.discover {
+	background-position: 0 -163px;
+}
+
+#card-image.maestro {
+	background-position: 0 -251px;
+}
+
+#card-image.jcb {
+	background-position: 0 -221px;
+}
+
+#card-image.diners-club {
+	background-position: 0 -133px;
+}
+
+/* Braintree Hosted Fields styling classes*/
+.braintree-hosted-fields-focused {
+	border: 1px solid #66afe9;
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px
+		rgba(102, 175, 233, .6);
+}
+
+.braintree-hosted-fields-focused.focused-invalid {
+	border: 1px solid #727070;
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px
+		rgba(100, 100, 0, .6);
+}
+
+#loader-inner {
+	top: 300px;
+}
+
+@media ( max-width : 900px) {
+	#loader-inner {
+		top: 15%;
+	}
+	#expirationDate {
+		margin-top: 28px;
+	}
+	#cvv {
+		margin-top: 28px;
+	}
+}
+</style>
+
+<!-- request.getParameter("bill") == null && !request.getParameter("bill").equals("test") -->
+
+<div id="credit_loader" style="background-color: white; position: absolute; left: 0; right: 0; top: 0; bottom: 0; z-index: 100;">
+	<div id="loader-inner" style="margin: 0 auto; max-width: 150px; position: relative; margin-top: -60px;">
+		<img src="https://images.sharefaith.com/images/img/3/central/images/icons/ring.gif" style="max-width: 150px;">
+	</div>
+</div>
+
+<div id="processing_loader" style="display: none; background-color: white; position: absolute; left: 0; right: 0; top: 0; bottom: 0; z-index: 100;">
+	<div id="loader-inner" style="margin: 0 auto; max-width: 150px; position: relative; margin-top: -60px;">
+		<img id="processing-icon" src="https://images.sharefaith.com/images/img/3/central/images/icons/processing-in.gif" style="max-width: 150px;">
+	</div>
+</div>
+
+
+<!-- Load the required client component. -->
+<script src="https://js.braintreegateway.com/web/3.30.0/js/client.min.js"></script>
+
+<!-- Load Hosted Fields component. -->
+<script src="https://js.braintreegateway.com/web/3.30.0/js/hosted-fields.min.js"></script>
+
+<script>
+
+/**
+ * detect IE returns version of IE or false, if browser is
+ * not Internet Explorer
+ */
+function detectIE() {
+  var ua = window.navigator.userAgent;
+
+  var msie = ua.indexOf('MSIE ');
+  if (msie > 0) {
+    // IE 10 or older => return version number
+    return parseInt(ua.substring(msie + 5, ua.indexOf('.', msie)), 10);
+  }
+
+  var trident = ua.indexOf('Trident/');
+  if (trident > 0) {
+    // IE 11 => return version number
+    var rv = ua.indexOf('rv:');
+    return parseInt(ua.substring(rv + 3, ua.indexOf('.', rv)), 10);
+  }
+
+  var edge = ua.indexOf('Edge/');
+  if (edge > 0) {
+    // Edge (IE 12+) => return version number
+    return parseInt(ua.substring(edge + 5, ua.indexOf('.', edge)), 10);
+  }
+
+  // other browser
+  return 100;
+}
+
+	$( document )
+			.ready(
+					function()
+					{
+						$( '#processing_loader' ).hide();
+
+						if(detectIE() <= 9){
+							$( "#braintreeIncompatiableModal" ).modal(
+									{
+										keyboard : false,
+										show : true,
+										backdrop : 'static'
+									} );
+									$( '#credit_loader' ).hide();
+									Raven.captureException( new Error("IE Version is lower or equal than 9"));
+
+							return;
+						}
+
+						try
+						{
+							//Make sure we are in testing mode.
+							if( getQueryString( "bill" ) != "test" )
+							{
+
+								//Hide all credit card erros from displaying to the user.
+								hideAllErrors();
+
+								braintree.client
+										.create(
+												{
+													authorization : "production_gq3qvh6n_52x225t7snbympgc"
+				}, function( err, clientInstance )
+				{
+					if( err )
+					{
+						//Can be found in footer.jsp
+						$( "#braintreeIncompatiableModal" ).modal(
+						{
+							keyboard : false,
+							show : true,
+							backdrop : 'static'
+						} );
+						$( '#credit_loader' ).hide();
+						Raven.captureException( new Error( "Error creating billing form occured!" ) );
+						Raven.captureException( new Error( err ) );
+						return;
+					}
+					braintree.hostedFields.create(
+					{
+						client : clientInstance,
+						styles :
+						{
+							'select, input' :
+							{
+								'font-size' : '15px',
+								'font-family' : '"Open Sans", sans-serif',
+								'color' : '#727070',
+								'padding' : '0 0 0 18px'
+							},
+							'input:focus::placeholder' :
+							{
+								'opacity' : '0'
+							}
+						},
+						fields :
+						{
+							number :
+							{
+								selector : '#ccnum',
+								placeholder : 'Credit Card Number'
+							},
+							cvv :
+							{
+								selector : '#ccCVV',
+								placeholder : 'CVV'
+							},
+							expirationMonth :
+							{
+								selector : '#month',
+								placeholder : 'Month',
+								select :
+								{
+									options :
+									[ '01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12' ]
+								}
+							},
+							expirationYear :
+							{
+								selector : '#year',
+								placeholder : 'Year',
+								select : true
+							},
+							postalCode :
+							{
+								selector : '#zip',
+								placeholder : 'Postal Code'
+							}
+						}
+					}, function( err, hostedFieldsInstance )
+					{
+						if( err )
+						{
+							//Can be found in footer.jsp
+							$( "#braintreeIncompatiableModal" ).modal(
+							{
+								keyboard : false,
+								show : true,
+								backdrop : 'static'
+							} );
+							$( '#credit_loader' ).hide();
+							Raven.captureException( new Error( "Error creating billing form occured!" ) );
+							Raven.captureException( new Error( err ) );
+							return;
+						}
+
+						$( '#credit_loader' ).hide();
+
+						//hostedFieldsInstance.on( 'validityChange', function( event )
+						//{
+						// Check if all fields are valid, then show submit button
+						//	var formValid = Object.keys( event.fields ).every( function( key )
+						//	{
+						//		return event.fields[ key ].isValid;
+						//	} );
+						//} );
+
+						hostedFieldsInstance.on( 'empty', function( event )
+						{
+							$( 'header' ).removeClass( 'header-slide' );
+							$( '#card-image' ).removeClass();
+						} );
+
+						hostedFieldsInstance.on( 'cardTypeChange', function( event )
+						{
+							// Change card bg depending on card type
+							if( event.cards.length === 1 )
+							{
+								$( '#card-image' ).removeClass().addClass( event.cards[ 0 ].type );
+								$( 'header' ).addClass( 'header-slide' );
+
+								// Change the CVV length for AmericanExpress cards
+								if( event.cards[ 0 ].code.size === 4 )
+								{
+									hostedFieldsInstance.setAttribute(
+									{
+										field : 'cvv',
+										attribute : 'placeholder',
+										value : 'CVV'
+									} );
+								}
+							}
+							else
+							{
+								hostedFieldsInstance.setAttribute(
+								{
+									field : 'cvv',
+									attribute : 'placeholder',
+									value : 'CVV'
+								} );
+							}
+						} );
+
+						$( '.btn.btn-success.btn-reg-type' ).click( function( event )
+						{
+                            event.preventDefault();
+                            if (! validationCCPrompts())
+                                return;
+							if (! ccFieldsAreInvalid(hostedFieldsInstance._state.fields)) {
+								hostedFieldsInstance.tokenize( function( tokenizeErr, payload )
+								{
+									if( tokenizeErr )
+									{
+										console.error( tokenizeErr );
+
+										switch( tokenizeErr.code )
+										{
+											case 'HOSTED_FIELDS_FIELDS_EMPTY':
+												//All fields are blank so lets show all the errors.
+												var allFields =
+												[ "number", "cvv", "expirationMonth", "expirationYear", "postalCode" ];
+
+												//showErrors( allFields );
+												//Send payment merchant response to server
+												document.getElementById( "payment-response" ).value = "All Empty Credit Card Fields";
+												$( '#submitPayment' ).click();
+												break;
+											case 'HOSTED_FIELDS_FIELDS_INVALID':
+												if( tokenizeErr.details.invalidFieldKeys != null )
+												{
+													//Goes trough the array and will show the errors found.
+													//showErrors( tokenizeErr.details.invalidFieldKeys );
+													//Send payment merchant response to server
+													document.getElementById( "payment-response" ).value = "Invalid Credit Card Fields";
+													$( '#submitPayment' ).click();
+												}
+												break;
+											case 'HOSTED_FIELDS_TOKENIZATION_FAIL_ON_DUPLICATE':
+												$( "#braintreeIncompatiableModal" ).modal(
+												{
+													keyboard : false,
+													show : true,
+													backdrop : 'static'
+												} );
+												$( '#credit_loader' ).hide();
+												Raven.captureException( new Error( "Duplicate Transaction" ) );
+												//Send payment merchant response to server
+												document.getElementById( "payment-response" ).value = "Duplicate Transaction";
+												$( '#submitPayment' ).click();
+												break;
+											case 'HOSTED_FIELDS_TOKENIZATION_CVV_VERIFICATION_FAILED':
+												showErrors( 'cvv' );
+												$( "#braintreeIncompatiableModal" ).modal(
+												{
+													keyboard : false,
+													show : true,
+													backdrop : 'static'
+												} );
+												$( '#credit_loader' ).hide();
+												Raven.captureException( new Error( "CVV verification failed" ) );
+
+												//Send payment merchant response to server
+												document.getElementById( "payment-response" ).value = "CVV Verification Failed";
+												$( '#submitPayment' ).click();
+												break;
+											case 'HOSTED_FIELDS_FAILED_TOKENIZATION':
+												$( "#braintreeIncompatiableModal" ).modal(
+												{
+													keyboard : false,
+													show : true,
+													backdrop : 'static'
+												} );
+												$( '#credit_loader' ).hide();
+
+												//Send payment merchant response to server
+												document.getElementById( "payment-response" ).value = "Could not get Braintree Nonce";
+												$( '#submitPayment' ).click();
+												break;
+											case 'HOSTED_FIELDS_TOKENIZATION_NETWORK_ERROR':
+												$( "#braintreeIncompatiableModal" ).modal(
+												{
+													keyboard : false,
+													show : true,
+													backdrop : 'static'
+												} );
+												$( '#credit_loader' ).hide();
+												Raven.captureException( new Error( "Tokenization error" ) );
+
+												//Send payment merchant response to server
+												document.getElementById( "payment-response" ).value = "Network Error";
+												$( '#submitPayment' ).click();
+												break;
+											default:
+												$( "#braintreeIncompatiableModal" ).modal(
+												{
+													keyboard : false,
+													show : true,
+													backdrop : 'static'
+												} );
+												$( '#credit_loader' ).hide();
+												Raven.captureException( new Error( "Generic error!" ) );
+
+												//Send payment merchant response to server
+												document.getElementById( "payment-response" ).value = "Generic Error";
+												$( '#submitPayment' ).click();
+										}
+									}
+									else
+									{
+										$( '#processing_loader' ).show();
+
+										setTimeout( function()
+										{
+											document.getElementById( 'processing-icon' ).setAttribute( 'src', 'https://images.sharefaith.com/images/img/3/central/images/icons/processing-solid.gif' )
+										}, 1000 )
+
+										//Hack: TODO Find a better way to do this.
+										document.getElementById( "payment_method_nonce" ).value = payload.nonce;
+										document.getElementById( "zip" ).value = "999999";
+										document.getElementById( "payment-response" ).value = "success";
+										$( '#submitPayment' ).click();
+									}
+								} );
+							}
+						} );
+					} );
+				} );
+			}
+		}
+		catch( error )
+		{
+			//Can be found in footer.jsp
+			$( "#braintreeIncompatiableModal" ).modal(
+			{
+				keyboard : false,
+				show : true,
+				backdrop : 'static'
+			} );
+			$( '#credit_loader' ).hide();
+			Raven.captureException( error );
+		}
+	} );
+
+	function showErrors( errorArray )
+	{
+		//Make sure we are in testing mode.
+		if( getQueryString( "bill" ) != "test" )
+		{
+			var allFields = errorArray;
+
+			//Hide the error messages so that we only show the ones that apply.
+			hideAllErrors()
+
+			//Show the apropriate errors.
+			for( var i = 0; i < errorArray.length; i++ )
+			{
+				var errorElement = "";
+
+				if( allFields[ i ] == "expirationMonth" || allFields[ i ] == "expirationYear" )
+				{
+					if( document.getElementById( "cvv" ).style.display == 'block' )
+					{
+						document.getElementById( "expirationDate" ).style.display == 'none';
+					}
+					else
+					{
+						errorElement = document.getElementById( "expirationDate" );
+						document.getElementById( "cvv" ).style.display == 'none';
+						errorElement.style.display = 'block';
+					}
+				}
+				else
+				{
+					if( document.getElementById( "expirationDate" ).style.display == 'block' && allFields[ i ] == "cvv" )
+					{
+						document.getElementById( "cvv" ).style.display == 'none';
+					}
+					else
+					{
+						errorElement = document.getElementById( allFields[ i ] + "" );
+						errorElement.style.display = 'block';
+
+						if (allFields[ i ] === 'number') {
+							$('#card-image').css('top', '40px');
+						}
+					}
+				}
+			}
+		}
+	}
+
+	/**
+	 * Hide the error messages for credit card information
+	 */
+	function hideAllErrors()
+	{
+		//Make sure we are in testing mode.
+		if( getQueryString( "bill" ) != "test" )
+		{
+			var allFields =
+			[ "number", "cvv", "expirationMonth", "expirationYear", "postalCode", "firstName", "lastName", "country" ];
+
+			//We need to hide all credit card errors.
+			for( var i = 0; i < allFields.length; i++ )
+			{
+				var errorElement = "";
+
+				if( allFields[ i ] == "expirationMonth" || allFields[ i ] + "" == "expirationYear" )
+				{
+					errorElement = document.getElementById( "expirationDate" );
+					errorElement.style.display = 'none';
+				}
+				else
+				{
+					errorElement = document.getElementById( allFields[ i ] + "" );
+					errorElement.style.display = 'none';
+				}
+			}
+			$('#card-image').css('top', '9px');
+		}
+	}
+
+	/**
+	 * Get the value of a querystring
+	 * @param  {String} field The field to get the value of
+	 * @param  {String} url   The URL to get the value from (optional)
+	 * @return {String}       The field value
+	 */
+	function getQueryString( field, url )
+	{
+		var href = url ? url : window.location.href;
+		var reg = new RegExp( '[?&]' + field + '=([^&#]*)', 'i' );
+		var string = reg.exec( href );
+		return string ? string[ 1 ] : null;
+	}
+
+	/**
+	 * Check if fields are empty or invalid in form and trigger error messages if so
+	 * @param {Object} hostedFieldState An object with info from Brainstree on the CC hosted fields
+	 * @return {Boolean}                True or False as to whether or not fields are empty/invalid
+	 */
+	function ccFieldsAreInvalid(hostedFieldState) {
+		var nativeFields = ['firstName', 'lastName', 'country'];
+		var invalidFields = {
+			native: [],
+			hosted: []
+		};
+		// Check if the native name fields are empty
+		$.each(nativeFields, function(index, name) {
+			var value = $('[name="value(' + name + ')"]').val();
+			if(isConsideredEmpty(value, ['Card Holder First Name', 'Card Holder Last Name'])) {
+				invalidFields.native.push(name);
+			}
+		});
+		// Check if hosted fields are empty or invalid
+		$.each(hostedFieldState, function(index, value) {
+			if (value.isEmpty || !value.isValid) {
+				invalidFields.hosted.push(index);
+			}
+		});
+		var fields = $.merge(invalidFields.native, invalidFields.hosted);
+		if (fields.length === 0) {
+			return false;
+		} else {
+			showErrors(fields);
+			return true;
+		}
+	}
+</script>
+
+
+	        <!-- Billing Address.  Only show what we need, display:none existing -->
+	        
+<style>
+.text-left {
+	text-align: left !important;
+}
+</style>
+
+<!-- Billing Address: Address, City and State : Not Showing -->
+<div class="row hide">
+	<div class="col-xs-12">
+		<div class="reg-form-box">
+			
+			<input type="text" name="value(address1)" value="" onblur="showPromptFromTitle(this);" onfocus="clearPromptFromTitle(this);" class="form-control reg-text-control reg-grey prompt_text" title="Address">
+		</div>
+
+		<div class="reg-form-box reg-form-box-medium">
+			
+			<input type="text" name="value(city)" value="" onblur="showPromptFromTitle(this);" onfocus="clearPromptFromTitle(this);" class="form-control reg-text-control reg-grey prompt_text" title="City">
+		</div>
+
+		<div class="reg-form-box reg-form-box-medium select_option_reg">
+			
+			<select name="value(state)" size="1" class="reg-drop-control reg-grey"><option value="--">State</option>
+<option value="INTL">INTERNATIONAL</option>
+<option value="AL">AL</option>
+<option value="AK">AK</option>
+<option value="AZ">AZ</option>
+<option value="AR">AR</option>
+<option value="CA">CA</option>
+<option value="CO">CO</option>
+<option value="CT">CT</option>
+<option value="DE">DE</option>
+<option value="DC">DC</option>
+<option value="FL">FL</option>
+<option value="GA">GA</option>
+<option value="HI">HI</option>
+<option value="ID">ID</option>
+<option value="IL">IL</option>
+<option value="IN">IN</option>
+<option value="IA">IA</option>
+<option value="KS">KS</option>
+<option value="KY">KY</option>
+<option value="LA">LA</option>
+<option value="ME">ME</option>
+<option value="MD">MD</option>
+<option value="MA">MA</option>
+<option value="MI">MI</option>
+<option value="MN">MN</option>
+<option value="MS">MS</option>
+<option value="MO">MO</option>
+<option value="MT">MT</option>
+<option value="NC">NC</option>
+<option value="ND">ND</option>
+<option value="NE">NE</option>
+<option value="NH">NH</option>
+<option value="NJ">NJ</option>
+<option value="NM">NM</option>
+<option value="NV">NV</option>
+<option value="NY">NY</option>
+<option value="OH">OH</option>
+<option value="OK">OK</option>
+<option value="OR">OR</option>
+<option value="PA">PA</option>
+<option value="RI">RI</option>
+<option value="SC">SC</option>
+<option value="SD">SD</option>
+<option value="TN">TN</option>
+<option value="TX">TX</option>
+<option value="UT">UT</option>
+<option value="VT">VT</option>
+<option value="VA">VA</option>
+<option value="WA">WA</option>
+<option value="WI">WI</option>
+<option value="WV">WV</option>
+<option value="WY">WY</option></select>
+		</div>
+	</div>
+</div>
+
+<!-- Country and Zip Required -->
+<div class="row">
+	<div class="col-xs-12">
+			
+		<div class="reg-form-box">
+			<div id="country" class="form-errors">Country Required</div>
+			<select name="value(country)" size="1" class="reg-drop-control reg-grey text-left select_option_reg"><!-- Country Codes set up for BrainTree api-->
+<option value="--" disabled="disabled" selected="selected">Country</option>
+<option value="United States of America">USA</option>
+<option value="Canada">Canada</option>
+<option value="United Kingdom">United Kingdom</option>
+<option value="Australia">Australia</option>
+<option value="Ireland">Ireland</option>
+<option value="Singapore">Singapore</option>
+<option value="New Zealand">New Zealand</option>
+<option value="South Africa">South Africa</option>
+<option value="Hong Kong">Hong Kong</option>
+<option value="Mexico">Mexico</option>
+<option value="Philippines">Philippines</option>
+<option value="" disabled="disabled">------------------</option>
+<option value="Afghanistan">Afghanistan</option>
+<option value="Aland">Aland</option>
+<option value="Albania">Albania</option>
+<option value="Algeria">Algeria</option>
+<option value="American Samoa">American Samoa</option>
+<option value="Andorra">Andorra</option>
+<option value="Angola">Angola</option>
+<option value="Anguilla">Anguilla</option>
+<option value="Antarctica">Antarctica</option>
+<option value="Antigua and Barbuda">Antigua and Barbuda</option>
+<option value="Argentina">Argentina</option>
+<option value="Armenia">Armenia</option>
+<option value="Aruba">Aruba</option>
+<option value="Austria">Austria</option>
+<option value="Azerbaijan">Azerbaijan</option>
+<option value="Bahamas">Bahamas</option>
+<option value="Bahrain">Bahrain</option>
+<option value="Bangladesh">Bangladesh</option>
+<option value="Barbados">Barbados</option>
+<option value="Belarus">Belarus</option>
+<option value="Belgium">Belgium</option>
+<option value="Belize">Belize</option>
+<option value="Benin">Benin</option>
+<option value="Bermuda">Bermuda</option>
+<option value="Bhutan">Bhutan</option>
+<option value="Bolivia">Bolivia</option>
+<option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
+<option value="Botswana">Botswana</option>
+<option value="Bouvet Island">Bouvet Island</option>
+<option value="Brazil">Brazil</option>
+<option value="British Indian Ocean Territory">British Indian Ocean Territory</option>
+<option value="Brunei Darussalam">Brunei Darussalam</option>
+<option value="Bulgaria">Bulgaria</option>
+<option value="Burkina Faso">Burkina Faso</option>
+<option value="Burundi">Burundi</option>
+<option value="Cambodia">Cambodia</option>
+<option value="Cameroon">Cameroon</option>
+<option value="Cape Verde">Cape Verde</option>
+<option value="Cayman Islands">Cayman Islands</option>
+<option value="Central African Republic">Central African Republic</option>
+<option value="Chad">Chad</option>
+<option value="Chile">Chile</option>
+<option value="China">China</option>
+<option value="Christmas Island">Christmas Island</option>
+<option value="Colombia">Colombia</option>
+<option value="Comoros">Comoros</option>
+<option value="Congo (Brazzaville)">Congo (Brazzaville)</option>
+<option value="Congo (Kinshasa)">Congo (Kinshasa)</option>
+<option value="Cook Islands">Cook Islands</option>
+<option value="Costa Rica">Costa Rica</option>
+<option value="Croatia">Croatia</option>
+<option value="Cuba">Cuba</option>
+<option value="Cyprus">Cyprus</option>
+<option value="Czech Republic">Czech Republic</option>
+<option value="Denmark">Denmark</option>
+<option value="Djibouti">Djibouti</option>
+<option value="Dominica">Dominica</option>
+<option value="Dominican Republic">Dominican Republic</option>
+<option value="Ecuador">Ecuador</option>
+<option value="Egypt">Egypt</option>
+<option value="El Salvador">El Salvador</option>
+<option value="Equatorial Guinea">Equatorial Guinea</option>
+<option value="Eritrea">Eritrea</option>
+<option value="Estonia">Estonia</option>
+<option value="Ethiopia">Ethiopia</option>
+<option value="Falkland Islands">Falkland Islands</option>
+<option value="Faroe Islands">Faroe Islands</option>
+<option value="Fiji">Fiji</option>
+<option value="Finland">Finland</option>
+<option value="France">France</option>
+<option value="French Guiana">French Guiana</option>
+<option value="French Polynesia">French Polynesia</option>
+<option value="French Southern Lands">French Southern Lands</option>
+<option value="Gabon">Gabon</option>
+<option value="Gambia">Gambia</option>
+<option value="Georgia">Georgia</option>
+<option value="Germany">Germany</option>
+<option value="Ghana">Ghana</option>
+<option value="Gibraltar">Gibraltar</option>
+<option value="Greece">Greece</option>
+<option value="Greenland">Greenland</option>
+<option value="Grenada">Grenada</option>
+<option value="Guadeloupe">Guadeloupe</option>
+<option value="Guam">Guam</option>
+<option value="Guatemala">Guatemala</option>
+<option value="Guernsey">Guernsey</option>
+<option value="Guinea">Guinea</option>
+<option value="Guinea-Bissau">Guinea-Bissau</option>
+<option value="Guyana">Guyana</option>
+<option value="Haiti">Haiti</option>
+<option value="Heard and McDonald Islands">Heard and McDonald Islands</option>
+<option value="Honduras">Honduras</option>
+<option value="Hungary">Hungary</option>
+<option value="Iceland">Iceland</option>
+<option value="India">India</option>
+<option value="Indonesia">Indonesia</option>
+<option value="Iran">Iran</option>
+<option value="Iraq">Iraq</option>
+<option value="Isle of Man">Isle of Man</option>
+<option value="Israel">Israel</option>
+<option value="Italy">Italy</option>
+<option value="Jamaica">Jamaica</option>
+<option value="Japan">Japan</option>
+<option value="Jersey">Jersey</option>
+<option value="Jordan">Jordan</option>
+<option value="Kazakhstan">Kazakhstan</option>
+<option value="Kenya">Kenya</option>
+<option value="Kiribati">Kiribati</option>
+<option value="Korea, North">Korea, North</option>
+<option value="Korea, South">Korea, South</option>
+<option value="Kuwait">Kuwait</option>
+<option value="Kyrgyzstan">Kyrgyzstan</option>
+<option value="Laos">Laos</option>
+<option value="Latvia">Latvia</option>
+<option value="Lebanon">Lebanon</option>
+<option value="Lesotho">Lesotho</option>
+<option value="Liberia">Liberia</option>
+<option value="Libya">Libya</option>
+<option value="Liechtenstein">Liechtenstein</option>
+<option value="Lithuania">Lithuania</option>
+<option value="Luxembourg">Luxembourg</option>
+<option value="Macau">Macau</option>
+<option value="Macedonia">Macedonia</option>
+<option value="Madagascar">Madagascar</option>
+<option value="Malawi">Malawi</option>
+<option value="Malaysia">Malaysia</option>
+<option value="Maldives">Maldives</option>
+<option value="Mali">Mali</option>
+<option value="Malta">Malta</option>
+<option value="Marshall Islands">Marshall Islands</option>
+<option value="Martinique">Martinique</option>
+<option value="Mauritania">Mauritania</option>
+<option value="Mauritius">Mauritius</option>
+<option value="Mayotte">Mayotte</option>
+<option value="Micronesia">Micronesia</option>
+<option value="Moldova">Moldova</option>
+<option value="Monaco">Monaco</option>
+<option value="Mongolia">Mongolia</option>
+<option value="Montenegro">Montenegro</option>
+<option value="Montserrat">Montserrat</option>
+<option value="Morocco">Morocco</option>
+<option value="Mozambique">Mozambique</option>
+<option value="Myanmar">Myanmar</option>
+<option value="Namibia">Namibia</option>
+<option value="Nauru">Nauru</option>
+<option value="Nepal">Nepal</option>
+<option value="Netherlands">Netherlands</option>
+<option value="Netherlands Antilles">Netherlands Antilles</option>
+<option value="New Caledonia">New Caledonia</option>
+<option value="Nicaragua">Nicaragua</option>
+<option value="Niger">Niger</option>
+<option value="Nigeria">Nigeria</option>
+<option value="Niue">Niue</option>
+<option value="Norfolk Island">Norfolk Island</option>
+<option value="Northern Mariana Islands">Northern Mariana Islands</option>
+<option value="Norway">Norway</option>
+<option value="Oman">Oman</option>
+<option value="Pakistan">Pakistan</option>
+<option value="Palau">Palau</option>
+<option value="Panama">Panama</option>
+<option value="Papua New Guinea">Papua New Guinea</option>
+<option value="Paraguay">Paraguay</option>
+<option value="Peru">Peru</option>
+<option value="Poland">Poland</option>
+<option value="Portugal">Portugal</option>
+<option value="Puerto Rico">Puerto Rico</option>
+<option value="Qatar">Qatar</option>
+<option value="Reunion">Reunion</option>
+<option value="Romania">Romania</option>
+<option value="Russian Federation">Russian Federation</option>
+<option value="Rwanda">Rwanda</option>
+<option value="Saint Barthelemy">Saint Barthelemy</option>
+<option value="Saint Helena">Saint Helena</option>
+<option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option>
+<option value="Saint Lucia">Saint Lucia</option>
+<option value="Saint Martin (French part)">Saint Martin (French part)</option>
+<option value="Saint Pierre and Miquelon">Saint Pierre and Miquelon</option>
+<option value="Saint Vincent and the Grenadines">Saint Vincent and the Grenadines</option>
+<option value="Samoa">Samoa</option>
+<option value="San Marino">San Marino</option>
+<option value="Sao Tome and Principe">Sao Tome and Principe</option>
+<option value="Saudi Arabia">Saudi Arabia</option>
+<option value="Senegal">Senegal</option>
+<option value="Seychelles">Seychelles</option>
+<option value="Sierra Leone">Sierra Leone</option>
+<option value="Slovakia">Slovakia</option>
+<option value="Slovenia">Slovenia</option>
+<option value="Solomon Islands">Solomon Islands</option>
+<option value="Somalia">Somalia</option>
+<option value="Spain">Spain</option>
+<option value="Sri Lanka">Sri Lanka</option>
+<option value="Sudan">Sudan</option>
+<option value="Suriname">Suriname</option>
+<option value="Svalbard and Jan Mayen Islands">Svalbard and Jan Mayen Islands</option>
+<option value="Swaziland">Swaziland</option>
+<option value="Sweden">Sweden</option>
+<option value="Switzerland">Switzerland</option>
+<option value="Syria">Syria</option>
+<option value="Taiwan">Taiwan</option>
+<option value="Tajikistan">Tajikistan</option>
+<option value="Tanzania">Tanzania</option>
+<option value="Thailand">Thailand</option>
+<option value="Timor-Leste">Timor-Leste</option>
+<option value="Togo">Togo</option>
+<option value="Tokelau">Tokelau</option>
+<option value="Tonga">Tonga</option>
+<option value="Trinidad and Tobago">Trinidad and Tobago</option>
+<option value="Tunisia">Tunisia</option>
+<option value="Turkey">Turkey</option>
+<option value="Turkmenistan">Turkmenistan</option>
+<option value="Turks and Caicos Islands">Turks and Caicos Islands</option>
+<option value="Tuvalu">Tuvalu</option>
+<option value="Uganda">Uganda</option>
+<option value="Ukraine">Ukraine</option>
+<option value="United Arab Emirates">United Arab Emirates</option>
+<option value="United Kingdom">United Kingdom</option>
+<option value="United States Minor Outlying Islands">United States Minor Outlying Islands</option>
+<option value="United States of America">United States</option>
+<option value="Uruguay">Uruguay</option>
+<option value="Uzbekistan">Uzbekistan</option>
+<option value="Vanuatu">Vanuatu</option>
+<option value="Vatican City">Vatican City</option>
+<option value="Venezuela">Venezuela</option>
+<option value="Vietnam">Vietnam</option>
+<option value="Virgin Islands, British">Virgin Islands, British</option>
+<option value="Virgin Islands, U.S.">Virgin Islands, U.S.</option>
+<option value="Wallis and Futuna Islands">Wallis and Futuna Islands</option>
+<option value="Western Sahara">Western Sahara</option>
+<option value="Yemen">Yemen</option>
+<option value="Zambia">Zambia</option>
+<option value="Zimbabwe">Zimbabwe</option></select>
+		</div>
+		<!-- request.getParameter("bill") != null && request.getParameter("bill").equals("test") -->
+		
+		<div class="reg-form-box">
+			<span class="errorAddress"></span>
+			<div id="postalCode" class="form-errors">ZIP/Postal Code Required</div>
+			<div id="zip" name="value(zip)" class="form-control reg-text-control reg-grey prompt_text" style="padding: 0;"></div>
+		</div>
+		
+</div>
+
+
+	        <!-- Optional Data -->
+	        
+
+<div class="row">
+    <div class="col-xs-12">
+        <div class="reg-form-box reg-form-box-medium">
+            <input type="text" name="value(role)" value="" onblur="showPromptFromTitle(this);" onfocus="clearPromptFromTitle(this);" class="form-control reg-text-control reg-grey prompt_text" title="Your Role">
+        </div>
+        <div class="reg-form-box reg-form-box-medium">
+            <input type="text" name="value(organization)" value="" onblur="showPromptFromTitle(this);" onfocus="clearPromptFromTitle(this);" class="form-control reg-text-control reg-grey prompt_text" title="Denomination">
+        </div>
+        <div class="reg-form-box">
+            <input type="text" name="value(phone)" value="" onblur="showPromptFromTitle(this);" onfocus="clearPromptFromTitle(this);" class="form-control reg-text-control reg-grey prompt_text" title="Phone Number For Account">
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <div class="reg-form-box reg-form-box-large select_option_reg">
+           <select name="value(referrer)" size="1" class="form_control reg-drop-control reg-grey"><option value="-1">How did you hear about Sharefaith</option>
+              <option value="Worship Leader Magazine">Worship Leader Magazine</option>
+              <option value="Worship Leader Conference">Worship Leader Conference</option>
+              <option value="Facebook">Facebook</option>
+              <option value="Youtube">Youtube</option>
+              <option value="Pinterest">Pinterest</option>
+              <option value="Sharefaith Magazine">Sharefaith Magazine</option>
+              <option value="Protect My Ministry">Protect My Ministry</option>
+              <option value="Ezekiel">E-zekiel</option>
+              <option value="Church Relevance">Church Relevance</option>
+              <option value="Relevant Magazine">Relevant Magazine</option>
+              <option value="ShelbySystems">Shelby Systems</option>
+              <option value="Childrens Ministry Magazine">Children's Ministry Magazine</option>
+              <option value="Google">Google</option>
+              <option value="Referred by another church">Referred by another church</option>
+              <option value="Exponential Conference">Exponential Conference</option>
+              <option value="Webinar">Sharefaith Webinar</option>
+              <option value="FellowshipOne">FellowshipOne</option>
+              <option value="Previous User">Previous Sharefaith User</option></select>
+        </div>
+    </div>
+</div>
+
+
+	    </div>
+
+	    <!-- ************************ Agreements =================================== -->
+	    <div class="row member-register-box reg-agreements plan-line-break " style="">
+	        <div class="col-xs-12 reg-padding-left-0">
+	            <div class="form-errors hide" id="ccPromptError">You must agree to the following by selecting the box below to continue.</div>
+	            <label class="radio reg-grey" style="margin-left: 21px;">
+	                <input type="radio" name="regValidation1" id="ckCCAuthorizing" value="option1" tabindex="20" /><span>I authorize this transaction.</span>
+	            </label>
+	            <label class="radio-inline reg-grey">
+					<input type="radio" name="regValidation2" id="ckCCAutoRenewal" value="option2" />
+					<span>I agree my membership will auto-renew unless I disable/cancel the account.</span>
+				</label>
+	        </div>
+	    </div>
+
+	    
+	        <!-- ************************ Captcha : Attack Prevention  =================================== -->
+	        <div class="row member-register-box reg-terms plan-line-break reg-grey">
+	        	<p class="labelMargin">Click the box below</p>
+	        	<div class="g-recaptcha" data-sitekey="6LcA5SEUAAAAAI4KBsliwihHCneCFPG-j6uBNDcM"></div>
+	        	
+	        </div>
+	    
+
+
+	    <!-- ************************ SUBMIT =================================== -->
+	    <div class="row member-register-box reg-final coup">
+	        <div class="col-xs-12 reg-padding-left-0">
+	            <div class="pull-left">
+	                <div class="submit-reg">
+	                    <button type="button" class="btn btn-success btn-reg-type"
+                            value="Start My Free Trial!" name="value(submit)" tabindex="21"
+                        ><i style="margin-right:5px;" class='icon icon-lock icon-1x'
+                        ></i> START 7 DAY FREE TRIAL</button
+                        >
+	                </div>
+	                <div class="waiting-reg">
+	                    <img src="https://de411bmyfix7d.cloudfront.net/images/loading-dots.gif" />
+	                    <h1> One Moment Please...</h1>
+	                </div>
+	            </div>
+	            <div class="pull-right">
+	               <!-- thawte seal -->
+	               <script src="https://siteseal.thawte.com/cgi/server/thawte_seal_generator.exe"></script>
+	            </div>
+	        </div>
+	    </div>
+
+      <!-- ************************ Terms  =================================== -->
+      <div id="terms" class="row member-register-box reg-terms plan-line-break reg-grey">
+        <div class="col-xs-12 reg-padding-left-0">
+          <p class="info">
+            By joining Sharefaith, you are agreeing to our
+            <a href="https://www.ministrybrands.com/documents/Ministry_Brands_Terms_and_Conditions_05.15.20.pdf" target="_blank">Terms of Use</a>.
+          </p>
+          <p style="font-weight: 600; margin-top: 1.5em">
+            Your free trial will auto-rollover into a full
+            Media Monthly membership
+            ($30/month)
+            if not cancelled before 7 days.
+          </p>
+        </div>
+      </div>
+    </div>
+</div>
+
+</form>
+</div>
+
+<script src="https://de411bmyfix7d.cloudfront.net/js/coolReg.js?v=200911"></script>
+<script src="https://de411bmyfix7d.cloudfront.net/js/sessionKeepAlive.js"></script>
+</div>
+</div>
+
+ <style>
+     .freetrial_header{
+     	margin-bottom: 20px;
+     }
+
+ 	.side-info{
+ 		float: left;
+ 	}
+
+ 	.reg-container{
+ 		float: left;
+ 		width: 65%;
+ 		margin-left: -13px;
+ 	}
+
+ 	.row.member-register-box.reg-terms.plan-line-break.reg-grey{
+	 	float: left;
+	    width: 61%;
+ 	}
+
+ 	.row.member-register-box.reg-final.coup{
+	 	float: left;
+	    width: 30%;
+	    margin: 27px 0 0 0;
+    }
+
+    #regcctitle{
+        margin-left: 5px;
+    }
+
+    #terms{
+    	margin-left: 18px;
+    	width: 100%;
+    }
+
+    .info{
+    	margin-left: 0;
+    }
+
+    @media (max-width: 1090px){
+    	#member-registration .reg-form-box{
+   		    float: left;
+		    width: 94%;
+		    margin-left: -13px;
+		    display: inline-block;
+		    margin-left: 7px;
+		    margin-right: 7px;
+    	}
+
+    	.reg-container {
+		    width: calc(100% - 16px);
+		    margin-left: 7px;
+		}
+
+    	.row.member-register-box.reg-terms.plan-line-break.reg-grey {
+		    float: none;
+		    width: 100%;
+		}
+
+    	.row.member-register-box.reg-final.coup {
+		    margin: 0;
+		    width: 100%;
+		}
+
+		#terms {
+		    margin-left: 0;
+		}
+
+		.labelMargin{
+			margin-left: 6px;
+		}
+
+		.g-recaptcha{
+			margin-left: 6px;
+		}
+
+		.radio{
+			margin-left: 6px;
+		}
+
+		.radio-inline{
+			margin-left: 6px;
+		}
+
+		#member-registration .btn-reg-type {
+		    margin-top: 0;
+		    margin-left: -18px;
+		    margin-bottom: 25px;
+		}
+
+		.plan-line-break {
+    		padding-left: 0px;
+		}
+    }
+ </style>
+<!-- end container -->
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var planName = getUrlVars()["planName"];
+    if (planName === "kids")
+        document.GenericForm.action = '/faith/freeTrial.do?planName=kids';
+}, false);
+
+function getUrlVars() {
+    var vars = {};
+    window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+        vars[key] = value;
+    });
+    return vars;
+}
+</script>
+
+
+<!-- begin footer.jsp -->
+<div id="push"></div>
+
+</div>  <!-- END content -->
+</div> <!-- END MAIN DIV -->
+<link href="/css/homeFooter.css" type="text/css" rel="stylesheet" />
+<footer id="footer" class="canvas">
+    <div class="container container-non-responsive">
+        <div class="row">
+            <div id="footer_quicklinks" class="col-xs-12">
+                <!-- Text Block Footer_Top_Links -->
+                <div class="quicklinks-row">  
+<div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+<ul>
+    <li><span id="footerHeader">Products</span></li>
+    <li>&nbsp;</li>
+    <li><a href="/category/what-is-new.html">Worship Graphics</a></li>
+    <li><a href="/category/church-websites.html">Church Websites</a></li>
+    <li><a href="/category/church-app.html">Church Mobile Apps</a></li>
+    <li><a href="/category/kids-sunday-school-curriculum.html">Sunday School Lessons</a></li>
+    <li><a href="/category/sunday-school-activities-kids-bible-stories-and-videos.html">Sunday School Activities</a></li>
+    <li><a href="https://hello.sharefaith.com/kids-vacation-bible-school">Vacation Bible School</a></li>
+    <li><a href="/category/sharefaith-presenter-church-presentation-software.html">Worship Software</a></li>
+    <li><a href="/faith/online-giving-tithing-churches.do">Giving & Donations</a></li>
+</ul>
+</div>
+<div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+<ul>
+    <li><span id="footerHeader">About Us</span></li>
+    <li>&nbsp;</li>
+    <li><a href="/about-us">Who Are We?</a></li>
+    <li><a href="/feature/sharefaith-job-openings.html">Career Opportunities</a></li>
+    <li><a href="/blog/">Sharefaith Blog Magazine</a></li>
+    <li><a href="/category/sharefaith-reviews.html">Sharefaith Reviews</a></li>
+    <li><a href="/faith/sitemap.do">Sitemap</a></li>
+    <li><a href="/faith/privacyPolicy/view.do">Privacy</a></li>
+</ul>
+</div>
+<div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+<ul>
+    <li><span id="footerHeader">Support</span></li>
+    <li>&nbsp;</li>
+    <li><a href="/faith/usagePolicy/view.do">Terms of Use</a></li>
+    <li><a href="//support.sharefaith.com" target="_blank">Support</a></li>
+    <li><a href="https://www.youtube.com/channel/UC6w9jd8-njBUtaRgsyu1BAQ" target="_blank">Youtube</a></li>
+    <li><a href="https://www.facebook.com/SharefaithPage" target="_blank">Facebook</a></li>
+    <li><a href="https://www.instagram.com/sharefaith_official/" target="_blank">Instagram</a></li>
+    <li><a href="https://www.pinterest.com/sharefaithmedia/" target="_blank">Pinterest</a></li>
+    <li><a href="https://twitter.com/sharefaith" target="_blank">Twitter</a></li>
+</ul>
+</div>
+<div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+<ul>
+    <li><span id="footerHeader">Sales</span></li>
+    <li>&nbsp;</li>
+    <li><p>Our Product Ambassadors
+    are ready to introduce you to
+    our full product offering<br/>
+    <span class="supportNumber">888-317-4018</span></p></li>
+    <li><p>Subscribe to our Newsletter</p></li>
+    <li>
+<!--[if lte IE 8]>
+<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+<![endif]-->
+<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+<script>
+  hbspt.forms.create({
+    portalId: "6060861",
+    formId: "f5a97b3b-7637-4941-a4b9-37e664e99b89",
+    css:"",
+    cssClass: "sharefaith-form",
+});
+</script></li>
+</ul>
+</div>
+</div>
+
+
+
+
+<!--
+form action="//sharefaith.us6.list-manage.com/subscribe/post?u=a18d3c291be94979ab0150651&amp;id=c4d4890405" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate lgFooterForm" target="_blank" novalidate>
+                <input type="email" title="Email" style="padding-left: 4px;" placeholder="YOUR EMAIL HERE" name="EMAIL" class="required text" id="mce-EMAIL"  >
+                <input type="submit" value="Subscribe" text="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="submit footerSubmit">
+            </form></li>
+</ul>
+</div>
+</div>
+-->
+
+<style>
+
+iframe#hs-form-iframe-0 {
+    height: 100px;
+}
+
+iframe.hs-form-iframe#hs-form-iframe-0 {
+	width: 217px;
+}
+
+.hs-form .actions {
+    margin: 0;
+    padding: 0;
+}
+
+.hbspt-form .input {
+    margin-bottom: 0;
+}
+
+form.hs-form {
+    margin-bottom: 0;
+}
+
+.hs-form .hs_email {
+    margin-bottom: 6px;
+}
+
+.hs-form-field input[type="email"] {
+    padding: 1px 1px 1px 4px;
+    height: 26px;
+    width: 100%;
+    color: #888;
+    font-size: 14px;
+}
+
+.hs-form-field input[type="email"]::placeholder {
+    font-family: "Open Sans", sans-serif;
+}
+
+.hs-error-msgs.inputs-list label {
+    color: #888;
+}
+
+.hbspt-form .submitted-message {
+    padding-top: 20px;
+}
+
+input.hs-button {
+    font-size: 18px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    padding: 2px 0;
+    width: 100%;
+    background: #53afd1;
+    color: white!important;
+    border: none;
+}
+
+@media screen and (max-width: 768px) and (min-width: 900px) {
+	iframe.hs-form-iframe#hs-form-iframe-0 {
+		width: 185px;
+	}
+}
+
+</style>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-copyright container container-non-responsive" id="footer-copyright">
+        <div class="row">
+            <!-- Text Block FOOTER_brandbar -->
+            <div class="col-xs-12 brandBar">
+    <p>Copyright&nbsp;&#169;&nbsp;<span id="sf-copyright-year"></span>
+        <script>
+            $(function() {
+                $('#sf-copyright-year').text(new Date().getFullYear());
+            });
+        </script>
+        Sharefaith Inc. All Rights Reserved.
+        860 O'hare Parkway Suite #200, Medford, OR, 97504, U.S. &nbsp;&nbsp;<span
+            id="sf-mf-implementation-version"></span>
+    </p>
+</div>
+
+<style>
+@font-face {
+    font-family: 'din';
+    src: url('https://d2d735512y8kbj.cloudfront.net/fonts/DIN%20Condensed%20Bold.ttf');
+}
+h3 { display: inline-block; }
+#sf-mf-implementation-version { opacity: 0.5; }
+</style>
+
+<div id="ad-bot" style="position: fixed; height: 122px; background-color: #217993; z-index:1000; bottom: 0; display: none; font-family: 'Open Sans', sans-serif;">
+    <div class="head-give-con" style="text-align:  center;">
+        <div class="image-give" style="float: left; margin-right: 9px; text-align:  right; margin-right: 10px;">
+            <img src="//images.sharefaith.com/images/img/3/central/images/giving-promo/PhoneHand.png" alt="" style="height: 142px;padding:  10px;display:  inline-block;margin-top: -7px;">
+        </div>
+        <div class="head-give" style="display: inline-block;text-align: right;margin-top: 6px;width: 318px;">
+            <h3 style="color: #fff !important;font: 48px/61px din, 'Open Sans Condensed', sans-serif; margin: 0;margin-bottom: -16px !important;"><strong style=" font-weight: normal;">GIVING &amp; DONATIONS</strong></h3>
+            <p style="color: #fff;font-size: 14px !important; margin: 0 20px !important; font-weight: normal !important; text-align:left;">FREE TO ALL SHAREFAITH MEMBERS</p>
+            <div style="color: #fff;font-size: 14px;">
+                <a href="https://sharefaith.com/category/online-giving-tithing-churches.html" style="cursor: pointer; color:#FFF; background-color: #000;padding: 8px;width:144px;text-align: center;float:  right;margin: 4px;">LEARN MORE</a>
+                <a href="https://sharefaith.com/category/myhome-giving-cookie.html" style="cursor: pointer; color:#FFF; background-color:#EC841D;padding: 8px;width:144px;text-align: center;float:  right;margin: 4px;">ACTIVATE NOW</a>
+
+
+
+            </div>
+        </div>
+    </div>
+    <div id="close" onclick="hideBar();" style="position: absolute !important; top: 4px !important; right: 10px !important; font-size: 20px !important; font-weight: bold; cursor:  pointer !important; color: #fff !important;">x</div>
+</div>
+
+<form id="active1" style"display:none;" action="https://api.sharefaith.com/log" method="POST">
+    <input name="at" value="at" type="hidden">
+    <input name="action" value="logDownload" type="hidden">
+    <input name="go" value="https://givead.sharefaith.com/" type="hidden">
+    <input value="DOWNLOAD" class="" style="width: 159px; height: 58px; display: none;" data-wid="507" type="submit">
+</form>
+
+<form id="active2" style"display:none;" action="https://api.sharefaith.com/log" method="POST">
+    <input name="at" value="at" type="hidden">
+    <input name="action" value="logDownload" type="hidden">
+    <input id="go1" name="go" value="https://givead.sharefaith.com/" type="hidden">
+    <input value="DOWNLOAD" class="" style="width: 159px; height: 58px; display: none;" data-wid="507; " type="submit">
+</form>
+
+<form id="active3" style"display:none;" action="https://api.sharefaith.com/log" method="POST">
+    <input name="at" value="at" type="hidden">
+    <input name="action" value="logDownload" type="hidden">
+    <input name="go" value="https://givead.sharefaith.com/" type="hidden">
+    <input value="DOWNLOAD" class="" style="width: 159px; height: 58px; display: none;" data-wid="507; " type="submit">
+</form>
+
+<form id="active4" style"display:none;" action="https://api.sharefaith.com/log" method="POST">
+    <input name="at" value="at" type="hidden">
+    <input name="action" value="logDownload" type="hidden">
+    <input name="go" value="https://givead.sharefaith.com/" type="hidden">
+    <input value="DOWNLOAD" class="" style="width: 159px; height: 58px;  display: none;" data-wid="507;" type="submit">
+</form>
+
+<form id="active5" style"display:none;" action="https://api.sharefaith.com/log" method="POST">
+    <input name="at" value="at" type="hidden">
+    <input name="action" value="logDownload" type="hidden">
+    <input name="go" value="https://givead.sharefaith.com/" type="hidden">
+    <input value="DOWNLOAD" class="" style="width: 159px; height: 58px;  display: none;" data-wid="507;" type="submit">
+</form>
+
+<form id="active6" style"display:none;" action="https://api.sharefaith.com/log" method="POST">
+    <input name="at" value="at" type="hidden">
+    <input name="action" value="logDownload" type="hidden">
+    <input name="go" value="https://givead.sharefaith.com/" type="hidden">
+    <input value="DOWNLOAD" class="" style="width: 159px; height: 58px; display: none;" data-wid="507;" type="submit">
+</form>
+
+<style>
+#ad-bot{
+left: 0; right:0;
+}
+
+.main .mediaBody ~#footer #ad-bot {left:250px}
+.main.expand .mediaBody ~#footer #ad-bot {left:40px}
+
+.head-give{
+    float: left;
+    margin-left: -30px;
+}
+
+.image-give{
+    display: block;
+}
+
+.head-give-con{
+width: 522px;
+    margin: auto;
+}
+
+@media ( max-width : 1079px) {
+   .main .mediaBody ~#footer #ad-bot {
+        left: 0;
+    }
+}
+
+@media (max-width: 700px){
+.head-give{
+    float: none;
+    margin-left: 0;
+}
+
+.image-give{
+    display: none;
+}
+
+.head-give-con{
+width: auto;
+    margin-right: 18px;
+}
+
+}
+</style>
+
+<script>
+
+        var maxScroll = $(document).height() - $(window).height();
+
+        if ($.cookie('ad-bar') !== 'hide')
+        {
+            if (maxScroll < 400)
+            {
+                $('#ad-bot').fadeIn();
+            }
+        }
+
+        $(document).scroll(function ()
+        {
+            if ($.cookie('ad-bar') !== 'hide')
+            {
+                var y = $(this).scrollTop();
+
+                if (maxScroll < 400)
+                {
+                    $('#ad-bot').fadeIn();
+                }
+                else
+                {
+                    if ($(window).width() > 900)
+                    {
+                        if (y > 400)
+                        {
+                            $('#ad-bot').fadeIn();
+                        }
+                        else
+                        {
+                            $('#ad-bot').fadeOut();
+                        }
+                    }
+                    else
+                    {
+                        if (y > 600)
+                        {
+                            $('#ad-bot').fadeIn();
+                        }
+                        else
+                        {
+                            $('#ad-bot').fadeOut();
+                        }
+                    }
+                }
+            }
+        });
+
+        function hideBar()
+        {
+            var onehour = 1000 * 60 * 60;
+            var expires = new Date(+new Date() + (onehour * 120));
+
+            $.cookie('ad-bar', 'hide',
+                    {
+                        expires: expires,
+                        path: '/'
+                    });
+
+            $('#ad-bot').hide();
+        }
+
+</script>
+
+<script>
+        $(document).ready(function ()
+        {
+            $(".activateb").click(function ()
+            {
+                if ($('#account_plan').length == 0)
+                {
+                   //$.ajax({ type: "POST", url: "https://api.sharefaith.com/log", data: 'at=at&action=logDownload&go=http://giving.sharefaith.com/give-back-campaign', success: function() {                                       }});
+$('#active1').submit();
+
+                } else
+                {
+                    if ($('#account_application_id').val().length == 1 && $('#account_giving_id').val().length == 1)
+                    {
+                       // $.ajax({ type: "POST", url: "https://api.sharefaith.com/log", data: 'at=at&action=logDownload&go=http://giving.sharefaith.com/give-back-campaign', success: function() { }});
+$('#go1').val('http://giving.sharefaith.com/give-back-campaign');
+$('#active2').submit();
+                    } else if ($('#account_giving_id').val().length > 1)
+                    {
+                       //$.ajax({ type: "POST", url: "https://api.sharefaith.com/log", data: 'at=at&action=logDownload&go=http://giving.sharefaith.com/give-back-campaign', success: function() {   }});
+                       document.location.href='https://secure.sharefaithgiving.com/';
+
+$('#active3').submit();
+
+                    } else if ($('#account_application_id').val().length > 1 && $('#account_giving_id').val().length == 1)
+                    {
+                      // $.ajax({ type: "POST", url: "https://api.sharefaith.com/log", data: 'at=at&action=logDownload&go=http://giving.sharefaith.com/give-back-campaig'n', success: function() {   }});
+                     $('#active4').submit();
+                    }
+                }
+            });
+
+            $(".jgiving").click(function ()
+            {
+                if ($('#account_plan').length == 0)
+                {
+                    document.cookie = 'goToTab=tithing';
+                   // $.ajax({ type: "POST", url: "https://api.sharefaith.com/log", data: 'at=at&action=logDownload&go=http://giving.sharefaith.com/give-back-campaign', success: function() { }});
+$('#active5').submit();
+                } else
+                {
+ document.cookie = 'goToTab=tithing';
+//                    $.ajax({ type: "POST", url: "https://api.sharefaith.com/log", data: 'at=at&action=logDownload&go=http://giving.sharefaith.com/give-back-campaign', success: function() { }});
+
+$('#active6').submit();
+
+                }
+            });
+        });
+
+        function writeCookie(key, value, hours)
+        {
+            var date = new Date();
+
+            // Get unix milliseconds at current time plus number of hours
+            date.setTime(+date + (hours * 86400000)); //60 * 60 * 1000
+            window.document.cookie = key + "=" + value + "; expires=" + date.toGMTString() + "; path=/";
+
+            return value;
+        }
+</script>
+
+<!--
+<div class="col-xs-12 brandBar">
+        <p>Copyright &#169;<script type="text/javascript">var d = new Date(); document.write(d.getFullYear());</script> Sharefaith Inc. All rights Reserved. 860 O'hare Parkway Suite #200, Medford, OR, 97504, U.S.</p>
+</div>
+
+
+<style>
+@font-face{
+	font-family: 'din';
+	src: url('https://d2d735512y8kbj.cloudfront.net/fonts/din_condensed_bold1-webfont.woff2') format('woff2'),
+         url('https://d2d735512y8kbj.cloudfront.net/fonts/din_condensed_bold1-webfont.woff') format('woff'),
+		 url('https://d2d735512y8kbj.cloudfront.net/fonts/DIN%20Condensed%20Bold.ttf') format('truetype');
+	font-weight: normal;
+        font-style: normal;
+        margin-bottom: -10px !important;
+        margin-top: -6px;
+
+}
+</style>
+
+<div id="ad-bot" style="position: fixed; height: 122px; background-color: #1f7d9d; z-index:1000; bottom: 0; display: none; font-family: 'Open Sans', sans-serif;">
+    <div class="head-give-con" style="text-align:  center;">
+        <div class="image-give" style="float: left; margin-right: 9px; text-align:  right; margin-right: 10px;">
+            <img src="https://images.sharefaith.com/images/img/3/central/images/PMM-Promo/Sharefaith-Ministry-Background-Checks.png" alt="Sharefaith-Ministry-Background-Checks" style="height: 142px;padding:  10px;display:  inline-block;margin-top: -7px;">
+        </div>
+        <div class="head-give" style="display: inline-block;text-align: right;margin-top: 6px;">
+            <h1 style="color: #fff !important;margin: 0;margin-bottom: -16px !important;"><strong style=" font-weight: normal;">MINISTRY&nbsp;BACKGROUND&nbsp;CHECKS</strong></h1>
+            <div style="color: #fff;font-size: 14px;">
+                <div class="activateb" style="cursor: pointer; background-color: #e9832f;padding: 8px;width: 119px;text-align: center;float:  right;margin-top: 19px;">ACTIVATE NOW</div>
+                <div class='jgiving' style="cursor: pointer;background-color: #286657;padding: 8px;width: 119px;text-align: center;float:  right;margin-top: 19px; margin-right: 11px;">LEARN MORE</div>
+
+
+            </div>
+        </div>
+    </div>
+    <div id="close" onclick="hideBar();" style="position: absolute !important; top: 4px !important; right: 10px !important; font-size: 20px !important; font-weight: bold; cursor:  pointer !important; color: #fff !important;">x</div>
+</div>
+
+<form id="active1" style"display:none;" action="https://api.sharefaith.com/log" method="POST">
+    <input name="at" value="at" type="hidden">
+    <input name="action" value="logDownload" type="hidden">
+    <input name="go" value="https://sharefaith.com/faith/planSelection.do" type="hidden">
+    <input value="DOWNLOAD" class="" style="width: 159px; height: 58px; display: none;" data-wid="507" type="submit">
+</form>
+
+<form id="active2" style"display:none;" action="https://api.sharefaith.com/log" method="POST">
+    <input name="at" value="at" type="hidden">
+    <input name="action" value="logDownload" type="hidden">
+    <input id="go1" name="go" value="ANYURLHERE" type="hidden">
+    <input value="DOWNLOAD" class="" style="width: 159px; height: 58px; display: none;" data-wid="507; " type="submit">
+</form>
+
+<form id="active3" style"display:none;" action="https://api.sharefaith.com/log" method="POST">
+    <input name="at" value="at" type="hidden">
+    <input name="action" value="logDownload" type="hidden">
+    <input name="go" value="https://sharefaith.com/faith/member.do" type="hidden">
+    <input value="DOWNLOAD" class="" style="width: 159px; height: 58px; display: none;" data-wid="507; " type="submit">
+</form>
+
+<form id="active4" style"display:none;" action="https://api.sharefaith.com/log" method="POST">
+    <input name="at" value="at" type="hidden">
+    <input name="action" value="logDownload" type="hidden">
+    <input name="go" value="https://sharefaith.com/faith/member.do" type="hidden">
+    <input value="DOWNLOAD" class="" style="width: 159px; height: 58px;  display: none;" data-wid="507;" type="submit">
+</form>
+
+<form id="active5" style"display:none;" action="https://api.sharefaith.com/log" method="POST">
+    <input name="at" value="at" type="hidden">
+    <input name="action" value="logDownload" type="hidden">
+    <input name="go" value="https://www.sharefaith.com/category/Sharefaith-Ministry-background-checks.html" type="hidden">
+    <input value="DOWNLOAD" class="" style="width: 159px; height: 58px;  display: none;" data-wid="507;" type="submit">
+</form>
+
+<form id="active6" style"display:none;" action="https://api.sharefaith.com/log" method="POST">
+    <input name="at" value="at" type="hidden">
+    <input name="action" value="logDownload" type="hidden">
+    <input name="go" value="https://sharefaith.com/faith/member.do" type="hidden">
+    <input value="DOWNLOAD" class="" style="width: 159px; height: 58px; display: none;" data-wid="507;" type="submit">
+</form>
+
+<style>
+.head-give h1{
+    font: 40px/61px din, 'Open Sans Condensed', sans-serif;
+}
+
+.head-give h1{
+    width: 313px;
+}
+
+#ad-bot{
+left: 0; right:0;
+}
+
+.main .mediaBody ~#footer #ad-bot {left:250px}
+.main.expand .mediaBody ~#footer #ad-bot {left:40px}
+
+.head-give{
+    float: left;
+}
+
+.image-give{
+    display: block;
+}
+
+.head-give-con{
+width: 535px;
+    margin: auto;
+}
+
+@media ( max-width : 1079px) {
+   .main .mediaBody ~#footer #ad-bot {
+        left: 0;
+    }
+
+@media (max-width: 700px){
+.head-give{
+    float: none;
+    margin-left: 0;
+    width: 285px;
+}
+
+.image-give{
+    display: none;
+}
+
+.head-give-con{
+width: auto;
+    margin-right: 33px;
+}
+
+.head-give h1{
+    font: 33px/61px din, 'Open Sans Condensed', sans-serif;
+}
+
+.head-give h1{
+    width: 284px;
+}
+
+}
+</style>
+
+<script>
+
+        var maxScroll = $(document).height() - $(window).height();
+
+        if ($.cookie('ad-bar') !== 'hide')
+        {
+            if (maxScroll < 400)
+            {
+                $('#ad-bot').fadeIn();
+            }
+        }
+
+        $(document).scroll(function ()
+        {
+            if ($.cookie('ad-bar') !== 'hide')
+            {
+                var y = $(this).scrollTop();
+
+                if (maxScroll < 400)
+                {
+                    $('#ad-bot').fadeIn();
+                }
+                else
+                {
+                    if ($(window).width() > 900)
+                    {
+                        if (y > 400)
+                        {
+                            $('#ad-bot').fadeIn();
+                        }
+                        else
+                        {
+                            $('#ad-bot').fadeOut();
+                        }
+                    }
+                    else
+                    {
+                        if (y > 600)
+                        {
+                            $('#ad-bot').fadeIn();
+                        }
+                        else
+                        {
+                            $('#ad-bot').fadeOut();
+                        }
+                    }
+                }
+            }
+        });
+
+        function hideBar()
+        {
+            var onehour = 1000 * 60 * 60;
+            var expires = new Date(+new Date() + (onehour * 120));
+
+            $.cookie('ad-bar', 'hide',
+                    {
+                        expires: expires,
+                        path: '/'
+                    });
+
+            $('#ad-bot').hide();
+        }
+
+</script>
+
+<script>
+        $(document).ready(function ()
+        {
+            $(".activateb").click(function ()
+            {
+                if ($('#account_plan').length == 0)
+                {
+                   //$.ajax({ type: "POST", url: "https://api.sharefaith.com/log", data: 'at=at&action=logDownload&go=https://www.sharefaith.com/faith/joinNow.do', success: function() {                                       }});
+$('#active1').submit();
+
+                } else
+                {
+                    if ($('#account_application_id').val().length == 1 && $('#account_giving_id').val().length == 1)
+                    {
+                       // $.ajax({ type: "POST", url: "https://api.sharefaith.com/log", data: 'at=at&action=logDownload&go=https://secure.sharefaithgiving.com/sign-up/?tid=' + $('#account_id').val(), success: function() { }});
+$('#go1').val('https://secure.sharefaithgiving.com/sign-up/?tid=' + $('#account_id').val());
+$('#active2').submit();
+                    } else if ($('#account_giving_id').val().length > 1)
+                    {
+                       //$.ajax({ type: "POST", url: "https://api.sharefaith.com/log", data: 'at=at&action=logDownload&go=https://secure.sharefaithgiving.com/', success: function() {   }});
+                       document.location.href='https://secure.sharefaithgiving.com/';
+
+$('#active3').submit();
+
+                    } else if ($('#account_application_id').val().length > 1 && $('#account_giving_id').val().length == 1)
+                    {
+                      // $.ajax({ type: "POST", url: "https://api.sharefaith.com/log", data: 'at=at&action=logDownload&go=https://sharefaith.com/faith/member.do#giving_tab', success: function() {   }});
+                     $('#active4').submit();
+                    }
+                }
+            });
+
+            $(".jgiving").click(function ()
+            {
+                if ($('#account_plan').length == 0)
+                {
+                    document.cookie = 'goToTab=tithing';
+                   // $.ajax({ type: "POST", url: "https://api.sharefaith.com/log", data: 'at=at&action=logDownload&go=https://sharefaith.com/faith/planSelection.do', success: function() { }});
+$('#active5').submit();
+                } else
+                {
+ document.cookie = 'goToTab=tithing';
+//                    $.ajax({ type: "POST", url: "https://api.sharefaith.com/log", data: 'at=at&action=logDownload&go=https://sharefaith.com/faith/member.do', success: function() { }});
+
+$('#active6').submit();
+
+                }
+            });
+        });
+
+        function writeCookie(key, value, hours)
+        {
+            var date = new Date();
+
+            // Get unix milliseconds at current time plus number of hours
+            date.setTime(+date + (hours * 86400000)); //60 * 60 * 1000
+            window.document.cookie = key + "=" + value + "; expires=" + date.toGMTString() + "; path=/";
+
+            return value;
+        }
+</script>
+-->
+
+
+
+
+<!--
+Description = GDPR Complience Storing cookies.
+Developer = Pieter de Vries.
+Date = 08/01/2018
+Version = 1.1
+-->
+<style>
+	#gdpr-bot{
+		left: 0;
+		right:0;
+		position: fixed;
+		height: 70px;
+		background-color: #607D8B;
+		z-index:2000;
+		bottom: 0;
+		display: none;
+		font-family: 'Open Sans', sans-serif;
+	}
+
+	.main .mediaBody ~#footer #gdpr-bot {left:250px}
+	.main.expand .mediaBody ~#footer #gdpr-bot {left:40px}
+
+	#gdpr-content{
+		color: #fff;
+		font-size: 14px;
+	}
+
+	#gdpr-text{
+		float:left;
+		width: 703px;
+		margin-top: 7px;
+               margin-right: 20px;
+	}
+
+	.head-gdpr{
+	    float: left;
+		/*display: inline-block;*/
+		text-align: left;
+		margin-top: 6px;
+	}
+
+	.image-gdpr{
+	  display: block;
+	}
+
+	.head-gdpr-con{
+		width: 1020px;
+	  margin: auto;
+		text-align: left;
+	}
+
+	.gdprClose{
+		background-color: #607D8B;
+		color: #fff;
+		border: solid 1px #fff;
+		cursor: pointer;
+		padding: 8px;
+		width: 115px;
+                box-sizing: border-box;
+		text-align: center;
+		float: right;
+		margin-top: 11px;
+		margin-left: 20px;
+		margin-right: 20px;
+		border-radius: 8px;
+	}
+
+	.gdprInfo{
+		background-color: #607D8B;
+		color: #fff;
+		border: solid 1px #fff;
+		cursor: pointer;
+		padding: 8px;width: 127px;
+		text-align: center;
+		float: right;
+		width: 119px;
+		margin-top: 11px;
+		margin-right: 11px;
+		border-radius: 8px;
+	}
+
+	.gdprClose:hover{
+		background-color: #fff;
+		color: #607D8B;
+	}
+
+	.gdprInfo:hover{
+		background-color: #fff;
+		color: #607D8B;
+	}
+
+	@media (max-width: 1090px){
+		#gdpr-bot{
+			height: 146px;
+		}
+
+		.head-gdpr{
+		  width: 100%;
+			float: none;
+		}
+
+		.head-gdpr-con{
+		  width: 100%;
+			float: none;
+		}
+
+		#gdpr-content{
+			text-align: center;
+			float: none;
+			width: 100%
+		}
+
+		#gdpr-text{
+			display: inline-block;
+			text-align: center;
+			float: none;
+			width: 100%
+		}
+
+		.gdprClose{
+			float: none;
+			display: inline-block;
+			margin-right: 0;
+		}
+
+		.gdprInfo{
+			float: none;
+			display: inline-block;
+		}
+
+		.gdprInfo{
+			margin-right: 0;
+		}
+	}
+
+	@media (max-width: 560px){
+		#gdpr-bot {
+    	height: 170px;
+		}
+
+		.gdprInfo{
+			margin-right: 0;
+		}
+	}
+</style>
+
+<style class="ad_banner_mobile_styles">
+</style>
+
+<!-- The bar for the gdpr-->
+<div id="gdpr-bot">
+	<!-- Describes the with of the content container -->
+  <div class="head-gdpr-con">
+			<!-- The container to put the content relative in the center -->
+  		<div class="head-gdpr">
+					<!-- The content of the gdpr bar -->
+        	<div id="gdpr-content">
+							<p id="gdpr-text" >
+We use cookies to ensure that we give you the best experience possible. If you would like more information on how cookies are used, please continue to more info.  Or you can click Okay to proceed as accepted.
+							<div class="gdprClose" onclick="hideGDPRBar();">Okay</div>
+
+            	<div class='gdprInfo' onclick="document.location.href='//sharefaith.com/faith/privacyPolicy/view.do';">More Info</div>
+
+        	</div>
+					<!-- Closes gdpr-content -->
+    	</div>
+			<!-- Closes head-gdpr -->
+	</div>
+	<!-- Closes head-gdpr-con -->
+</div>
+<!-- Closes gdpr-bot -->
+
+<script>
+	/* Only show gdpr if there is no cookie set */
+  if ($.cookie('gdpr-bar') !== 'hide')
+  {
+		//Show the cookie
+    $('#gdpr-bot').fadeIn();
+
+		//move the ad bar up so we can see it.
+		$('#ad-bot').css("bottom","70px");
+		$(".ad_banner_mobile_styles").text("@media (max-width: 860px) {#ad-bot{bottom:115px !important;}} @media (max-width: 560px) {#ad-bot{bottom:138px !important;}}");
+  }
+
+	/* Set Cookie so we do not show bar again */
+  function hideGDPRBar()
+  {
+		//Get an hour in miliseconds
+    var onehour = 1000 * 60 * 60;
+		//Set the expire dat to one month
+    var expires = new Date(+new Date() + (onehour * 120));
+
+		//Create the cookie
+    $.cookie('gdpr-bar', 'hide',
+      {
+          expires: expires,
+          path: '/'
+      });
+
+		//Hide the gdpr bar.
+    $('#gdpr-bot').hide();
+
+		//Put the ad bar back in place.
+		$('#ad-bot').css("bottom","0");
+		$(".ad_banner_mobile_styles").text("@media (min-width: 860px) {#ad-bot{bottom:0px}} @media (min-width: 560px) {#ad-bot{bottom:0px}}");
+  }
+</script>
+
+        </div>
+    </div>
+</footer>
+<script>
+$(function() {
+    $("#sf-mf-implementation-version").text("21.1.17.1202ae");
+});
+</script>
+
+<!--begin google tracking code-->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MCKVWJR"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+
+<!--end google tracking code-->
+
+
+
+</div>   <!--/body-->
+<!-- Libs -->
+
+
+<!-- Theme Initializer -->
+ <script src="/js/plugins.js"></script>
+
+
+<div class="modal fade" style="background-color: rgba(0, 0, 0, 0.4) !important;" id="braintreeIncompatiableModal" tabindex="-1" role="dialog">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title" style="font-size: 22px;">Incompatibility Warning!</h4>
+			</div>
+			<div class="modal-body">
+				<p>
+					For your security we cannot allow any payments to be processed from your device. We value your security and apologize for the inconvenience. <br><br> <strong>What you can do to fix this.</strong> <br> Update your web browser to the latest version and disable any ad blockers.  
+					<br>
+					<br>
+					<strong>Still having issues?</strong>
+					<br>
+					Contact our amazing support staff for more information.
+					<br>
+					<strong><a href="tel:888-317-4018">888-317-4018</a></strong><br>
+					<a href="https://support.sharefaith.com/">https://support.sharefaith.com/</a>
+				</p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-primary" onclick="window.history.back();">Got It!</button>
+			</div>
+		</div>
+		<!-- /.modal-content -->
+	</div>
+	<!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+
+</body>
+</html>
+<!-- end footer.jsp -->
+

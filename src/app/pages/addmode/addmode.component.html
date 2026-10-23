@@ -1,0 +1,85 @@
+<!-- <ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-button slot="start">
+      <ion-back-button (click)="navBack()"></ion-back-button>
+    </ion-button>
+    <ion-title class="glbl-clr-white glbl-text-cntr">Add Mode</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+<ion-header>
+  <ion-toolbar class="global-background">
+    <ion-buttons slot="start">
+      <ion-back-button (click)="navBack()"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="title-pos glbl-clr-white">Add Scene</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [scrollEvents]="true">
+  <div class="fullscreen-container">
+    <ion-card class="global-background card-cls">
+      <form #form="ngForm" (ngSubmit)="setmode(form)" (keyup.enter)="setmode(form)">
+        <ion-card-content>
+          <div class="modeslider glbl-text-cntr">
+            <h3 class="glbl-clr-white">Swipe to select Image for Modes</h3>
+
+            <ion-grid>
+              <ion-row>
+                <ion-col size="1">
+                  <!-- <span class="slider-nav arrow-prev" (click)="slidePrev('','')">
+                 
+                    <div class="prev-icon-custom custon-nav" [class.disabled]="sliderOne.isBeginningSlide">
+                      <ion-icon name="arrow-back" size="small"></ion-icon>
+                    </div>
+                  </span> -->
+                </ion-col>
+                <ion-col size="10">
+                  <!-- <ion-slides pager="false" [options]="slideOptsOne" #slideWithNav -->
+                  <!-- <ion-slides pager="false" [options]="sliderOne" #slideWithNav
+                    (ionSlideDidChange)="SlideDidChange(sliderOne,slideWithNav); getcurrentimg(sliderOne,slideWithNav);">
+                    <ion-slide *ngFor="let s of sliderOne.slidesItems">
+                      <div>
+                        <img src="{{s.image}}">
+                        <div><span style="font-weight: 500;" class="glbl-clr-white">{{s.name}}</span></div>
+                      </div>
+
+                    </ion-slide>
+                  </ion-slides> -->
+                  <swiper-container #swiper (slidechange)="swiperSlideChanged($event);" (afterinit)="swiperReady()">
+                    <swiper-slide *ngFor="let s of sliderOne.slidesItems" class="swi-slide">
+                      <div>
+                        <img src="{{s.image}}">
+                        <div><span style="font-weight: 500;" class="glbl-clr-white">{{s.name}}</span></div>
+                      </div>
+                    </swiper-slide>
+                  </swiper-container>
+
+                </ion-col>
+                <ion-col size="1">
+                  <!-- <span class="slider-nav arrow-next" (click)="slideNext(sliderOne,slideWithNav)">
+                    <div class="next-icon-custom custon-nav" [class.disabled]="sliderOne.isEndSlide">
+                      <ion-icon name="arrow-forward" size="small"></ion-icon>
+                    </div>
+                  </span> -->
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </div>
+          <ion-item>
+            <ion-label position="stacked" class="glbl-clr-white">Mode Name</ion-label>
+            <ion-input placeholder="optional" ngModel name="modename"></ion-input>
+          </ion-item>
+
+        </ion-card-content>
+
+        <ion-row class="cardfooter">
+          <ion-col size=6>
+            <ion-button (click)="navBack()" class="cancel">Cancel</ion-button>
+          </ion-col>
+          <ion-col size=6>
+            <ion-button type="submit" class="add">Add</ion-button>
+          </ion-col>
+        </ion-row>
+      </form>
+    </ion-card>
+  </div>
+</ion-content>

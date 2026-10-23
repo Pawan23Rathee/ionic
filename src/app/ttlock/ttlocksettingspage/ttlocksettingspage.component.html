@@ -1,0 +1,75 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar >
+    <ion-buttons slot="start" >
+      <ion-back-button defaultHref="/ttoperation" ></ion-back-button>
+    </ion-buttons>
+    <ion-title style="text-align: center; ">
+      Settings
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<!-- <ion-card> -->
+  <ion-list>
+    <ion-item detail (click)="lockDetailsClick()">
+      <ion-label>
+      Basic
+      </ion-label>
+    </ion-item>
+  </ion-list>
+ 
+<!-- </ion-card> -->
+<!-- <ion-card> -->
+  <ion-list class="list">
+    <ion-item detail lines="full">
+      <ion-label slot="start">Unlock remotely</ion-label>
+      <ion-label slot="end">off</ion-label>
+    </ion-item>
+    <ion-item detail lines="full" (click)="setAutoTime()">
+      <ion-label slot="start">Auto Lock</ion-label>
+      <ion-label slot="end">5s</ion-label>
+    </ion-item>
+    <ion-item detai lines="full"l>
+      <ion-label slot="start">Passage Mode</ion-label>
+      <ion-label slot="end">Off</ion-label>
+    </ion-item>
+    <ion-item detail lines="full">
+      <ion-label slot="start">Lock Sound</ion-label>
+      <ion-label slot="end">On</ion-label>
+    </ion-item>
+    <ion-item detail lines="full">
+      <ion-label slot="start">Lock Sound</ion-label>
+      <ion-label slot="end">on</ion-label>
+    </ion-item>
+    <ion-item detail lines="full">
+      <ion-label slot="start">Tamper Alert</ion-label>
+      <ion-label slot="end">On</ion-label>
+    </ion-item>
+    <ion-item detail lines="full">
+      <ion-label slot="start">Reset Button</ion-label>
+      <ion-label slot="end">On</ion-label>
+    </ion-item>
+  </ion-list>
+<!-- </ion-card> -->
+
+<ion-list class="list">
+  <ion-item detail lines="full">
+    <ion-label slot="start">Lock Clock</ion-label>
+  </ion-item>
+  <ion-item detail lines="full">
+    <ion-label slot="start">Diagnosis</ion-label>
+  </ion-item>
+  <ion-item detai lines="full"l>
+    <ion-label slot="start">Upload Data</ion-label>
+  </ion-item>
+  <ion-item detail lines="full">
+    <ion-label slot="start">Import from another lock</ion-label>
+  </ion-item>
+  <ion-item detail lines="full">
+    <ion-label slot="start">Firmware Upload</ion-label>
+  </ion-item>
+</ion-list>
+
+<ion-button expand="full" (click)="deleteTTLock()">Delete</ion-button>
+</ion-content>

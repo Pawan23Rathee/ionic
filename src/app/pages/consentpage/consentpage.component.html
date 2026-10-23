@@ -1,0 +1,16 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar >
+    <ion-buttons slot="start" style="position:absolute">
+      <ion-back-button defaultHref="/mainpage" ></ion-back-button>
+    </ion-buttons>
+    <ion-title style="text-align: center;">
+      Account Linking
+    </ion-title> 
+    <ion-icon name="create-outline" slot="end" style=" font-size: 20px;margin-right: 10px;" (click)="editName()" ></ion-icon> 
+    <!-- <p  name='trash' slot="end" ">{{d_on}}</p>  -->
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+   <ion-button (click)="routeAlexa()">Link Account with Alexa</ion-button>
+   <ion-button (click)="routeGoogle()">Link Account with Google</ion-button>
+</ion-content>

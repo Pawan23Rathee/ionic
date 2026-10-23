@@ -1,0 +1,45 @@
+<ion-header translucent class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/mcategory" (click)="backbutton()"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center glbl-clr-white">Smart Config</ion-title>
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngIf="selectWifiDetails" class="global-background">
+    <ion-card-header>
+      <ion-card-title>Select Wi-Fi Network and enter password</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      It will scan for available smart equipment and add it.
+    </ion-card-content>
+  
+    <ion-button (click)="getwifidetail()" expand="block">Add Wifi</ion-button>
+  </ion-card>
+  <ion-card *ngIf="selectDeviceType">
+    <ion-card-header>
+      <ion-card-title>Select device type and submit</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <label>Mac Id of the device is: {{mac_id}}</label>
+        </ion-row>
+        <ion-row>
+          <ion-item style="width: 100%;">
+          <label>Device type:</label>
+          
+          <ion-select  [(ngModel)]="device_type"  style="max-height: 100%;">
+          <ion-select-option *ngFor="let type of allDeviceTypes" [value]="type[1]">{{type[0]}}</ion-select-option>
+          </ion-select>
+          </ion-item>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+    
+  <ion-button (click)="submitdevice()" expand="block">Submit</ion-button>
+  </ion-card>
+</ion-content>

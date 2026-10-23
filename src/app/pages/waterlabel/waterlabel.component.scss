@@ -1,0 +1,114 @@
+:root {
+  --fillvalue: 100%;
+  
+}
+.refresh ,.ionTab{
+    background: #b6b9b9;
+    color: white;
+    border-radius: 10px;
+}
+ion-card{
+    border-radius: 10px;
+}
+.settings1,.level{
+    border-radius: 10px;
+    background-color: transparent !important;
+    border: 2px solid white;
+}
+.settings1:focus,.level:focus{
+    border-radius: 10px;
+    background-color: #3880ff !important;
+    border: 2px solid white;
+}
+ion-label{
+    font-size: 12px;
+    min-width: 74%;
+}
+ion-select{
+    font-size: 12px;
+}
+ion-item{
+    --background: transparent;
+}
+ion-input.custom {
+    --color: white;
+    --placeholder-color: white;
+  }
+  ion-button.custom{
+      width: 80%;
+      margin-left: 10%;
+      --border-radius: 10px;
+  }
+// .custom ion-toolbar ion-tabs ion-tab-bar ion-tab-button{
+//     background: transparent !important;
+//     border: 2px solid white;
+// }
+/* #banner1 {
+    width: 180px;
+    height: 300px;
+    border-radius:10%;
+    border:2px solid black;
+    background: #fff;
+    overflow: hidden;
+    backface-visibility: hidden;
+    transform: translate3d(0, 0, 0);
+    margin-left: 22%;
+}
+#banner .fill {
+    animation-name: fillAction;
+    animation-iteration-count: 1;
+    animation-timing-function: cubic-bezier(.2, .6, .8, .4);
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+    text-align: center;
+}
+#banner #waveShape {
+    animation-name: waveAction;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: 0.5s;
+    width:190px;
+    height: 0px;
+    fill: #04ACFF;
+}
+@keyframes fillAction {
+    0% {
+        transform: translate(0, 180px);
+    }
+    100% {
+        transform: translate(0, -5px);
+    }
+} */
+
+#banner {
+    margin: auto;
+  width: 150px;
+  height: 200px;
+  position: relative;
+  background: #ffffff;
+  border-radius: 10px;
+  border: #b6b9b9 2px solid;
+  overflow: hidden;
+}
+#banner2 {
+  width: 150px;
+  height: 0px;
+  position: absolute;
+  background: cornflowerblue;
+  //border-radius: 50%;
+  overflow: hidden;
+  bottom: 0;
+}
+#bannerText {
+    padding-top: 20px;
+    margin: auto;
+  width: 150px;
+  height: 200px;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+}
+.level-font{
+    font-size: 18px;
+}
+

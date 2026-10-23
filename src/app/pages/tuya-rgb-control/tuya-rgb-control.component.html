@@ -1,0 +1,136 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start" style="position:absolute">
+      <ion-back-button defaultHref="/mainpage" (click)='backbutton()'></ion-back-button>
+    </ion-buttons>
+    <ion-title style="text-align: center;">
+      {{d_name}}
+    </ion-title>
+    <!-- <p  name='trash' slot="end" style="color: black; font-size: 30px;margin-right: 10px;">{{d_on}}</p>  -->
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-item text-center style="width: 100%;">
+    <label *ngIf="d_online" style="color: green;">The device is online</label>
+    <label *ngIf="!d_online" style="color: red;">The device is offline</label>
+  </ion-item>
+
+  <ion-item *ngIf="!onDevice" [disabled]="!d_online"> 
+    <label>Currently the light is: OFF</label>
+    <ion-tab-button (click)="powerStatus('on')">
+      <ion-icon name="flash-outline"></ion-icon>
+      <ion-label>On</ion-label>
+    </ion-tab-button>
+    </ion-item>
+    <ion-item *ngIf="onDevice"  [disabled]="!d_online">
+      <label>Currently the light is: ON</label>
+    <ion-tab-button  (click)="powerStatus('off')">
+      <ion-icon name="flash-off-outline"></ion-icon>
+      <ion-label>Off</ion-label>
+    </ion-tab-button>
+  </ion-item>
+  <ion-grid>
+    <ion-row style="margin-top: 10px;">
+      <!-- <ion-range  min="{{m.minimum}}" max="{{m.maximum}}" pin id="dimmervalue" (ionChange)="setDimmer($event,m.device)" value="{{m.dimmer}}"></ion-range>-->
+      <ion-item  [disabled]="!d_online">
+        <!-- <ion-range min="{{m.minimum}}" max="{{m.maximum}}" pin color="secondary" (ionChange)="setDimmer($event,m.device)">
+        <ion-icon slot="start" size="small" name="contrast"></ion-icon>
+        <ion-icon slot="end" name="contrast"></ion-icon>
+      </ion-range> -->
+      <label>Set brightness percentage:</label>
+        <input type="range" min="0" max="100" pin id="brightnessdimmervalue"
+          (input)="setBrightness()" value="{{d_brightness}}">
+      </ion-item>
+    </ion-row>
+    <ion-row style="margin-top: 10px;">
+      <ion-item  [disabled]="!d_online">
+        <!-- <ion-range min="{{m.minimum}}" max="{{m.maximum}}" pin color="secondary" (ionChange)="setDimmer($event,m.device)">
+            <ion-icon slot="start" size="small" name="contrast"></ion-icon>
+            <ion-icon slot="end" name="contrast"></ion-icon>
+          </ion-range> -->
+          <label>Set temperature percentage:</label>
+        <input type="range" min="0" max="100" pin id="temperaturedimmervalue" (input)="setTemperature()"
+          value="{{d_temperature}}">
+      </ion-item>
+    
+  </ion-row>
+    <ion-row style="margin-top: 10px;width: 100%;">
+      <ion-item style="width: 100%;">
+      <label>Select color values and click SET COLOR</label>
+      </ion-item>
+    </ion-row>
+     <ion-row style="width: 100%;">
+    <!--    <ion-item style="width: 100%;">
+          <label style="width: 35%;">HUE:</label>
+          <input type="range" min="0" max="360" pin id="huevalue" (input)="setHexColor()"
+            value="{{d_hue}}">
+        </ion-item>
+    </ion-row>
+    <ion-row style="width: 100%;">
+        <ion-item style="width: 100%;">
+          <label style="width: 35%;">SATURATION</label>
+          <input type="range" min="0" max="100" pin id="saturationvalute" (input)="setHexColor()" value="{{d_saturation}}">
+        </ion-item>
+        </ion-row>
+      <ion-row style="width: 100%;">
+        <ion-item style="width: 100%;">
+          <label style="width: 35%;">VALUE</label>
+          <input type="range" min="1" max="100" pin id="valuevalue" (input)="setHexColor()"  value="{{d_value}}">
+        </ion-item>
+        </ion-row> -->
+      
+    
+    <!-- <ion-row style="width: 100%;">
+      <ion-item style="width: 100%;">
+         <label>Selected color:</label>
+        <ion-card style="height: 40px;width: 40px;" [style.background]='d_hsvtohex'></ion-card>
+        
+        <ion-button style="margin-top: 15px;width: 50%;" expand="round" fill="outline" (click)='changeColor()'>SET COLOR</ion-button>
+        </ion-item>
+    </ion-row>
+    <ion-row> -->
+<div class="colorpicker">
+  <canvas id="picker" var="2" width="300" height="300"></canvas>
+</div>
+<div class="controls">
+
+  <div><label>Selected Color:</label> <input type="text" disabled class="preview" /><ion-button  expand="round" fill="outline" (click)='changeColor()'  [disabled]="!d_online">SET COLOR
+  </ion-button></div>
+  <div hidden><label></label> <input type="text" id="hexVal" disabled /></div>
+
+
+</div>
+
+    </ion-row>
+    <ion-row style="margin-top: 10px;width: 100%;">
+      <ion-item style="width: 100%;"  [disabled]="!d_online">
+      <ion-label>Select Scene:</ion-label>
+      <ion-select (ionChange)="changeScene()" [(ngModel)]="d_scene" ok-text="Okay" style="max-height: 100%;"
+        cancel-text="Cancel">
+        <ion-select-option value="goodnight">Good Night</ion-select-option>
+        <ion-select-option value="work">Work</ion-select-option>
+        <ion-select-option value="read">Read</ion-select-option>
+        <ion-select-option value="casual">Casual</ion-select-option>
+        
+      </ion-select>
+      </ion-item>
+    </ion-row>
+    <ion-row style="margin-top: 10px;width: 100%;">
+      <ion-item style="width: 100%;"  [disabled]="!d_online">
+      <ion-label>Select Work Mode:</ion-label>
+      <ion-select (ionChange)="changeMode()" [(ngModel)]="d_mode" ok-text="Okay" style="max-height: 100%;"
+        cancel-text="Cancel">
+        <ion-select-option value="white">White</ion-select-option>
+        <ion-select-option value="color">Color</ion-select-option>
+        <ion-select-option value="scene">Scene</ion-select-option>
+
+    
+      </ion-select>
+      </ion-item>
+    </ion-row>
+  </ion-grid>
+
+
+
+
+</ion-content>

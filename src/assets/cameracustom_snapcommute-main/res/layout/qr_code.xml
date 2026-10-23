@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".camera.QrCodeConfigActivity">
+
+    <LinearLayout
+        android:id="@+id/show_qr_code"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_qrcode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/mg_22"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            />
+
+        <Button
+            android:id="@+id/btn_confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/mg_60"
+            android:text="Press once the device beeps"
+            android:backgroundTint="@color/blue"
+            android:textColor="@color/white"
+            android:layout_margin="15dp"
+            android:textAllCaps="false"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_input_wifi"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/et_wifi_ssid"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/mg_80"
+            android:hint="wifi_ssid"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black_60" />
+
+        <EditText
+            android:id="@+id/et_wifi_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/mg_80"
+            android:hint="wifi_pwd"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black_60" />
+
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/mg_60"
+            android:text="save"
+            android:textColor="#ffffff" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/show_progress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_show_progress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_margin="15dp"
+            android:text="Please Wait. Getting device info from the cloud!"
+            android:textColor="@color/black"
+            android:textSize="24dp"
+            android:maxLines="2"
+            android:lines="2"/>
+
+        <ProgressBar
+            android:id="@+id/simpleProgressBar"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:layout_centerHorizontal="true" />
+        <TextView
+            android:id="@+id/tv_show_progress2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_margin="12dp"
+            android:text="Please be patient. This might take some time as this depends on your internet connection. In case this screen does not close after some time, please go to security screen and check if the camera is added"
+            android:textColor="@color/black"
+            android:textSize="24dp"
+            android:maxLines="2"
+            android:lines="2"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,57 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/securitymodule"></ion-back-button>
+    </ion-buttons>
+    <ion-title style="text-align: center;" class="glbl-clr-white">
+      Security Devices
+    </ion-title>
+  </ion-toolbar>
+</ion-header> 
+<ion-content>
+
+  <ion-card class="global-background">
+    <ion-card-header>
+      <ion-card-title class="glbl-clr-white">Reset the Device First</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content class="glbl-clr-white">
+      Power on the device and make sure the indicator is flashing rapidly or prompt tone is heard
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="global-background">
+    <ion-card-header>
+      <ion-card-title class="glbl-clr-white">STEP:01</ion-card-title>
+    </ion-card-header>
+    <ion-card-content class="glbl-clr-white">
+      Power on the device
+    </ion-card-content>
+
+    <ion-card-header>
+      <ion-card-title class="glbl-clr-white">STEP:02</ion-card-title>
+    </ion-card-header>
+    <ion-card-content class="glbl-clr-white">
+      Press and hold the Reset Button for 5 seconds. Camera will start the resetting process
+    </ion-card-content>
+
+    <ion-card-header>
+      <ion-card-title class="glbl-clr-white">STEP:03</ion-card-title>
+    </ion-card-header>
+    <ion-card-content class="glbl-clr-white">
+      The indicator will flash rapidly when the camera is reset
+    </ion-card-content> 
+
+    <ion-card-content class="global-background margin-card-border">
+      <ion-item class="item-class">
+        <ion-label class="ion-text-wrap glbl-clr-white">Check when indicator is flashing quickly</ion-label>
+        <ion-checkbox class="checkbox-class" checked="false" (ionChange)="navigateNext($event)" slot="start"></ion-checkbox>
+      </ion-item>
+      <ion-item class="item-class"> 
+        <ion-label class="ion-text-wrap glbl-clr-white">Please make sure the device and phone are as close to wifi
+          router as possible</ion-label> 
+      </ion-item>
+    </ion-card-content>
+ 
+  </ion-card>
+</ion-content>

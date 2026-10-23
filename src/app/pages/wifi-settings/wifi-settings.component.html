@@ -1,0 +1,86 @@
+<ion-header translucent class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/mainpage" (click)="backbutton()"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="glbl-clr-white glbl-text-cntr"> Switch WiFi</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content ion-text-center="center">
+  <ion-card class="global-background">
+    <ion-button (click)="open('wifi')" class="config-btn">Wifi Reconfiguration</ion-button>
+    <ion-card *ngFor="let d of moduleName" (click)="switchWifi(d.id,d.name)" class="global-background">
+      <ion-item>
+        <ion-avatar slot="start">
+          <img src="../../../assets/product_image/triomodule.jpeg">
+        </ion-avatar>
+        <ion-label>
+          <p class="glbl-clr-white">{{d.name}}</p>
+          <p class="glbl-clr-white">{{d.pi_id}}</p>
+        </ion-label>
+      </ion-item>
+    </ion-card>
+
+    <ion-card *ngFor="let imodule of irmodule" (click)="switchWifi(imodule.id,imodule.name)" class="global-background">
+      <ion-item>
+        <ion-avatar slot="start">
+          <img src="../../../assets/product_image/IRBlaster.png">
+        </ion-avatar>
+        <ion-label>
+          <p class="glbl-clr-white">{{imodule.name}}</p>
+          <p class="glbl-clr-white">{{imodule.pi_id}}</p>
+        </ion-label>
+      </ion-item>
+    </ion-card>
+
+    <ion-card *ngFor="let mmodule of user.moodModule" (click)="switchWifi(mmodule.id,mmodule.name)" class="global-background">
+      <ion-item>
+        <ion-avatar slot="start">
+          <img src="../../../assets/product_image/mood.png">
+        </ion-avatar>
+        <ion-label>
+          <p class="glbl-clr-white">{{mmodule.name}}</p>
+          <p class="glbl-clr-white">{{mmodule.pi_id}}</p>
+        </ion-label>
+      </ion-item>
+    </ion-card>
+
+    <ion-card *ngFor="let lmodule of lockres" (click)="switchWifi(lmodule.id,lmodule.serial_number)" class="global-background">
+      <ion-list>
+        <ion-item>
+          <ion-avatar slot="start">
+            <img src="../../../assets/product_image/doorlock.png">
+          </ion-avatar>
+          <ion-label>
+            <p class="glbl-clr-white">Door Lock</p>
+            <p class="glbl-clr-white">{{lmodule.serial_number}}</p>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-card>
+  </ion-card>
+  <ion-card *ngIf="wifi" style="margin-top:15px;" class="global-background">
+    <ion-card-header>
+      <h4 class="glbl-clr-white"> <b> To add New Module goto your WiFi settings of Your Device</b></h4>
+    </ion-card-header>
+    <ion-card-content>
+      <h3 class="glbl-clr-white">Supply power to THomes Module.Your module has created a temporary Wi-Fi hotspot.To set it up,connect to it in
+        the
+        Wi-Fi settings by following these steps below: </h3>
+      <ol>
+        <li class="glbl-clr-white"><b>Go to settings > Wi_fi</b></li>
+        <p class="glbl-clr-white">Connect to the Wi-Fi hotspot for THomes module that you are setting up.</p>
+        <ion-button (click)="open('wifi')">Wi-Fi</ion-button>
+        <li class="glbl-clr-white"><b>Come back to the to app to proceed with the set up</b></li>
+      </ol>
+      <p class="glbl-clr-white">Next Button Will redirect to a Link. After navigating to the link and setting up SSID password.Please restart
+        your app</p>
+      <!-- <ion-button  href="http://192.168.4.1/" >Next</ion-button> -->
+    </ion-card-content>
+  </ion-card>
+  <!-- <ion-item>{{nt}}</ion-item>
+  <ion-list *ngFor="let net of networks">
+    
+    <ion-item *ngIf="net.SSID!=''" (click)="wificheck(net)">{{net.SSID}}</ion-item>
+  </ion-list> -->
+</ion-content>

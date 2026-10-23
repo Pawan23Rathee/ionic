@@ -1,0 +1,235 @@
+<ion-header translucent class="ion-no-border">
+  <ion-toolbar  *ngIf='user.plug_more'>
+    <ion-buttons slot="start" style="position:absolute">
+      <ion-back-button defaultHref="/automationmodule" ></ion-back-button>
+    </ion-buttons>
+    <ion-title *ngIf="user.moduledevice" style="text-align: center;">
+      Device Module
+    </ion-title>
+    <ion-title *ngIf="user.moduleplug" style="text-align: center; ">
+      Plug Module
+    </ion-title>
+    <ion-title *ngIf="user.modulemoter" style="text-align: center; ">
+      Curtain Motor
+    </ion-title>
+
+  </ion-toolbar>
+  <ion-toolbar *ngIf="user.modulesensor" class="ion-no-border">
+    <ion-buttons slot="start" style="position:absolute">
+      <ion-back-button defaultHref="/mcategory" ></ion-back-button>
+    </ion-buttons>
+    <ion-title style="text-align: center;">
+      Sensor Module
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="user.moduledevice" >
+
+    <ion-card>
+      <ion-item (click)='scannewModuleQr()' detail>
+        <ion-avatar slot="start">
+          <img src="../../../assets/product_image/triomodule.jpeg">
+        </ion-avatar>
+        <ion-label>
+          <p>One Light Module</p>
+          <!-- <p >02</p>       -->
+        </ion-label>
+      </ion-item>
+    </ion-card>
+  
+
+  <ion-card>
+    <ion-item (click)='scannewModuleQr()' detail>
+      <ion-avatar slot="start">
+        <img src="../../../assets/product_image/triomodule.jpeg">
+      </ion-avatar>
+      <ion-label>
+        <p>Two Light Module</p>
+        <!-- <p >02</p>       -->
+      </ion-label>
+    </ion-item>
+  </ion-card>
+
+<ion-card>
+  <ion-item (click)='scannewModuleQr()' detail>
+    <ion-avatar slot="start">
+      <img src="../../../assets/product_image/triomodule.jpeg">
+    </ion-avatar>
+    <ion-label>
+      <p>Three Light Module</p>
+    </ion-label>
+  </ion-item>
+</ion-card>
+
+  <ion-card>
+    <ion-item (click)='scannewModuleQr()' detail>
+      <ion-avatar slot="start">
+        <img src="../../../assets/product_image/triomodule.jpeg">
+      </ion-avatar>
+      <ion-label>
+        <p>Four Light Module</p>
+        <!-- <p >03</p>       -->
+      </ion-label>
+    </ion-item>
+  </ion-card>
+
+  <ion-card>
+    <ion-item (click)='scannewModuleQr()' detail>
+      <ion-avatar slot="start">
+        <img src="../../../assets/product_image/triomodule.jpeg">
+      </ion-avatar>
+      <ion-label>
+        <p>Five Light Module</p>
+        <!-- <p >04</p>       -->
+      </ion-label>
+    </ion-item>
+  </ion-card>
+
+  <ion-card>
+    <ion-item (click)='scannewModuleQr()' detail>
+      <ion-avatar slot="start">
+        <img src="../../../assets/product_image/triomodule.jpeg">
+      </ion-avatar>
+      <ion-label>
+        <p>Six Light Module</p>
+        <!-- <p >05</p>       -->
+      </ion-label>
+    </ion-item>
+  </ion-card>
+
+</ion-content>
+<!-- -----module plug ---- -->
+<ion-content *ngIf="user.moduleplug">
+  <ion-card>
+    <ion-item (click)='scannewModuleQr()' detail>
+      <ion-avatar slot="start">
+        <img src="../../../assets/product_image/plug.png">
+      </ion-avatar>
+      <ion-label>
+        <p>Light Plug</p>
+        <!-- <p >02</p>       -->
+      </ion-label>
+    </ion-item>
+  </ion-card>
+  <ion-card >
+    <ion-item (click)='scannewModuleQr()' detail>
+      <ion-avatar slot="start">
+        <img src="../../../assets/product_image/plug.png">
+      </ion-avatar>
+      <ion-label>
+        <p>Heavy Plug</p>
+        <!-- <p >01</p>       -->
+      </ion-label>
+    </ion-item>
+  </ion-card>
+
+
+</ion-content>
+
+<ion-content *ngIf="user.modulesensor" >
+
+  <ion-card>
+    <ion-item (click)='scannewModuleQr()' detail>
+      <ion-avatar slot="start">
+        <img src="../../../assets/product_image/SmokeHumidityDetector.png">
+      </ion-avatar>
+      <ion-label>
+        <p>Smoke Sensor</p>
+        <!-- <p >01</p>       -->
+      </ion-label>
+    </ion-item>
+  </ion-card>
+
+  <ion-card>
+    <ion-item (click)='scannewModuleQr()' detail>
+      <ion-avatar slot="start">
+        <img src="../../../assets/product_image/SmokeHumidityDetector.png">
+      </ion-avatar>
+      <ion-label>
+        <p>Temperature Sensor</p>
+        <!-- <p >02</p>       -->
+      </ion-label>
+    </ion-item>
+  </ion-card>
+
+  <ion-card>
+    <ion-item (click)='scannewModuleQr()' detail>
+      <ion-avatar slot="start">
+        <img src="../../../assets/product_image/SmokeHumidityDetector.png">
+      </ion-avatar>
+      <ion-label>
+        <p>Gas Sensor</p>
+        <!-- <p >03</p>       -->
+      </ion-label>
+    </ion-item>
+  </ion-card>
+
+  <ion-card>
+    <ion-item (click)='scannewModuleQr()' detail>
+      <ion-avatar slot="start">
+        <img src="../../../assets/product_image/intuder.png">
+      </ion-avatar>
+      <ion-label>
+        <p>Intruder</p>
+        <!-- <p >04</p>       -->
+      </ion-label>
+    </ion-item>
+  </ion-card>
+
+  <ion-card>
+    <ion-item (click)='scannewModuleQr()' detail>
+      <ion-avatar slot="start">
+        <img src="../../../assets/product_image/dooropening.png">
+      </ion-avatar>
+      <ion-label>
+        <p>Door Opening Sensor</p>
+        <!-- <p >04</p>       -->
+      </ion-label>
+    </ion-item>
+  </ion-card>
+</ion-content>
+
+<!--------- Cutrian Motor  ------    -->
+<ion-content *ngIf="user.modulemoter">
+
+  <ion-card>
+    <ion-item (click)='scannewModuleQr()' detail>
+      <ion-avatar slot="start">
+        <img src="../../../assets/product_image/curtaiMotorVertical.png">
+      </ion-avatar>
+      <ion-label>
+        <p>Vertical curtain motor</p>
+        <!-- <p >01</p>       -->
+      </ion-label>
+    </ion-item>
+  </ion-card>
+
+  <ion-card>
+    <ion-item (click)='scannewModuleQr()' detail>
+      <ion-avatar slot="start">
+        <img src="../../../assets/product_image/CurtainMotor.png">
+      </ion-avatar>
+      <ion-label>
+        <p>Horizontal curtain motor</p>
+
+      </ion-label>
+    </ion-item>
+  </ion-card>
+</ion-content>
+
+<ion-footer class="ion-no-border">
+  <ion-toolbar >
+    <ion-avatar>
+      <!-- <img src="../../../assets/HomePage/dyfo.png"> -->
+      <!-- <img src="../../../assets/HomePage/livsmart.png"> -->
+      <!-- <img src="../../../assets/dyfo.png"> -->
+      <!-- <img class="profile-set" src="assets/HomePage/sara_t.png"> -->
+      <!-- <img src="assets/HomePage/wonder.png" alt="wondersolutions"> -->
+      <!-- <img src="../../../assets/HomePage/bonfire.png" /> -->
+      <!-- <img src="../../../assets/HomePage/spira.jpeg" /> -->
+      <!-- <img src="../../../assets/HomePage/ait_icon.png" /> -->
+      <img src="../../../assets/HomePage/thomes.png" />
+    </ion-avatar>
+  </ion-toolbar>
+</ion-footer>

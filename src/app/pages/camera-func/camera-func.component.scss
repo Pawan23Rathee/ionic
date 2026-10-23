@@ -1,0 +1,64 @@
+#securityMenu{
+  width: 100%;
+  ion-card{
+      width: 99%;
+      height: 70px;
+      // width: 46%;
+      text-align: center;
+      // float: left;
+  }
+}
+
+$grey : #666;
+.container{
+position:absolute !important;
+left:50%;
+top:50%;
+transform:(translate(-50%,-50%));
+}
+#circle { 
+width:100px; 
+height:100px;
+border:9px solid blue; 
+border-radius:100%;
+float:left;
+margin-right:40px;
+}
+#slider { 
+position:relative; 
+height:15px; 
+width:15px; 
+background:$grey; 
+left:32px; 
+top:-13px; 
+border-radius:100%;
+cursor:pointer;
+}
+input[type="text"],
+input[type="email"],
+input[type="password"]{
+  -moz-appearance: none;
+  border:none;
+  color: #818181;
+  display: block;
+  font-size: .8em;
+  height: 50px;
+  width:60px;
+  padding:0 6px;
+  transition: border 0s ease 0s, width 0.4s ease-in-out 0s;
+}
+#range{
+  width:100px;
+padding:0px 8px;
+}
+.range{
+float:left;
+width:30px;
+}
+.statusCard{
+height: 180px;
+width: 180px;
+border-radius: 50%;
+margin: 0 auto;
+top: 16%;
+}

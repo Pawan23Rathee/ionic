@@ -1,0 +1,42 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start" >
+      <ion-back-button defaultHref="/mainpage"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="glbl-clr-white glbl-text-cntr">Notification</ion-title>  
+    
+  </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-item *ngFor="let m of tuya_messages" >
+      
+          <ion-grid>
+            <ion-row size="12">
+              <ion-col size="10">
+          <label class="glbl-clr-white">
+            <strong>{{m.msg}}</strong> @ {{m.time}}
+            </label>
+          
+          </ion-col>
+          <ion-col size="2">
+            
+              <ion-button (click)='deleteMessage(m.id)'>
+                <ion-icon slot="icon-only" name='trash' ></ion-icon>
+              </ion-button>
+            
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <p class="glbl-clr-white">
+              {{m.message}}
+            </p>
+
+          </ion-row>
+          </ion-grid>
+        
+        
+          
+        
+
+    </ion-item>
+  </ion-content>

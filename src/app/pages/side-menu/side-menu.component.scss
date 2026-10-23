@@ -1,0 +1,35 @@
+.my-custom-menu {
+    --width: 80%;
+  }
+
+  .my-custom-menu .item{
+    --background: whitesmoke;
+    color: black;
+    border-bottom: 1px solid #adafaf;
+  }
+.my-custom-menu .menu-content{
+  background-color:whitesmoke;
+}
+
+.my-custom-menu .menu-content .in-list:hover{
+  color: black;
+}
+
+.list-md {
+//   margin-left: 0;
+//   margin-right: 0;
+//   margin-top: 0;
+//   margin-bottom: 0;
+//   padding-left: 0;
+//   padding-right: 0;
+//   padding-top: 8px;
+//   padding-bottom: 8px;
+  background-color: whitesmoke;
+}
+
+.menu-inner{
+  background-color: whitesmoke;
+}
+.menu-content-open {
+  pointer-events: auto !important; /* Re-enable pointer events */
+}

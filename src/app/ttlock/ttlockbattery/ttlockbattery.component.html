@@ -1,0 +1,16 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar >
+    <ion-buttons slot="start"  (click)="dismiss()">
+      <ion-back-button defaultHref="/ttlockdetails" ></ion-back-button>
+    </ion-buttons>
+    <ion-title style="text-align: center; ">
+      Battery
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <span >The battery level will be upgraded by gateway or phone bluetooth</span>
+  <span>Battery: {{bb}}%</span>
+ 
+  <ion-button expand="full">Upgrade</ion-button>
+</ion-content>

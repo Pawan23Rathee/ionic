@@ -1,0 +1,31 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar >
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/ttoperatiion" ></ion-back-button>
+    </ion-buttons>
+    <ion-title style="text-align: center;">
+      IC Card List
+    </ion-title>
+    <ion-buttons slot="end" >
+      <ion-button (click)="icAdd()">
+        <ion-icon slot="icon-only" ios="ellipsis-vertical" md="ellipsis-vertical"></ion-icon>      
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let ic of icdata" lines="full" detail (click)="icCardDelete(ic.cardNumber,ic.cardId)">
+      <ion-avatar style="width: 60px;height: 60px;" slot="start">
+        <ion-icon name="lock-closed-outline" style="font-size: 34px;padding-top: 10px;"></ion-icon>
+      </ion-avatar>
+     
+      <ion-label>
+        <h2>{{ic.cardId}}</h2>
+        <p>{{ic.cardName}}</p>
+        <p>{{ic.cardNumber}}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

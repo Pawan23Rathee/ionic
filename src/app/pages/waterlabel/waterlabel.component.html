@@ -1,0 +1,92 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" style="position:absolute">
+      <ion-back-button defaultHref="/waterlist" (click)="backbutton()"></ion-back-button>
+    </ion-buttons>
+    <ion-title style="text-align: center;" class="glbl-clr-white">
+      Water Level
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngIf="waterlabel">
+    <div style="width: 100%;margin: auto;padding-top: 30px;">
+      <div id="banner">
+        <div id="banner2" [style.height]=waterlevelheight></div>
+      </div>
+      <div id="bannerText">
+        {{waterlevel}}/{{tanklevel}}
+      </div>
+    </div>
+    <ion-card class="global-background glbl-text-cntr">
+      <ion-label class="glbl-clr-white level-font"> Water Level</ion-label>
+      <ion-label class="glbl-clr-white level-font"> {{waterlevelheightToShow}}%</ion-label>
+    </ion-card>
+  </div>
+
+
+  <div *ngIf="settingslabel">
+    <ion-card class="global-background">
+      <ion-item>
+        <ion-label class="glbl-clr-white">Change Tank Depth to</ion-label>
+        <ion-input [(ngModel)]="tanklevel" placeholder="Enter in meters" class="custom">
+        </ion-input>
+        <span class="glbl-clr-white">mts</span>
+      </ion-item>
+    </ion-card>
+    <ion-button (click)="updateTankDepth()" class="custom">Save Settings</ion-button>
+
+  </div>
+
+
+
+</ion-content>
+<ion-toolbar class="custom">
+  <ion-tabs>
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button (click)="wateLabelSelect()" class="level">
+        <ion-icon name="contrast-outline" color="light"></ion-icon>
+        <ion-label>Water Level</ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button (click)="settingsSelect()" class="settings1">
+        <ion-icon name="cog-outline" color="light"></ion-icon>
+        <ion-label>Settings</ion-label>
+      </ion-tab-button>
+
+    </ion-tab-bar>
+  </ion-tabs>
+</ion-toolbar>
+
+<!-- Footer section -->
+<ion-footer class="ion-no-border">
+  <ion-toolbar color="dark">
+    <ion-tabs>
+      <ion-tab-bar slot="bottom" style="padding-bottom: 9px;padding-top: 5px;">
+
+        <ion-tab-button (click)="mainpage()" class="home">
+          <ion-icon name="home-outline"></ion-icon>
+          <ion-label style="padding: 0;">Home</ion-label>
+        </ion-tab-button>
+
+
+        <ion-tab-button (click)="rgbpage()" class="favourite">
+          <ion-icon name="bulb-outline"></ion-icon>
+          <ion-label>RGB Devices</ion-label>
+        </ion-tab-button>
+        <ion-tab-button (click)="securitylockpage()" class="security">
+          <ion-icon name="lock-closed-outline"></ion-icon>
+          <ion-label>Security</ion-label>
+        </ion-tab-button>
+
+        <ion-tab-button (click)="modepage()" class="mode">
+          <ion-icon name="aperture-outline"></ion-icon>
+          <ion-label>Scene</ion-label>
+        </ion-tab-button>
+
+
+      </ion-tab-bar>
+    </ion-tabs>
+  </ion-toolbar>
+</ion-footer>

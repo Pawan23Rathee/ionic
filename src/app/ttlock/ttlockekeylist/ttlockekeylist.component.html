@@ -1,0 +1,32 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar >
+    <ion-buttons slot="start" >
+      <ion-back-button defaultHref="/ttoperation" ></ion-back-button>
+    </ion-buttons>
+    <ion-title style="text-align: center;">
+      eKeys
+    </ion-title>
+    <ion-buttons slot="end" >
+      <ion-button (click)="openpages()"   >
+        <ion-icon slot="icon-only" ios="ellipsis-vertical" md="ellipsis-vertical"></ion-icon>      
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item lines="full" (click)="ekeyListclick(e.keyId,e.lockName,e.noKeyPwd)" *ngFor="let e of ekeydata">
+      <ion-avatar slot="start" id="avatar">
+        <ion-icon name="person-outline">
+        </ion-icon>
+      </ion-avatar>
+      <ion-label id="label">
+        <span>{{e.noKeyPwd}}</span>
+        <p>{{e.lockAlias}}</p>
+      </ion-label>
+   
+    </ion-item>
+  </ion-list>
+  <!-- <ion-button (click)="ekeyList()">ekeyList</ion-button> -->
+</ion-content>

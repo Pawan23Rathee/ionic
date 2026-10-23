@@ -1,0 +1,13 @@
+ion-tab-button{
+    background-color: #1D96E8;
+    color: whitesmoke;
+    ion-label{
+        color: whitesmoke;
+    }
+}
+.active{
+    color: black;
+    ion-label{
+        color: black;
+    }
+}

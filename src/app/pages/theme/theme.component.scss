@@ -1,0 +1,28 @@
+ion-icon{
+    margin-top: 12px;
+    font-size: 20px;
+    margin-left: 6px;
+}
+
+.container{
+    min-height: 225px;
+    width: 100%;
+    background-color: #fff;
+    bottom: 0;
+    position: absolute;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.colorButton{
+    --border-radius:50%;
+}
+.btnColor{
+    margin-top: 10px;
+}
+ion-row{
+    text-align: center;
+}
+ion-card{
+    width: 100%;
+    height: auto;
+}

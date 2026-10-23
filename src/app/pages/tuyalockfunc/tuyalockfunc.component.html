@@ -1,0 +1,48 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar >
+    <ion-buttons slot="start" style="position:absolute">
+      <ion-back-button defaultHref="/mainpage" ></ion-back-button>
+    </ion-buttons>
+    <ion-title style="text-align: center;">
+      {{user.tuyaDeviceName}} 
+    </ion-title> 
+    <ion-icon name="create-outline" slot="end" style=" font-size: 20px;margin-right: 10px;" (click)="editName()" ></ion-icon> 
+    <!-- <p  name='trash' slot="end" ">{{d_on}}</p>  -->
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+
+<ion-button expand="block" (click)="clickRemoteListener()">Remote Unlocking</ion-button>
+<ion-card class="statusCard" (click)="createDynamicPass()" >
+
+  <h1 style="color:white" [(ngModel)]="pass" id="dyna">{{pass}}</h1>
+  <ion-text style="padding-top: 60em;color:white">Create Password</ion-text>
+<p style="color:white">(Valid for 5 minutes)</p>
+</ion-card>
+</ion-content>
+<ion-footer class="ion-no-border">
+  <ion-toolbar color="light" >
+    <ion-tabs >
+      <ion-tab-bar slot="bottom">
+        <!-- <ion-tab-button tab="alarmMsg">
+          <ion-icon name="alarm-outline"></ion-icon>
+          <ion-label>Alarm</ion-label>
+        </ion-tab-button> -->
+    
+        <ion-tab-button (click)="getUser()">
+          <ion-icon name="person-circle-outline"></ion-icon>
+         <ion-label>User</ion-label>
+        </ion-tab-button>
+        <ion-tab-button (click)="actionsheet()" >
+          <ion-icon name="folder-open-outline"></ion-icon>
+          <ion-label >Records</ion-label>
+        </ion-tab-button>
+    
+        <ion-tab-button (click)="getTempPassword()">
+          <ion-icon name="folder-open-outline"></ion-icon>
+          <ion-label>Temporary password</ion-label>
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+  </ion-toolbar>
+</ion-footer>

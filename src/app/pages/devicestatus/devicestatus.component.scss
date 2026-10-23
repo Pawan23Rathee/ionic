@@ -1,0 +1,30 @@
+.statusCard{
+    height: 180px;
+    width: 180px;
+    border-radius: 50%;
+    margin: 0 auto;
+    top: 16%;
+}
+.on{
+    // color: #946DE2;
+    // --box-shadow: 0px 1px 2px 2px #946DE2;
+    //color: black;
+    //--box-shadow: 0px 1px 2px 2px black;
+    color: #1396b0;
+    --box-shadow: 0px 1px 2px 2px #1396b0;
+}
+.off{
+    color: white;
+    --background: #000;
+}
+input{
+    width: 100%;
+}
+ion-item{
+    width: 96%;
+    margin-left: 2%;
+    --background: transparent;
+//     --border-color: white;
+//   --border-style: solid;
+//   --border-width: 2px;
+}

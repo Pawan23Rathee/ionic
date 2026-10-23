@@ -1,0 +1,37 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar >
+    <ion-buttons slot="start" >
+      <ion-back-button defaultHref="/mainpage" ></ion-back-button>
+    </ion-buttons>
+
+    <ion-buttons slot="end">
+      <ion-button (click)="gatewayListDetails()">
+        <ion-icon  class="plus" name="add-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title style="text-align: center;">Gateway
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+    <ion-item *ngFor="let tt of gatewaylist13" lines="full" (click)="ttGateWayLockClick(tt.lockId,tt.lockMac,tt.lockName,tt.lockAlias)">
+      <ion-avatar style="width: 60px;height: 60px;" slot="start">
+        <ion-icon name="lock-closed-outline" style="font-size: 34px;padding-top: 10px;"></ion-icon>
+      </ion-avatar>     
+      <ion-label>
+        <h2>{{tt.lockName}}</h2>
+        <p>{{tt.lockId}}</p>  
+        <p>{{tt.lockMac}}</p>      
+      </ion-label>
+    </ion-item>
+  </ion-list>
+<ion-button (click)="gatewaylistLock()">Gateway List</ion-button>
+<ion-button (click)="lock()">lock</ion-button>
+<ion-button (click)="unlock()">unlock</ion-button>
+<ion-button (click)="gatewaylock_Status()">status</ion-button>
+<ion-button (click)="gatewayOpenState()">open state</ion-button>
+<ion-button (click)="deleteGateway()">Delete Gateway</ion-button>
+</ion-content>

@@ -1,0 +1,147 @@
+// ion-content{
+//   --overflow: hidded;
+//   text-align: center;
+// }
+// // ion-slide{
+// swiper-slide{
+//   width: 100%;
+//   max-width: 100%;
+//   height: 100%;
+//   min-height: 100%;
+//   flex-direction: column;
+// }
+// // ion-slides{
+// // padding-top: 0px;
+// // }
+// // .class-name {
+// //   --background: url("../../assets/thomes/home2.jpg") 0 0/100% 100% no-repeat;
+// //  }
+//  ion-content {
+//   --background: none;
+  
+//   background-position: center top;
+//   background-repeat: no-repeat;
+//   background-size: cover;
+// }
+// .center{
+//   position: absolute;
+//   left: 50%;
+//   top: 50%;
+//   --webkit-transform: translate(-49%,-49%);
+//   transform: translate(-49%,-49%);
+//   width: 90%;
+  
+// }
+// swiper-container {
+//   width: 100%;
+//   height: 100%;
+//   padding-top: 0px;
+//   --swiper-pagination-bullet-inactive-color: var(--ion-color-step-200, #cccccc);
+//   --swiper-pagination-color: var(--ion-color-primary, #3880ff);
+// }
+
+// swiper-slide {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   justify-content: center;
+// }
+// // swiper-container {
+// //   width: 100%;
+// //   height: 100%;
+ 
+// //   --swiper-pagination-bullet-inactive-color: var(--ion-color-step-200, #cccccc);
+// //   --swiper-pagination-color: var(--ion-color-primary, #3880ff);
+// // }
+// // ion-slide p{
+// swiper-slide  p{
+//   margin: 0;
+//   font-size: 13px !important;
+//   line-height: 15px !important;
+//   color: white;
+//   margin-top: 0 !important;
+//   padding-left: 35px;
+//   padding-right: 35px;
+//   padding-top: 10px;
+//   padding-bottom: 30px;
+//   margin-bottom: 20px;
+// }
+// h2{
+//   // color: #946DE2;
+//   //color: black;
+//   color: white;
+//   font-family: Tahoma, sans-serif;
+// }
+// .my-modal {
+//   --width: 95%;
+//   --height: 85%;
+// }
+// // .slide-class{
+// //   --bullet-background:white;
+// //   --bullet-background-active:yellow;
+// // }
+.background-container {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+}
+.background-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../../assets/images/welcome.jpg");
+  background-size: cover;
+  filter: blur(2px); /* Apply blur effect */
+  z-index: -1; /* Ensure the pseudo-element is behind the content */
+}
+.content {
+  position: relative; /* Ensure content stays above the pseudo-element */
+  z-index: 1; /* Ensure content is above the pseudo-element */
+  height: 50%;
+}
+.center-container {
+  display: flex;
+  justify-content: center; /* Align horizontally in the center */
+  align-items: center; /* Align vertically in the center */
+  flex-direction: column;
+  height: 100%;
+  transform: translate(1%, 50%);
+  // height: 100%; /* Set height to cover viewport height */
+
+}
+.title {
+  font-size: 40px;
+  font-weight: bold;
+  color: white;
+}
+.description-container {
+  text-align: center; /* Center-align the text */
+  margin-top: 20px; /* Add some spacing between the title and description */
+}
+.description{
+  font:25px;
+  color: white;
+  font-weight: 500;
+}
+.bottom-buttons {
+  display: flex;
+  justify-content: center; /* Align buttons horizontally in the center */
+  position: absolute;
+  bottom: 20px; /* Adjust bottom spacing */
+  width: 100%; /* Make the container take full width */
+}
+.login-button,
+.register-button {
+  width: 35%;
+}
+.login-button{
+  --background: #3b3a42;
+  --color: white;
+}
+.register-button {
+  --background: white;
+  --color: black;
+}

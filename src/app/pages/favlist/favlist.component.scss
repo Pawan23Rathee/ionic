@@ -1,0 +1,40 @@
+ion-avatar{
+    margin: auto;
+    width: 60px;
+    height: 60px;
+}
+ion-label{
+    text-align: initial;
+    padding: 7px 7px 7px 20%;
+   
+}
+ion-card{
+    margin: 7px;
+}
+
+.on{
+    color: white;
+    
+    // --background: #946DE2;
+    //--background: black;
+    --background:#1396b0;
+}
+.off{
+    color: white;
+    // --box-shadow: 0px 1px 2px 2px #121943;
+    --background: #121943;
+}
+
+.nofav_button{
+    // box-shadow: 0px 14px 25px rgb(47 37 37 / 59%);
+    border-radius: 50%;
+    height: 81px;
+    width: 81px;
+    text-align: center;
+    margin-top: 19%;
+}
+
+ion-tab-button {
+    height: 70px;
+  //   padding-bottom: 10px;
+}  

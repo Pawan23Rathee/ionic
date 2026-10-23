@@ -1,0 +1,90 @@
+<ion-header>
+  <ion-toolbar style="--background:aliceblue;">
+    <ion-buttons slot="start" >
+      <ion-back-button  style="color:black" defaultHref="/mainpage" ></ion-back-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center" style="color:black">Security Devices</ion-title>
+    <ion-icon (click)="menu()" name='md-more' slot="end" style="color: black; font-size: 30px;margin-right: 10px;"></ion-icon>
+  </ion-toolbar>
+</ion-header>
+
+<!-- <div class='container'>
+  <div id='circle'>
+    <div id='slider'></div>
+   <div id="range">
+    <input id="test" type="text" value="" class="range" data-max="50" value="20 Deg" data-min="0" data-step="1" name="angle">
+  </div> 
+  </div>
+</div> -->
+<ion-content style="--background:rgb(244 218 237) ;">
+<!-- <ion-card (click)="getAllScene()" style="border-radius: 15%;">
+  <ion-item > Get All Scene
+  </ion-item>
+</ion-card> -->
+<ion-card (click)="createTempCondition()" >
+  <ion-item >Create Temperature Condition
+  </ion-item>
+</ion-card>
+
+<ion-card (click)="getConditionList()">
+  <ion-item > Get Condition List
+  </ion-item>
+</ion-card>
+<ion-card (click)="getDeviceTaskOperationList()" >
+  <ion-item > Get Device Task Operation List
+  </ion-item>
+</ion-card>
+
+<ion-card (click)="createDevCondition()" >
+  <ion-item > Create Device Type Condition
+  </ion-item>
+</ion-card>
+<ion-card (click)="createTimerCondition()" >
+  <ion-item > Create Timing Type Condition
+  </ion-item>
+</ion-card>
+<ion-card (click)="createSceneTask()">
+  <ion-item > Create Device Task Based on Device Id
+  </ion-item>
+</ion-card>
+<ion-card (click)="createScene()" >
+  <ion-item > Create Scene
+  </ion-item>
+</ion-card>
+<ion-card (click)="modifyScene()" >
+  <ion-item > Modify Scene
+  </ion-item>
+</ion-card>
+<ion-card (click)="deleteScene()" >
+  <ion-item > Delete Scene
+  </ion-item>
+</ion-card>
+<ion-card (click)="executeScene()" >
+  <ion-item > Execute Scene
+  </ion-item>
+</ion-card>
+<!-- <ion-card (click)="getDeviceTaskOperationList()" style="border-radius: 15%;">
+  <ion-item > Get Device Task Operation List
+  </ion-item>
+</ion-card>
+<ion-card (click)="getDeviceTaskOperationList()" style="border-radius: 15%;">
+  <ion-item > Get Device Task Operation List
+  </ion-item>
+</ion-card>
+<ion-card (click)="getDeviceTaskOperationList()" style="border-radius: 15%;">
+  <ion-item > Get Device Task Operation List
+  </ion-item>
+</ion-card>
+<ion-card (click)="getDeviceTaskOperationList()" style="border-radius: 15%;">
+  <ion-item > Get Device Task Operation List
+  </ion-item>
+</ion-card>
+<ion-card (click)="getDeviceTaskOperationList()" style="border-radius: 15%;">
+  <ion-item > Get Device Task Operation List
+  </ion-item>
+</ion-card><ion-card (click)="getDeviceTaskOperationList()" style="border-radius: 15%;">
+  <ion-item > Get Device Task Operation List
+  </ion-item>
+</ion-card> -->
+</ion-content>
+ 

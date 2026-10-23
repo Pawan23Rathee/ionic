@@ -1,0 +1,229 @@
+<ion-content *ngIf="!cameraon" fullscreen>
+
+  <div style="width: 100%; padding: 8% 2%; display: flex; text-align: center;">
+    <div class="icon_color">
+      <!-- <svg class="svg-icon" viewBox="0 0 20 20" *ngIf='step1' routerLink='/home'>
+        <path fill="none"
+          d="M8.388,10.049l4.76-4.873c0.303-0.31,0.297-0.804-0.012-1.105c-0.309-0.304-0.803-0.293-1.105,0.012L6.726,9.516c-0.303,0.31-0.296,0.805,0.012,1.105l5.433,5.307c0.152,0.148,0.35,0.223,0.547,0.223c0.203,0,0.406-0.08,0.559-0.236c0.303-0.309,0.295-0.803-0.012-1.104L8.388,10.049z">
+        </path> -->
+
+      <!-- </svg> -->
+      <ion-icon name="chevron-back-outline" *ngIf='step1' routerLink='/home'></ion-icon>
+      <!-- <ion-icon style="margin-right: 24px;color: white;" *ngIf='step1' routerLink='/home' src="assets/iconi5/chevron-back.svg"></ion-icon> -->
+      <!-- <ion-icon style="margin-right: 24px;color: white;" *ngIf='!(step1 == true || step4 == true)' (click)='stepback()' src="assets/iconi5/chevron-back.svg"></ion-icon> -->
+      <!-- <svg class="svg-icon" viewBox="0 0 20 20" *ngIf='!(step1 == true || step4 == true)' (click)='stepback()'>
+        <path fill="primary"
+          d="M8.388,10.049l4.76-4.873c0.303-0.31,0.297-0.804-0.012-1.105c-0.309-0.304-0.803-0.293-1.105,0.012L6.726,9.516c-0.303,0.31-0.296,0.805,0.012,1.105l5.433,5.307c0.152,0.148,0.35,0.223,0.547,0.223c0.203,0,0.406-0.08,0.559-0.236c0.303-0.309,0.295-0.803-0.012-1.104L8.388,10.049z">
+        </path>
+      </svg> -->
+      <ion-icon name="chevron-back-outline" *ngIf='!(step1 == true || step4 == true)' (click)='stepback()'></ion-icon>
+    </div>
+    <ion-title style="height: 35px; position: relative; padding: 0;" class="ion-text-center" *ngIf='step1'>CREATE
+      ACCOUNT</ion-title>
+    <ion-title style="height: 35px; position: relative; padding: 0;" class="ion-text-center" *ngIf='step2'>SECURITY
+      PHOTO</ion-title>
+    <ion-title style="height: 35px; position: relative; padding: 0;" class="ion-text-center" *ngIf='step3'>VERIFY EMAIL
+    </ion-title>
+    <ion-title style="height: 35px; position: relative; padding: 0;" class="ion-text-center" *ngIf='step4'></ion-title>
+    <div style="height: 40px; width: 40px;"></div>
+  </div>
+
+
+  <div style="text-align:center;">
+    <span class="step step1 active"></span>
+    <span class="stepline"></span>
+    <span class="step step2"></span>
+    <span class="stepline"></span>
+    <span class="step step3"></span>
+    <span class="stepline"></span>
+    <span class="step step4"></span>
+  </div>
+
+  <div style="position: relative; padding: 25px; height: 80%;">
+    <form [formGroup]="registrationForm">
+      <div *ngIf='step1'>
+
+
+        <ion-input type="text" [(ngModel)]="test_key" formControlName="name" placeholder="User Name" required="true">
+        </ion-input>
+        <!-- <ion-icon class="reg-icon" item-start ios="ios-person" md="md-person" color="dark" slot="start"></ion-icon>-->
+        <!-- <div *ngFor="let error of errorMessages.name"> -->
+          <!-- <ng-container *ngIf="name.hasError(error.type) && (name.dirty || name.touched)"> -->
+          <!-- <ng-container *ngIf="name.hasError(error.type)">
+            <small class="error-message">{{error.message}}</small>
+          </ng-container> -->
+          <ng-container *ngFor="let error of getErrorMessages('name')">
+            <small class="error-message">{{error}}</small>
+          </ng-container>
+        <!-- </div> -->
+
+
+
+
+
+        <ion-input inputmode="email" formControlName="email" placeholder="Email Address" required="true"></ion-input>
+        <!-- <ion-icon class="reg-icon" item-start ios="ios-mail" md="md-mail" color="dark" slot="start"></ion-icon>  -->
+        <!-- <div *ngFor="let error of errorMessages.email">
+          <!-- <ng-container *ngIf="email.hasError(error.type) && (email.dirty || email.touched)"> -->
+          <!-- <ng-container *ngFor="let error of getErrorMessages('email')">
+            <small class="error-message">{{error}}</small>
+          </ng-container> -->
+        <!-- </div>  -->
+
+
+        <div id="phoneBox" style="display: flex;">
+          <select [(ngModel)]="stdcode" [ngModelOptions]="{standalone: true}"
+            style="background: white; margin: 10px 0px; height: 50px; width: 70px; border: none; border-right: 1px solid;color: black;">
+            <option *ngFor="let code of user.countryCode">{{code.dial_code}} &nbsp;&nbsp;&nbsp; &nbsp;
+              &nbsp;&nbsp;{{code.name}}</option>
+          </select>
+          <ion-input type="tel" (ionInput)="onInput($event)" maxlength="10" formControlName="phone" placeholder="Mobile"
+            required="true"></ion-input>
+        </div>
+        <!-- <ion-icon class="reg-icon" item-start ios="ios-call" md="md-call" color="dark" slot="start"></ion-icon>   -->
+        <!-- <div *ngFor="let error of errorMessages.phone"> -->
+          <!-- <ng-container *ngIf="phone.hasError(error.type) && (phone.dirty || phone.touched)"> -->
+          <ng-container *ngFor="let error of getErrorMessages('phone')">
+            <small class="error-message">{{error}}</small>
+          </ng-container>
+        <!-- </div> -->
+
+        <div style="position: relative; display: flex;">
+          <ion-input style="width: 90%;" type="password" [type]="getType()" formControlName="password"
+            placeholder="Create Password" required="true"></ion-input>
+          <!-- <ion-icon class="reg-icon" item-start ios="ios-lock" md="md-lock" color="dark" slot="start"></ion-icon> -->
+          <ion-icon class="ion-icon-eye" name="eye-off" slot="end" (click)="toggleTextPassword()"></ion-icon>
+        </div>
+
+        <!-- <div *ngFor="let error of errorMessages.password"> -->
+          <!-- <ng-container *ngIf="password.hasError(error.type) && (password.dirty || password.touched)"> -->
+          <ng-container *ngFor="let error of getErrorMessages('password')">
+            <small class="error-message">{{error}}</small>
+          </ng-container>
+        <!-- </div> -->
+
+      </div>
+
+      <div *ngIf='step2'
+        style="text-align: center;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+        <span style="font-size: 4vw;" class="glbl-clr-white">We recommend uploading a security <br> photo to more easily
+          identify each other
+          <br> when sending and receiving invites</span>
+        <img *ngIf="!currentImage" style="height: 150px; margin: 20px; border-radius: 50%;"
+          src="assets/HomePage/userblank.png" alt="">
+        <img [src]="currentImage" *ngIf="currentImage"
+          style="height: 200px; width: 200px; margin: 20px; border-radius: 50%;">
+      </div>
+
+
+      <div *ngIf='step2'
+        style="position: absolute; bottom: 16%; left: 0; right: 0; width: 100%; text-align: center;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+        <p> <span (click)='skip_step()'> SKIP THIS STEP </span></p>
+
+        <input type="file" id="fileLoader" #fileLoader name="files" (change)="handleFileInput($event)"
+          title="Load File" hidden />
+        <ion-button (click)="presentActionSheet(fileLoader)"
+          style="width: 70%; --border-radius: 0; color: white; border: 1.5px solid #9a9b9b;">
+          select from gallery</ion-button>
+        <ion-button (click)='getImage()' style="width: 14%; --border-radius: 0; color: white;">
+          <ion-icon name='camera'></ion-icon>
+        </ion-button>
+      </div>
+
+      <!-- .........STEP 3 OF REGISTRATION................. -->
+      <div *ngIf='step3' style="text-align: center;">
+        <span>For security we require new users to <br> verify mobile number and email</span> <br>
+        <h3 style="border-radius: 50%; border: 2px solid; color: #07abbc; width: 30px; margin: 20px auto auto auto;">i
+        </h3> <br>
+        <span>Please enter the code we just send to your email</span>
+
+        <div style="padding-top: 15px;">
+          <ng-otp-input #ngOtpInput (onInputChange)="onOtpChange($event)" [config]="config"></ng-otp-input>
+        </div>
+        <p *ngIf='timeLeft > 0' class="glbl-clr-white">Resend after...{{timeLeft}} sec.</p>
+        <p *ngIf='timeLeft == 0' class="glbl-clr-white">Didn't receive a code? <span style="color: white;"
+            (click)="resend_otp()">TAP
+            HERE</span> </p>
+      </div>
+
+      <!-- ...............step 4.................... -->
+      <div *ngIf='step4' style="text-align: center;">
+        <!-- <ion-button class="ion-button1" [disabled]="!(registrationForm.valid && matchedpass) " type="submit" expand="block">Submit </ion-button> -->
+        <div id="successImg" style="width: 60%; margin: 0 auto;">
+          <img style="width: 100%;" src="assets/images/verified1.jpeg" alt="">
+        </div>
+        <div style="display: flex; margin: 0 auto; margin-top: 70px; width: 50%; font-size: 25px;">
+          <span>Logging In</span>
+          <ion-spinner name="dots" style="margin-top: 10px;"></ion-spinner>
+        </div>
+      </div>
+
+
+    </form>
+
+    <!-- <p *ngIf='step1' style="margin-left: 40%;"> <a id="reg-otp" routerLink="/login">Already a User ? Login</a></p> -->
+    <ion-button style="position: absolute; bottom: 6%; left: 7%; right: 7%; margin: 0; --border-radius: 0;"
+      *ngIf='!step4' (click)="next_step()">next</ion-button>
+    <!-- </ion-card> -->
+
+
+    <!-- .......................otp.................................. -->
+    <!-- <div class="deviceeditback" *ngIf="otp">
+  <ion-card style="position: relative; border-radius: 21px; background-color: white;top: 35%;margin: auto 5%;">
+    <ion-card-header>
+      
+      <ion-card-title>Enter OTP</ion-card-title>
+      <ion-card-subtitle>Please enter one time verification code send to <strong>{{email.value}}</strong> </ion-card-subtitle>
+    </ion-card-header>
+  
+    <ion-card-content>
+      <ion-input type="number" id="sendingotp" [(ngModel)]="otpver" value="" maxlength="6" minlength="6" style="border: 1px solid rgb(128, 13, 173);"></ion-input>
+      <div class="resend_otp">
+        <p>{{timeLeft}} Seconds Left....</p>
+        <p><a  (click)="resend_otp()">Resend OTP</a></p></div> 
+
+     <div style="text-align: center;">
+      <ion-button size="small" slot="start" color="danger" (click)="cancelButton()">&nbsp;&nbsp;cancel&nbsp;&nbsp;</ion-button>&nbsp;&nbsp;&nbsp;
+      <ion-button size="small" slot="end" color="success" (click)="submit()">&nbsp;confirm&nbsp;</ion-button>
+    </div>
+   
+
+    </ion-card-content>
+  </ion-card>
+</div> -->
+
+
+  </div>
+
+  <!-- <div style="width: 40%; height: 1px; border: 3px solid; border-radius: 3px; position: fixed; bottom: 10px; left: 30%;color: #946DE2;"></div> -->
+  <!-- <div
+  style="width: 40%; height: 1px; border: 3px solid; border-radius: 3px; position: fixed; bottom: 10px; left: 30%;color: black;">
+</div> -->
+  <div
+    style="width: 40%; height: 1px; border: 3px solid; border-radius: 3px; position: fixed; bottom: 10px; left: 30%;color: #1396b0;">
+  </div>
+</ion-content>
+<div *ngIf='cameraon' style="position: fixed; bottom: 5px; text-align: center; width: 100%;--background: #F3F1F2;">
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-button style="margin-top: 15px;" (click)='stopCamera()'>
+          <ion-icon src="assets/iconi5/backspace-outline.svg"></ion-icon>
+        </ion-button>
+      </ion-col>
+      <ion-col>
+        <div
+          style="border-radius: 50%; height: 70px; width: 70px; border: 4px solid rgb(240, 240, 240); margin: 0 auto;">
+          <ion-button
+            style="box-shadow: none; --border-radius: 50%; height: 100%; width: 100%; margin: 0;--background: #13A9DB"
+            (click)='takePicture()'></ion-button>
+        </div>
+      </ion-col>
+      <ion-col>
+        <ion-button style="margin-top: 15px;" (click)='swichCam()'>
+          <ion-icon src="assets/iconi5/camera-reverse-outline.svg"></ion-icon>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</div>

@@ -1,0 +1,79 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar class="profile-tool" style="text-align: center; color: black;">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/ir-product" class="color-white"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="color-white">All Remotes </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngIf="remotes">
+    <ion-card style="--background: #282F56;text-align: center; color: white" class="allremotetext">
+      <p id="allremotetext" block class="ion-padding"> <b> Test Your Remote </b> </p>
+    </ion-card>
+    <div id="remote_slider" class="ion-padding">
+      <swiper-container #swiper>
+        <swiper-slide *ngFor="let i of user.idremote21" class="swi-slide">
+          <ion-grid>
+            <ion-row>
+              <ion-col>
+                <section id="remote">
+                  <div id="remote_layout">
+                    <ion-toggle (ionChange)="checked($event,i.on,i.off,i.id)"></ion-toggle>
+                  </div>
+                </section>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>
+                <h4 id="livermt_id"> {{i.id}}</h4>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col class="glbl-text-cntr">
+                <img src="{{imgPath}}">
+              </ion-col>
+            </ion-row>
+            <ion-button expand="full" (click)="saveRemote(i.id)" style=" --background: rgb(245, 248, 248);
+         color: black;
+         border: 1px solid #afafaf;">
+              Save This Remote
+            </ion-button>
+          </ion-grid>
+        </swiper-slide>
+      </swiper-container>
+      <!-- <div id="btns">
+        <ion-button id="btn_lft" type="submit" class="ion-float-left" ion-button color="primary" class="btnPrev"
+          (click)="prev()">
+          &lt;</ion-button>
+        <ion-button id="btn_rt" type="submit" class="ion-float-right" color="primary" class="btnNext" (click)="next()">
+          &gt; </ion-button>
+      </div> -->
+
+    </div>
+  </div>
+  <ion-card>
+    <div *ngIf="room" class="fullscreen-container">
+      <ion-card-header style="font-weight:bold;font-size: 14px;text-align: center;">SELECT ROOM TO ASSIGN DEVICE
+      </ion-card-header>
+      <div class="allRooms " *ngFor="let r of rooms" style="float:left;width:45%;height: 45%;padding-left:2.5em;">
+        <div style="margin-right:2.5em;width:88%;" (click)="addedRooms(r)">
+          <img src="{{r.imgPath}}" height="100px" width="100%" style="border:1.6px solid blue;border-radius:25%;">
+          <p style="text-align: center;font-size:16px; text-overflow:ellipsis;overflow: hidden;white-space: nowrap;">
+            {{r.name}}</p>
+        </div>
+      </div>
+    </div>
+  </ion-card>
+  <ion-card *ngIf="editRoom" style="padding:15px 20px;">
+    <img src="{{roomImg}}" style=" margin-bottom:15px ; width:99%;height:15%;border-radius:6%;">
+    <span style="color:red">*(Use Unique Room Name To identify Your room)</span><br />
+    <ion-label position="stacked">Room Name:</ion-label>
+    <ion-input id="input" required type="text" value="{{selectedRooms}}" style="border: 1px solid blue; width:90%">
+    </ion-input>
+    <ion-button (click)="saveRoomWithApi()">Save Room</ion-button>
+  </ion-card>
+
+
+</ion-content>

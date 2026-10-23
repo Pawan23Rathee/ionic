@@ -1,0 +1,224 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar class="global-background">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/mainpage" (click)="backbutton()"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="title-pos glbl-clr-white">Scenes</ion-title>
+    <!-- <ion-buttons slot="end">
+      <ion-icon slot="end" name="add-circle-outline" style="font-size:35px;" (click)="addMode()"></ion-icon>
+    </ion-buttons> -->
+  </ion-toolbar>
+</ion-header>
+<app-side-menu></app-side-menu>
+<ion-content fullscreen class="back">
+  <!-- display modes -->
+  <ion-fab horizontal="end" vertical="bottom" slot="fixed">
+    <ion-fab-button class="fav-button-clr" (click)="addMode()" size="large">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  <ion-row>
+    <ion-col size=6 *ngFor="let i of source">
+      <ion-card class="inactive scene-card">
+        <ion-card-content>
+          <ion-row>
+            <ion-col class="12 glbl-text-cntr">
+              <ion-label><b>{{i.mname}}</b></ion-label>
+            </ion-col>
+
+            <ion-col size="12">
+              <div (click)='showAppl(i)'><img src="{{i.img}}"></div>
+            </ion-col>
+            <ion-col size="12" class="card-bottom">
+              <ion-col size="6">
+                <button ion-button icon-only class="delMode" (click)='deleteMode(i.id)'>
+                  <ion-icon name="trash" class="x-large-font"></ion-icon>
+                </button>
+              </ion-col>
+              <ion-col size="6" class="glbl-text-right">
+                <button ion-button icon-only class="editmode" (click)='editClick(i)'>
+                  <ion-icon name="cog" class="x-large-font"></ion-icon>
+                </button>
+              </ion-col>
+            </ion-col>
+          </ion-row>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+
+  <!-- <div (click)='showAppl(i)'><img src="{{i.img}}"></div>
+    <div id="anurag_tiwari">
+      <button ion-button icon-only class="delMode" (click)='deleteMode(i.id)'>
+        <ion-icon name="trash"></ion-icon>
+      </button>
+      <ion-checkbox color="success"  slot="start"  (ionChange)='ischecked($event)' ></ion-checkbox>
+      <ion-label>
+        <div class="modetext">{{i.mname}}</div>
+      </ion-label>
+      <button ion-button icon-only class="editmode" (click)='editClick(i)'>
+        <ion-icon name="cog"></ion-icon>
+      </button>
+    </div> -->
+
+  <!-- ..............end display... -->
+
+  <!-- Add modes................................................................ -->
+  <!-- <div class="fullscreen-container" *ngIf="modes" >
+    <ion-card  class="popdiv" >
+        <form #form="ngForm" (ngSubmit)="setmode(form)" (keyup.enter)="setmode(form)">      
+        <ion-card-content>
+            <div class="modeslider">
+              <h3>Select Image for Modes</h3>
+ 
+              <ion-grid>
+                <ion-row>
+                  <ion-col size="1">
+                    <span class="slider-nav arrow-prev"
+                      (click)="slidePrev(sliderOne,slideWithNav)">
+                      <div class="prev-icon-custom custon-nav"
+                        [class.disabled]="sliderOne.isBeginningSlide">
+                        <ion-icon name="arrow-back" size="small"></ion-icon>
+                      </div>
+                    </span>
+                  </ion-col>
+                  <ion-col size="10">
+                    <ion-slides  pager="false" [options]="slideOptsOne" #slideWithNav
+                      (ionSlideDidChange)="SlideDidChange(sliderOne,slideWithNav); getcurrentimg(sliderOne,slideWithNav);">
+                      <ion-slide style="height: 120px;" *ngFor="let s of sliderOne.slidesItems">
+                        <div><img style="height: 100px;" src="{{s.image}}">
+                          <div><span style="font-weight: 500;">{{s.name}}</span></div>
+                        </div>
+                        
+                      </ion-slide>
+                    </ion-slides>
+             
+                  </ion-col>
+                  <ion-col size="1">
+                    <span class="slider-nav arrow-next"
+                      (click)="slideNext(sliderOne,slideWithNav)">
+                      <div class="next-icon-custom custon-nav"
+                        [class.disabled]="sliderOne.isEndSlide">
+                        <ion-icon name="arrow-forward" size="small"></ion-icon>
+                      </div>
+                    </span>
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+            </div>
+            <ion-item>
+              <ion-label position="stacked">Mode Name</ion-label>
+              <ion-input  placeholder="optional" ngModel name="modename"></ion-input>
+            </ion-item>
+
+        </ion-card-content>
+
+        <ion-row class="cardfooter">
+          <ion-col>
+              <ion-button (click)="modes=!modes">Cancel</ion-button>
+          </ion-col>
+          <ion-col>
+            <ion-button type="submit">Add</ion-button>
+        </ion-col>
+        </ion-row>
+      </form>
+      </ion-card> 
+    </div> -->
+
+
+
+
+
+  <!-- edit mode-->
+  <div class="fullscreen-container" *ngIf="editMod">
+    <ion-card class="editpopdiv">
+      <form style="height: 100%;" #form="ngForm" (ngSubmit)="saveeditMode(form)" (keyup.enter)="saveeditMode(form)">
+        <ion-card-content style="height: 80%;">
+          <ion-item>
+            <ion-label>Please select room first</ion-label>
+            <ion-select (ionChange)="checkValue($event)" interface="popover" placeholder="">
+              <ion-select-option *ngFor='let r of myRooms' [value]="r"> {{r.name}}</ion-select-option>
+            </ion-select>
+          </ion-item>
+          <!-- ......To select device............ -->
+          <div *ngIf="showDevices">
+            <!-- <ion-item *ngIf='dev_ToSelect.length == 0'><span>Sorry!</span></ion-item> -->
+            <ion-item>
+              <ion-label>Select Devices</ion-label>
+              <ion-select [(ngModel)]="selectedDevs" name="deviceSelect" multiple="true" cancelText="Cancel" okText="OK"
+                (ionChange)='dev_det_box=true'>
+                <ion-select-option *ngFor='let dev of deviceAll' value="Device1" [value]="dev">{{dev.device_name}}
+                </ion-select-option>
+              </ion-select>
+            </ion-item>
+
+          </div>
+          <p *ngIf="noshowDevices" class="pText">No Devices found in this room. please select another room.</p>
+          <!-- ................................ -->
+
+          <!-- ........Open Box To set device detail...................... -->
+          <div class="dev_status">
+            <ion-item *ngFor='let d of selectedDevs'>
+              <div class="toogleBox">
+                <span>{{d.device_name}}</span>
+                <ion-toggle style="position: absolute; right: 20px;" name='power' slot="end" [(ngModel)]="d.status"
+                  [ngModelOptions]="{standalone: true}" checked="{{d.status}}" (ionChange)="power(d.status)">
+                </ion-toggle>
+                <div class="dimBox" *ngIf="d.is_dimmer=='True'">
+                  <ion-range min="{{d.minimum}}" max="{{d.maximum}}" [(ngModel)]='d.dimmer'
+                    [ngModelOptions]="{standalone: true}" pin color="secondary" id="dimmervalue"
+                    (ionChange)="dimmer(d.dimmer)">
+                  </ion-range>
+                </div>
+              </div>
+
+            </ion-item>
+          </div>
+          <!-- .................................................... -->
+        </ion-card-content>
+
+        <ion-row class="cardfooter">
+          <ion-col>
+            <ion-button (click)="editMod=!editMod">Cancel</ion-button>
+          </ion-col>
+          <ion-col>
+            <ion-button type="submit">Save</ion-button>
+          </ion-col>
+        </ion-row>
+      </form>
+    </ion-card>
+  </div>
+  <!-- ..........end edit -->
+
+
+</ion-content>
+<!-- <app-tabs></app-tabs> -->
+
+<!-- <ion-footer class="ion-no-border">
+  <ion-toolbar color="dark">
+    <ion-tabs>
+      <ion-tab-bar slot="bottom" style="padding-bottom: 9px;padding-top: 5px;">
+
+        <ion-tab-button (click)="mainpage()" class="home">
+          <ion-icon name="heart-outline" class="glbl-clr-white"></ion-icon>
+          <ion-label>Home</ion-label>
+        </ion-tab-button>
+        <ion-tab-button class="favourite" (click)=rgbpage()>
+          <ion-icon name="bulb-outline" class="glbl-clr-white"></ion-icon>
+          <ion-label>RGB Device</ion-label>
+        </ion-tab-button>
+
+        <ion-tab-button (click)="securitylockpage()" class="security">
+          <ion-icon name="lock-closed-outline" class="glbl-clr-white"></ion-icon>
+          <ion-label>Security</ion-label>
+        </ion-tab-button>
+
+        <ion-tab-button class="mode">
+          <ion-icon name="aperture-outline" class="glbl-clr-white"></ion-icon>
+          <ion-label>Scene</ion-label>
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+  </ion-toolbar>
+</ion-footer> -->
+<app-footer></app-footer>

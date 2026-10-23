@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-ttlockdata" version="1.0.0" 
+xmlns="http://apache.org/cordova/ns/plugins/1.0" 
+xmlns:android="http://schemas.android.com/apk/res/android">
+   <name>TTlockdata</name>
+   <js-module name="TTlockdata"  src="www/TTlockdata.js">
+   <clobbers target="TTlockdata" />
+   </js-module>
+   <platform name="android">
+          <config-file parent="/*" target="res/xml/config.xml">
+              <feature name="TTlockdata">
+                  <param name="android-package" value="cordova.plugin.ttlockdata.TTlockdata" />
+              </feature>
+          </config-file>
+     <config-file parent="/*" target="AndroidManifest.xml" />
+   <source-file src="src/android/TTlockdata.java" target-dir="src/cordova/plugin/ttlockdata/TTlockdata" />
+    <lib-file src="src/android/ttlock-release-3.0.7.aar"/>
+   </platform>
+
+   <platform name="ios">
+            <config-file parent="/*" target="config.xml">
+                    <feature name="TTlockdata">
+                           <param name="ios-package" value="TTlockdata" />
+                    </feature>
+            </config-file>
+    <source-file src="src/ios/TTlockdata.m" />
+   </platform>
+   </plugin>

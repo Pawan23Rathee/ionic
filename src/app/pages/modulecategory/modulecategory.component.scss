@@ -1,0 +1,68 @@
+ion-card{
+    margin: 4px;
+    border-radius: 8px;
+}
+#lock1{
+    background: url('/assets/images/lock1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 120px;
+}
+#lock2{
+    background: url('/assets/images/lock2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 120px;
+}
+#lock3{
+    background: url('/assets/images/lock3.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 120px;
+}
+#lock4{
+    background: url('/assets/images/lock4.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 120px;
+}
+#lock5{
+    background: url('/assets/images/lock5.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 120px;
+}
+// ion-avatar{
+//     margin: auto;
+//     background: #f5f6f9;
+//     // width: 60px;
+//     // height: 60px;
+// }
+// ion-label{
+//     // text-align: center;
+//     padding: 7px 7px 7px 20%;
+
+// }
+// ion-footer{
+//     // border-top: 1px solid #b1b1b1;
+// }
+
+.label-cls{
+    font-size: large;
+    color: black;
+}
+.card-cls{
+    // height: 180px;
+    line-height: 4;
+    // background-color: black;
+    // box-shadow: 1px 1px 1px 1px white;
+}
+.verti-align{
+    line-height: 4;
+}
+

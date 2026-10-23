@@ -1,0 +1,15 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar >
+    <ion-buttons slot="start" style="position:absolute">
+      <ion-back-button defaultHref="/lockFunc" ></ion-back-button>
+    </ion-buttons>
+    <ion-title style="text-align: center;">
+      Alarm Messages
+    </ion-title>  
+    <!-- <p  name='trash' slot="end" style="color: black; font-size: 30px;margin-right: 10px;">{{d_on}}</p>  -->
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+<ion-button (click)="setHijackConfig()" expand="full">Set Hijacking Flag for Security</ion-button>
+<ion-button (click)="removeHijackConfig()" expand="full">Remove Hijack Flag</ion-button>
+</ion-content>

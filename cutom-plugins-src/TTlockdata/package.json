@@ -1,0 +1,25 @@
+{
+  "name": "ttlockdata",
+  "version": "1.0.0",
+  "description": "custom ttlock get data plugin",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ashishchauarsiya610/ttlockgetdata.git"
+  },
+  "keywords": [
+    "custom",
+    "seamoon",
+    "lib",
+    "plugin"
+  ],
+  "author": "ashish",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ashishchauarsiya610/ttlockgetdata/issues"
+  },
+  "homepage": "https://github.com/ashishchauarsiya610/ttlockgetdata#readme"
+}

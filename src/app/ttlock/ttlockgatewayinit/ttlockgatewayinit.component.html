@@ -1,0 +1,68 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar >
+    <ion-buttons slot="start" >
+      <ion-back-button defaultHref="/ttoperation" ></ion-back-button>
+    </ion-buttons>
+    <ion-title style="text-align: center;">Gateway
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div style="text-align: center;margin-top: 30px;">
+    <ion-button *ngIf="scanbtn" class="btn" expand="round" (click)="scanLock()">Scan Gateway</ion-button>
+    <ion-button *ngIf="connectbtn" class="btn" expand="round" (click)="connectlock()">OnConnect</ion-button>
+    <ion-button *ngIf="wifiscan" expand="round" class="btn" (click)="getbothnetwork()">wifi</ion-button>
+    <ion-button *ngIf="addgateway" expand="round" class="btn" (click)="addlock()">Add</ion-button>
+  </div>
+
+  <!-- <div style="text-align: center;margin-top: 30px;">
+    <ion-button class="btn" expand="round" (click)="connectlock()">OnConnect</ion-button>
+  </div> -->
+  
+  <!-- <ion-button expand="round" (click)="connectlock()">OnConnect</ion-button> -->
+ 
+  <!-- <ion-button expand="full" (click)="login()">uuid</ion-button> -->
+  
+  <!-- <ion-button expand="full" (click)="addlock()">Add</ion-button> -->
+
+
+  <div  *ngIf="deviceedit">
+    <ion-card style="position: relative; border-radius: 21px; background-color: white;top: 10%;height: 100%;">
+      <ion-card-content>
+        <div class="editashishdevice">
+          <ion-icon name="close-circle-outline" class="editdevicecross" (click)="deviceedit=!deviceedit"></ion-icon>
+          <h2 id="textdevice">Please select your home network</h2>
+        </div>
+        <ion-list  *ngFor="let data of results1">
+          <ion-item *ngIf="data.SSID!=''" (click)="wificheck(data.SSID)" detail>
+            <ion-avatar slot="start" >
+              <ion-icon id="icon" name="wifi-outline"></ion-icon>
+            </ion-avatar>
+            <ion-label>
+              <p style="margin-left: 10px;">{{data.SSID}}</p>
+            </ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-card-content>
+      <div class="cardfooter" *ngIf="pass">
+        <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
+          <ion-grid>  
+            <ion-row align-items-end>
+              <ion-col size="2" align-self-bottom style="text-align: end;">
+                <ion-icon  name="eye-off-outline"></ion-icon>
+              </ion-col>
+              <ion-col>
+                <ion-item>
+                  <ion-input  name="password" type="password" placeholder="Enter Password" ngModel required></ion-input>
+                </ion-item>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+          <ion-button type="submit" [disabled]="contactForm.invalid">Submit</ion-button>
+        </form>
+    </div>
+ 
+    </ion-card>
+  </div>
+ 
+</ion-content>

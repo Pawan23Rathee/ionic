@@ -1,0 +1,53 @@
+<ion-header translucent class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/mainpage"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center">Device Management</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <h4 class="h2-heading">Sharing & Control</h4>
+  <ion-card >
+    <ion-item>
+  <ion-avatar slot="start">
+    <img src="../../../assets/product_image/CurtainMotor.png">
+  </ion-avatar>
+  <ion-label >
+    <h2>Ashish Chaurasiya</h2>
+    <p >Living Room</p>    
+  </ion-label>
+    </ion-item>
+  </ion-card>
+
+  <ion-fab horizontal="end" vertical="bottom" slot="fixed">
+    <ion-fab-button >
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+
+    <ion-fab-list side="top">
+      <ion-item (click)="gotowifipage()"
+        style="position: absolute; margin: auto; border: 1px solid; right: 20px; border-radius: 30px; height: 38px;">
+        <ion-icon style=" margin-top: 0px;" slot="start" name="wifi"></ion-icon>
+        <ion-label style=" margin-top: 0px;">Wifi Reconfiguration</ion-label>
+      </ion-item>
+      <!-- </ion-fab-list> -->
+      <ion-fab-list side="top">
+        <ion-item (click)="gotoAddedModule()"
+          style="position: absolute; margin: auto; border: 1px solid; right: 20px; border-radius: 30px; height: 38px;">
+          <ion-icon style=" margin-top: 0px;" slot="start" name="save-outline"></ion-icon>
+          <ion-label style=" margin-top: 0px;">Device Configuration</ion-label>
+        </ion-item>
+      </ion-fab-list>
+
+      <!-- <ion-fab-list side="bottom">
+        <ion-item (click)="gotodyfolistlist()"
+          style="position: absolute; margin: auto; border: 1px solid; right: 55px; border-radius: 30px; height: 38px;">
+          <ion-icon style=" margin-top: 0px;padding-right: 20px;padding-bottom: 10px;"
+            src="assets/iconi5/lock-closed.svg"></ion-icon>
+          <ion-label style=" margin-top: 0px;">Dyfo lock</ion-label>
+        </ion-item>
+      </ion-fab-list> -->
+    </ion-fab-list>
+  </ion-fab>
+</ion-content>

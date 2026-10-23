@@ -1,0 +1,40 @@
+<!-- shared/footer/footer.component.html -->
+<!-- <ion-footer>
+  <ion-toolbar>
+    <ion-title>This is a Common Footer</ion-title>
+  </ion-toolbar>
+</ion-footer> -->
+
+<ion-footer slot="bottom">
+  <ion-toolbar>
+    <ion-tabs>
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button (click)="home()" [class.active]="(userService.currentPage == 'home')">
+          <ion-icon name="home"></ion-icon>
+          <ion-label>Home</ion-label>
+        </ion-tab-button>
+
+        <ion-tab-button (click)="devices()" [class.active]="(userService.currentPage == 'rooms')">
+          <ion-icon name="cube"></ion-icon>
+          <ion-label>Rooms</ion-label>
+        </ion-tab-button>
+
+        <ion-tab-button (click)="modepage()" [class.active]="(userService.currentPage == 'mode')">
+          <ion-icon name="aperture-outline"></ion-icon>
+          <ion-label>Scene</ion-label>
+        </ion-tab-button>
+
+        <ion-tab-button (click)="remote()" [class.active]="(userService.currentPage == 'remote')">
+          <ion-icon name="options"></ion-icon>
+          <ion-label>Remote</ion-label>
+        </ion-tab-button>
+
+        <ion-tab-button (click)="settings()" [ngClass]="{'active':userService.currentPage == 'settings'}">
+          <ion-icon name="settings"></ion-icon>
+          <ion-label>Setting</ion-label>
+        </ion-tab-button>
+
+      </ion-tab-bar>
+    </ion-tabs>
+  </ion-toolbar>
+</ion-footer>

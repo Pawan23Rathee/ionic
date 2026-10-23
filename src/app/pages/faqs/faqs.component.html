@@ -1,0 +1,24 @@
+<ion-header class="ion-no-border" [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/settings"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="glbl-clr-white glbl-text-cntr">FAQS</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-list class="setting-list">
+    <ng-container *ngFor="let item of items; let i = index">
+      <ion-item (click)="toggleItem(i)">
+        <ion-label class="list-label" text-wrap><b>{{ item.name}}</b></ion-label>
+        <ion-icon slot="end" name="{{ isItemExpanded[i] ? 'chevron-up' : 'chevron-down' }}"></ion-icon>
+      </ion-item>
+      <ion-list *ngIf="isItemExpanded[i]">
+        <ion-item *ngFor="let subItem of item.subItems; let subindex = index" class="sub-list">
+         <ion-label class="sub-list-label" text-wrap>{{ subItem.name }}</ion-label>
+        </ion-item>
+      </ion-list>
+    </ng-container>
+  </ion-list>
+</ion-content>
+<app-footer></app-footer>

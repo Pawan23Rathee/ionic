@@ -1,0 +1,66 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar >
+    <ion-buttons slot="start" >
+      <ion-back-button defaultHref="/ttoperation" ></ion-back-button>
+    </ion-buttons>
+    <ion-title style="text-align: center; ">
+      Special Lock
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-list>
+    <ion-item detail (click)="updateLockName()" >
+      <ion-label slot="start">
+        <p>Lock Name</p>
+      </ion-label>
+      <ion-label>
+        <p>{{lockname}}</p>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label slot="start">
+        <p>MAC/ID</p>
+      </ion-label>
+      <ion-label>
+        <p>{{lockmac}}</p>
+      </ion-label>
+    </ion-item>
+
+    <ion-item detail (click)="updateLockBettary()">
+      <ion-label slot="start">
+        <p>Battery</p>
+      </ion-label>
+      <ion-label slot="end">
+        <p>{{lockbattery}}%</p>
+      </ion-label>
+    </ion-item>
+
+    <ion-item >
+      <ion-label slot="start">
+        <p>Lock Number</p>
+      </ion-label>
+      <ion-label>
+        <p>{{lockNumber}}</p>
+      </ion-label>
+    </ion-item>
+
+    <ion-item detail>
+      <ion-label slot="start">
+        <p>Validity Period</p>
+      </ion-label>
+      <ion-label>
+        <p>Permanent</p>
+      </ion-label>
+    </ion-item>
+
+    <ion-item detail >
+      <ion-label slot="start">
+        <p>Admin Passcode</p>
+      </ion-label>
+      <ion-label>
+        <p>{{lockpass}}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,30 @@
+.room-card{
+    min-height: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // background-color: #adafaf;
+    color: black;
+    border: 1px solid;
+    // border-radius: 4px;
+    box-shadow: 2px 2px rgba(167, 167, 168, 0.795);
+
+}
+.title-position{
+    margin-left: 25%;
+}
+.class-on{
+    width: 10px; 
+    height: 10px;
+    background-color: yellow;
+    border-radius: 50%;
+    display: inline-block; 
+    margin-left: 5px;
+    position: absolute;
+}
+.align-right{
+    text-align: right;
+}
+.card-row{
+    width: 100%;
+}

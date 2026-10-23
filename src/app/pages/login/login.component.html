@@ -1,0 +1,102 @@
+<ion-content>
+  <div class="loginback">
+    <div class="container-fluid" style="height: 94%; width:100%; color: rgb(108, 107, 107)">
+      <div style="height: 15%; width: 100%; padding: 10% 3%; position: relative; display: flex;">
+        <div class="backBtn">
+          <ion-icon name="chevron-back-outline" routerLink='/home'></ion-icon>
+        </div>
+        <!-- <ion-title style="height: 35px;position: relative;color: #1396b0;" class="ion-text-center">SIGN IN</ion-title> -->
+        <!-- <div class="backBtn">
+          <ion-icon name="chevron-forward-outline" (click)='login(form)'></ion-icon>
+        </div> -->
+
+      </div>
+      <div class="glbl-text-cntr">
+        <ion-row>
+          <ion-col size=12>
+            <img src="../../../assets/kinetics.png" class="logo-cls">
+          </ion-col>
+          <ion-col size=12>
+            <ion-label class="color-white title-cls">SmartEasy</ion-label>
+          </ion-col>
+
+        </ion-row>
+
+
+      </div>
+      <div class="loginform">
+        <form #form="ngForm" (ngSubmit)="login(form)" (keyup.enter)="login(form)">
+          <!-- <ion-card> -->
+          <!-- <ion-item *ngIf='!phoneLogin' style="color: black;height: 40px;">
+              <ion-input style="border-left: 1px solid; margin-left: 16%; color:black;opacity:9;" color="white"
+                [(ngModel)]="email" type='email' name="email" placeholder="Enter Username/Email" required="true">
+              </ion-input>
+              <ion-icon style="color:black;opacity:9;" class="person-log" name="person" color="white" slot="start">
+              </ion-icon>
+            </ion-item> -->
+
+
+          <ion-list class="list-cls" style="margin-bottom: 8px;" lines="none">
+            <!-- Email input -->
+            <ion-item>
+              <ion-icon slot="start" name="at-circle"></ion-icon>
+              <ion-input placeholder="Enter Registered Email Id" class="input" [(ngModel)]="email" [(ngModel)]="email" type="email" name="email" required="true">
+              </ion-input>
+              <!-- <ion-icon slot="end" name="lock-closed"></ion-icon> -->
+            </ion-item>
+          </ion-list>
+
+          <ion-list class="list-cls" lines="none"> 
+            <!-- Password input -->
+            <ion-item>
+              <ion-icon slot="start" name="lock-closed"></ion-icon>
+              <ion-input placeholder="Enter Password" class="input" [type]="getType()" [(ngModel)]="password" type="password"
+                name="password"></ion-input>
+              <ion-icon slot="end" name="eye" aria-hidden="true" (click)="toggleTextPassword()"></ion-icon>
+            </ion-item>
+          </ion-list>
+
+          <!-- <ion-item *ngIf='phoneLogin' style="color: black;height: 40px;">
+              <select [(ngModel)]="stdcode" [ngModelOptions]="{standalone: true}" style="background: none;">
+                <option *ngFor="let code of user.countryCode">{{code.dial_code}}&nbsp;&nbsp;&nbsp; &nbsp;
+                  &nbsp;&nbsp;{{code.name}}</option>
+              </select>
+              <ion-input style="color:black;opacity:9;" [(ngModel)]="phone" type='text' name="phone" placeholder="Phone"
+                required="true"></ion-input>
+            </ion-item> -->
+          <!-- </ion-card> -->
+
+
+          <!-- <ion-card>
+            <ion-item style="color: black;height: 40px;">
+              <ion-icon style="color:black;opacity:9;" name="eye-off" slot="start" color='white'
+                (click)="toggleTextPassword()"></ion-icon>
+              <ion-input style="border-left: 1px solid; margin-left: 17%;color:black;opacity:9;" clearInput="false"
+                color="dark" [type]="getType()" [(ngModel)]="password" type='password' name="password"
+                placeholder="Enter Password" required="true"></ion-input>
+            </ion-item>
+          </ion-card> -->
+          <ion-button class="login-btn" style="margin-top: 15px;width: 80%;" expand="round" fill="outline" (click)='login(form)'>Login
+            <ion-icon name="arrow-forward-circle-outline" style="padding-left: 5px;"></ion-icon>
+          </ion-button>
+        </form>
+      </div>
+
+      <div id="loginFooter">
+        <!-- <p *ngIf='phoneLogin' (click)="phoneLogin= !phoneLogin" class="glbl-clr-white glbl-font-bold"> SIGN IN WITH
+          EMAIL
+          INSTEAD
+        </p> -->
+        <!-- <p *ngIf='!phoneLogin' (click)="phoneLogin= !phoneLogin" class="glbl-clr-white glbl-font-bold"> SIGN IN WITH
+          PHONE
+        </p> -->
+        <p id="forget" class="glbl-clr-white">
+          <span (click)="forget()" class="glbl-clr-white">FORGOT PASSWORD </span>
+          <span class="separater">|</span> <span (click)="navCtrl.navigateRoot('/register')"> NEW USER</span>
+        </p>
+        <!-- <div class="bottom-bar-cls">
+        </div> -->
+      </div>
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,76 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start" style="position:absolute">
+      <ion-back-button defaultHref="/mainpage" (click)='devicestatus()' class="glbl-clr-white"></ion-back-button>
+    </ion-buttons>
+    <ion-title style="text-align: center;" class="glbl-clr-white">
+      {{d_name}} 
+    </ion-title>  
+    <!-- <p  name='trash' slot="end" style="color: black; font-size: 30px;margin-right: 10px;">{{d_on}}</p>  -->
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div *ngFor='let r of device_status_res' style="display: -webkit-box;padding: 0 19px;">
+    <p>{{dev_status}}</p>
+  <ion-button slot="end" id='ion-btn'[ngClass]="r.is_online == 'True' ? 'on':'off'"
+  style="float: right; display: inline; font-size: 0px; margin: 5px; --border-radius: 74px; width: 28px; height: 28px;margin-top: 7px;margin-right: 7px; padding: 0;margin-left: 30%;">
+  <ion-icon style="font-size: 20px;" name='power'></ion-icon>
+</ion-button>
+</div>
+<ion-card class="statusCard" *ngFor="let l of lock_response">
+  <img style="width: 100%; height: 100%;" id={{l.id}}  src="{{l.img}}"  (click)="changeStatus($event,l.id,l.status)">
+</ion-card>
+
+<div *ngFor="let m of lock_response">
+    <!-- <div *ngIf="(m.status=='1' || m.status=='true') && (m.is_dimmer=='true' || m.is_dimmer=='1') " style="margin-top: 30%;" > -->
+    <div style="margin-top: 30%;" >
+    <!-- <ion-range  min="{{m.minimum}}" max="{{m.maximum}}" pin id="dimmervalue" (ionChange)="setDimmer($event,m.device)" value="{{m.dimmer}}"></ion-range>-->
+    <ion-item lines="none"> 
+      <!-- <ion-range min="{{m.minimum}}" max="{{m.maximum}}" pin color="secondary" (ionChange)="setDimmer($event,m.device)">
+        <ion-icon slot="start" size="small" name="contrast"></ion-icon>
+        <ion-icon slot="end" name="contrast"></ion-icon>
+      </ion-range> -->
+      <input type="range" min="{{m.minimum}}" max="{{m.maximum}}" pin id="dimmervalue" (input)="setDimmer($event,m.id)" value="{{m.dimmer}}">
+    </ion-item>
+  </div>
+</div>
+
+
+    
+    
+
+</ion-content>
+
+  <ion-footer class="ion-no-border">
+    <ion-toolbar color="light" >
+      <ion-tabs >
+        <ion-tab-bar slot="bottom" *ngFor="let l of lock_response">
+          <ion-tab-button *ngIf="onDevice" (click)="changeStatus($event,l.id,l.status)" id={{l.id}} >
+            <ion-icon name="flash-outline"></ion-icon>
+            <ion-label>On</ion-label>
+          </ion-tab-button>
+
+          <ion-tab-button *ngIf="offDevice" (click)="changeStatus($event,l.id,l.status)" id={{l.id}} >
+            <ion-icon name="flash-off-outline"></ion-icon>
+            <ion-label>Off</ion-label>
+          </ion-tab-button>
+      
+          
+          <ion-tab-button tab="guest">
+            <ion-icon name="person-add"></ion-icon>
+            <ion-label>Guest</ion-label>
+          </ion-tab-button>
+      
+          <ion-tab-button tab="newschedule">
+            <ion-icon name="calendar"></ion-icon>
+            <ion-label>Schedule</ion-label>
+          </ion-tab-button>
+      
+          <ion-tab-button  (click)="actionsheet()">
+            <ion-icon name="settings"></ion-icon>
+            <ion-label>Setting</ion-label>
+          </ion-tab-button>
+        </ion-tab-bar>
+      </ion-tabs>
+    </ion-toolbar>
+  </ion-footer>
